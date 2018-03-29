@@ -1,10 +1,10 @@
 {
-	"desc":"Add a new event to the events stack.",
-	"args":[
+	"desc":"Pulls a new event directly, returns it and stores it in the events stack, used by DiskOS to handle the \`escape\` key.",
+	"rets":[
 		{
 			"name":"event",
 			"type":"string",
-			"desc":"The event name."
+			"desc":"The event name, can be any of the callbacks names without the \"_\" at the start."
 		},
 		{
 			"name":"a",

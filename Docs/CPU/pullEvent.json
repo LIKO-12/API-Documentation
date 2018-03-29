@@ -1,10 +1,10 @@
 {
-	"desc":"Add a new event to the events stack.",
-	"args":[
+	"desc":"Pulls an event from the events stack.\n\nThis function is used internally by DiskOS to run the default event loop, which calls the callback functions that start by \`_\` like \`_update\` and \`_mousepressed\`, etc..\n\nEvents in LIKO-12 may be pulled directly, or pulled from a stack if there are already, the stack may fill up when [CPU.sleep](sleep.md) or [GPU.flip](../GPU/flip.md) are called.",
+	"rets":[
 		{
 			"name":"event",
 			"type":"string",
-			"desc":"The event name."
+			"desc":"The event name, can be any of the callbacks names without the \"_\" at the start."
 		},
 		{
 			"name":"a",
