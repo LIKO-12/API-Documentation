@@ -1,0 +1,46 @@
+{
+	"desc":"Add a new event to the events stack.",
+	"args":[
+		{
+			"name":"event",
+			"type":"string",
+			"desc":"The event name.",
+		},
+		{
+			"a",
+			"type":"any",
+			"desc":"First argument.",
+			"default":"nil"
+		},
+		{
+			"b",
+			"type":"any",
+			"desc":"Second argument.",
+			"default":"nil"
+		},
+		{
+			"c",
+			"type":"any",
+			"desc":"Third argument.",
+			"default":"nil"
+		},
+		{
+			"d",
+			"type":"any",
+			"desc":"Forth argument.",
+			"default":"nil"
+		},
+		{
+			"e",
+			"type":"any",
+			"desc":"Fifth argument.",
+			"default":"nil"
+		},
+		{
+			"f",
+			"type":"any",
+			"desc":"Sixth argument.",
+			"default":"nil"
+		}
+	]
+}
