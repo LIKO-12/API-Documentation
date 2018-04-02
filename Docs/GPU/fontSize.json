@@ -1,0 +1,15 @@
+{
+  "desc":"Returns size of the font character in pixels.",
+  "rets":[
+    {
+      "name":"height",
+      "type":"number",
+      "desc":"The height of the font character."
+    },
+    {
+      "name":"wudth",
+      "type":"number",
+      "desc":"The width of the font character."
+    }
+  ]
+}
