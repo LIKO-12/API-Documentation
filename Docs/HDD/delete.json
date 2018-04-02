@@ -1,0 +1,10 @@
+{
+  "desc":"Deletes a file.",
+  "args":[
+    {
+      "name":"file",
+      "type":"string",
+      "desc":"File to delete."
+    }
+  ]
+}

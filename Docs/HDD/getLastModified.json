@@ -1,0 +1,17 @@
+{
+  "desc":"Returns the Unix timestamp of a file.",
+  "args":[
+    {
+      "name":"file",
+      "type":"string",
+      "desc":"File to get timestamp of."
+    }
+  ],
+  "rets":[
+    {
+      "name":"timestamp",
+      "type":"integer",
+      "desc":"Unix timestamp of the file."
+    }
+  ]
+}

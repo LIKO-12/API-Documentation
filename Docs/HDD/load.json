@@ -1,0 +1,27 @@
+{
+  "desc":"Loads the contents of a Lua script as a function.",
+  "args":[
+    {
+      "name":"file",
+      "type":"string",
+      "desc":"File to load."
+    }
+  ],
+  "rets":[
+    {
+      "name":"file",
+      "type":"function",
+      "desc":"Loaded function"
+    },
+    {
+      "name":"ok",
+      "type":"unknown",
+      "desc":"First item returned from pcall on success, second item on error"
+    },
+    {
+      "name":"err",
+      "type":"unknown",
+      "desc":"Second item returned from pcall on success, third item on error"
+    }
+  ]
+}

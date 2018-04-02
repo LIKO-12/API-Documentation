@@ -1,0 +1,10 @@
+{
+  "desc":"Creates a directory.",
+  "args":[
+    {
+      "name":"path",
+      "type":"string",
+      "desc":"Path to new directory."
+    }
+  ]
+}
