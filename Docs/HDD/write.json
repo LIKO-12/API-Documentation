@@ -11,6 +11,5 @@
       "type":"string",
       "desc":"Text to write."
     }
-  ],
-  "rets":[]
+  ]
 }

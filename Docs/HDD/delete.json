@@ -6,6 +6,5 @@
       "type":"string",
       "desc":"File to delete."
     }
-  ],
-  "rets":[]
+  ]
 }

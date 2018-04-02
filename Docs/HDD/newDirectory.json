@@ -6,6 +6,5 @@
       "type":"string",
       "desc":"Path to new directory."
     }
-  ],
-  "rets":[]
+  ]
 }
