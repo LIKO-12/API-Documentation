@@ -7,7 +7,7 @@
       "desc":"The height of the font character."
     },
     {
-      "name":"wudth",
+      "name":"width",
       "type":"number",
       "desc":"The width of the font character."
     }
