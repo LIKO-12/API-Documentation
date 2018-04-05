@@ -33,7 +33,7 @@
     },
     {
       "name":"q",
-      "type":"GPUQuad",
+      "type":"Quad",
       "desc":"Optional, A quad to draw the image with, check GPU.quad for more info."
     }
   ]

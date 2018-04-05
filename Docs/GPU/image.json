@@ -4,13 +4,13 @@
     {
       "name":"data",
       "type":"string",
-      "desc":"The image data, must be in GPUImage format."
+      "desc":"The image data, must be in Image format."
     }
   ],
   "rets":[
     {
       "name":"img",
-      "type":"GPUImage",
+      "type":"Image",
       "desc":"The created image object."
     }
   ]

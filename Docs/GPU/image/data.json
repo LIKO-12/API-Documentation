@@ -3,7 +3,7 @@
   "rets":[
     {
       "name":"imgdata",
-      "type":"GPUImageData",
+      "type":"ImageData",
       "desc":"The imagedata object of this image."
     }
   ],
