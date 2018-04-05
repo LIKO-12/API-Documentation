@@ -1,0 +1,10 @@
+{
+  "desc":"Returns the imagedata object of LabelImage, which can be capture by pressing F6, It will automatically update to the latest capture.",
+  "rets":[
+    {
+      "name":"limg",
+      "type":"ImageData",
+      "desc":"The imagedata object of the label."
+    }
+  ]
+}
