@@ -1,0 +1,10 @@
+{
+  "desc":"Returns the imagedata width.",
+  "rets":[
+    {
+      "name":"width",
+      "type":"number",
+      "desc":"The imagedata width in pixels."
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "desc":"Returns the imagedata height.",
+  "rets":[
+    {
+      "name":"height",
+      "type":"number",
+      "desc":"The imagedata height in pixels."
+    }
+  ]
+}

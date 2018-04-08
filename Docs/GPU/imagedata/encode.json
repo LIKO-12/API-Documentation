@@ -1,0 +1,10 @@
+{
+  "desc":"Encodes the imagedata into lk12 image string.",
+  "rets":[
+    {
+      "name":"data",
+      "type":"string",
+      "desc":"The imagedata into lk12 image string."
+    }
+  ]
+}
