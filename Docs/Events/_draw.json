@@ -1,0 +1,10 @@
+{
+  "desc": "This function is called directly after _update(), available to help you organize your code.",
+  "args": [
+    {
+      "name": "dt",
+      "type": "number",
+      "desc": "deltatime, the time between frames (in seconds)."
+    }
+  ]
+}

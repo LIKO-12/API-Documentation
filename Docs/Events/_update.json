@@ -1,0 +1,10 @@
+{
+  "desc": "Update function is called every frame, it should be used for game logic.",
+  "args": [
+    {
+      "name": "dt",
+      "type": "number",
+      "desc": "deltatime, the time between frames (in seconds)."
+    }
+  ]
+}

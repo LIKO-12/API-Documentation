@@ -1,0 +1,15 @@
+{
+  "desc":"This function is called when the mouse scroll moves.",
+  "args":[
+    {
+      "name":"x",
+      "type":"number",
+      "desc":"Amount of horizontal mouse wheel movement. Positive values indicate movement to the right."
+    },
+    {
+      "name":"y",
+      "type":"number",
+      "desc":"Amount of vertical mouse wheel movement. Positive values indicate upward movement."
+    }
+  ]
+}

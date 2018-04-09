@@ -1,0 +1,35 @@
+{
+  "desc":"This function is called when the screen is touched.",
+  "args":[
+    {
+      "name":"id",
+      "type":"number",
+      "desc":"The touch id."
+    },
+    {
+      "number":"x",
+      "type":"number",
+      "desc":"The X coord of the touch."
+    },
+    {
+      "number":"y",
+      "type":"number",
+      "desc":"The Y coord of the touch."
+    },
+    {
+      "number":"dx",
+      "type":"number",
+      "desc":"The delta-x of the touch."
+    },
+    {
+      "number":"dy",
+      "type":"number",
+      "desc":"The delta-y of the touch."
+    },
+    {
+      "number":"p",
+      "type":"number",
+      "desc":"The pressure of the touch (Only on drawing tablets, 1 on any normal device)."
+    }
+  ]
+}
