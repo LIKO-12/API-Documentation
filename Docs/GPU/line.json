@@ -29,7 +29,8 @@
     {
       "name":"color",
       "type":"number",
-      "desc":"The color of the line(s) (0-15), defaults to the active color."
+      "desc":"The color of the line(s) (0-15), defaults to the active color.",
+      "default":"active color"
     }
   ]
 }
