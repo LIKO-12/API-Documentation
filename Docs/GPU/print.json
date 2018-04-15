@@ -151,9 +151,8 @@
           "desc":"The text to draw."
         },
         {
-          "name":"false",
-          "type":"boolean",
-          "desc":"literal"
+          "value":"false",
+          "type":"boolean"
         }
       ]
     },
@@ -166,14 +165,12 @@
           "desc":"The text to draw."
         },
         {
-          "name":"false",
-          "type":"boolean",
-          "desc":"literal"
+          "value":"false",
+          "type":"boolean"
         },
         {
-          "name":"true",
-          "type":"boolean",
-          "desc":"literal"
+          "value":"true",
+          "type":"boolean"
         }
       ]
     }
