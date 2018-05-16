@@ -1,0 +1,10 @@
+{
+  "desc":"Exports current floppy disk",
+  "rets":[
+    {
+      "name":"fimg",
+      "type":"string",
+      "desc":"The current floppy disk."
+    }
+  ]
+}
