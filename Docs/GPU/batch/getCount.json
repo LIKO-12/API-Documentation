@@ -1,0 +1,10 @@
+{
+  "desc":"Returns the number of sprites currently in the batch.",
+  "rets":[
+    {
+      "name":"count",
+      "type":"number",
+      "desc":"Number of sprites in the batch.."
+    }
+  ]
+}

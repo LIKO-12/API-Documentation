@@ -1,0 +1,24 @@
+{
+  "desc":"Creates a sprite batch.",
+  "args":[
+    {
+      "name":"bufferSize",
+      "type":"number",
+      "desc":"The max amount of sprites that it can contain.",
+      "default":"1000"
+    },
+    {
+      "name":"usage",
+      "type":"string",
+      "desc":"The usage of the sprite, how the memory is managed",
+      "default":"static"
+    }
+  ],
+  "rets":[
+    {
+      "name":"batch",
+      "type":"SpriteBatch",
+      "desc":"The created SpriteBatch."
+    }
+  ]
+}
