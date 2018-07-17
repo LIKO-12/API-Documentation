@@ -49,7 +49,7 @@
 ```js
 {
 	"availableForGames": true, //Is the peripheral available for games.
-	"documentationVersion": [ 1,0,0 ], //The peripheral version.
+	"version": [ 1,0,0 ], //The peripheral version.
 	"availableSince": [ 0,6,0 ], //Available since LIKO-12 v0.6.0.
 	"lastUpdatedIn": [ 0,8,0 ], //Last updated in LIKO-12 v0.8.0.
 	"name": "Graphics Processing Unit", //The full peripheral name, Optional.
