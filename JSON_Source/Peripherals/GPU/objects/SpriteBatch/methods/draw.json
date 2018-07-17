@@ -45,4 +45,3 @@
   ],
   "note":"The function returns the spritebatch object itself, so it can be used for chain calls."
 }
-}
