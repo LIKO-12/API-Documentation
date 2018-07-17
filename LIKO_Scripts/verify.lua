@@ -58,4 +58,4 @@ for id, path in ipairs(paths) do
   decoded[id] = JSON:decode(data)
 end
 
-color(12) log("Verify all JSONs successfully.")
+color(12) log("Verified all JSONs successfully.")
