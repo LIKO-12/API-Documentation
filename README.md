@@ -2,6 +2,126 @@
 
 ## Spec:
 
+### Value Types:
+* string: A simple type.
+* table: A collection of types.
+* "any": Any type.
+* table: This has to exist in a collection of types, the collection can contain only one
+
+```js
+["GPU","image"] //This type references to a format/object of the GPU peripheral, with the name "image"
+```
+
+#### Default types:
+
+* "number"
+* "string"
+* "boolean"
+* "nil"
+* "table"
+* "userdata"
+
+### Folder Structure:
+
+```
+└───Peripherals
+    ├───CPU
+	│	└...
+    ├───GPU
+    │   ├───Formats
+    │   │   └───string
+	│   │	    └───...
+    │   ├───Methods
+	│   │   └───...
+    │   └───Objects
+    │       ├───ImageData
+    │       │   └───Methods
+	│	 	│		└───...
+	│	 	└───...
+	└...
+```
+
+### Peripheral Info Json:
+
+* Located in the root of the peripheral api folder.
+* Has the name: `folderName.json`
+
+```js
+{
+	"availableForGames": true, //Is the peripheral available for games.
+	"documentationVersion": [ 1,0,0 ], //The peripheral version.
+	"availableSince": [ 0,6,0 ], //Available since LIKO-12 v0.6.0.
+	"lastUpdatedIn": [ 0,8,0 ], //Last updated in LIKO-12 v0.8.0.
+	"name": "Graphics Processing Unit", //The full peripheral name, Optional.
+	"shortDescription": "For drawing on the screen.", //Single line description.
+	"fullDescription": "This peripheral allows you to draw at the screen\nwith much more advanced api." //Markdown supported, optional.
+}
+```
+
+### Object Info Json:
+
+* Located in the root of the object api folder.
+* Has the name: `folderName.json`
+
+```js
+{
+	"availableSince": [[1,0,0], [0,6,0]], // GPU Version, then LIKO-12 Version
+	"lastUpdatedIn": [[1,0,0], [0,8,0]], //The same
+	"shortDescription": "whatever", //Single line description.
+	"fullDescription": "whatever", //Markdown supported, optional.
+	"note": "A single line note, markdown supported", //Shouldn't exist if "notes" exists.
+	"notes": [ //Multiple notes if needed.
+		"Note #1",
+		"Note #2",
+		"..."
+	],
+	"extra": "Markdown and multiple lines supported" //Extra information, (Optional).
+}
+```
+
+### Method Json:
+
+* Located in `Peripheral/Methods/methodName.JSON`
+
+```js
+//Single usage variant.
+{
+	"availableSince": [[1,0,0], [0,6,0]], // GPU Version, then LIKO-12 Version
+	"lastUpdatedIn": [[1,0,0],[0,8,0]], //The same.
+	"shortDescription": "Short desc",
+	"longDescription": "Markdown and multiline supported", //Optional
+	"note": "A single line note, markdown supported", //Shouldn't exist if "notes" exists.
+	"notes": [ //Multiple notes if needed.
+		"Note #1",
+		"Note #2",
+		"..."
+	]
+	"extra": "Markdown and multiple lines supported", //Extra information, (Optional).
+	"arguments":[
+		{
+			//If the name was not provided, and the argument has a default value, then it's a constant value.
+			//The name can be "..." for varavg.
+			"name": "the argument name",
+			"type": "number", //Check the value types section.
+			"description": "Single line description",
+			"default": "none"
+			//This specified means that this argument is optional, and so do not specify "nil" in the supported types.
+			//If there is no default value, but this argument is optional, then specify "default": "nil".
+		}
+	],
+	"returns":[
+		{
+			"name":"return name", //can be "..."
+			"type": "number", //Check the value types section.
+			"optional": true, //Please don't add nil to the types.
+			"description":"single line description"
+		}
+	]
+}
+```
+
+## OldSpec:
+
 ### API Functions:
 
 **Note:** The function name is determined from the file name.
