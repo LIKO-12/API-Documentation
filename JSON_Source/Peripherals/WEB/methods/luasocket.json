@@ -1,0 +1,17 @@
+{
+  "desc":"Load a submodule.",
+  "args":[
+    {
+      "name":"name",
+      "type":"string",
+      "desc":"Name of submodule to load."
+    }
+  ],
+  "rets":[
+    {
+      "name":"submodule",
+      "type":"module",
+      "desc":"The loaded submodule."
+    }
+  ]
+}

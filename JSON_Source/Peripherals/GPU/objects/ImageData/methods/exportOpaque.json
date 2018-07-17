@@ -1,0 +1,10 @@
+{
+  "desc":"Exports the imagedata to png, all the colors will be opaque.",
+  "rets":[
+    {
+      "name":"png",
+      "type":"string",
+      "desc":"The binary png data."
+    }
+  ]
+}

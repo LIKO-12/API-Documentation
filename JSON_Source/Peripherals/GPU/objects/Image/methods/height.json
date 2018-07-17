@@ -1,0 +1,10 @@
+{
+  "desc":"Returns the image height.",
+  "rets":[
+    {
+      "name":"height",
+      "type":"number",
+      "desc":"The image height in pixels."
+    }
+  ]
+}
