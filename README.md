@@ -97,6 +97,7 @@
 		"..."
 	]
 	"extra": "Markdown and multiple lines supported", //Extra information, (Optional).
+  "self": true, //Should the user use ':' when calling this method.
 	"arguments":[
 		{
 			//If the name was not provided, and the argument has a default value, then it's a constant value.
