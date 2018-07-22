@@ -121,6 +121,60 @@
 }
 ```
 
+```js
+//Multi usages variant.
+{
+	"availableSince": [[1,0,0], [0,6,0]], // GPU Version, then LIKO-12 Version
+	"lastUpdatedIn": [[1,0,0],[0,8,0]], //The same.
+	"shortDescription": "Short desc",
+	"longDescription": "Markdown and multiline supported", //Optional
+	"note": "A single line note, markdown supported", //Shouldn't exist if "notes" exists.
+	"notes": [ //Multiple notes if needed.
+		"Note #1",
+		"Note #2",
+		"..."
+	]
+	"extra": "Markdown and multiple lines supported", //Extra information, (Optional).
+  "usages":[
+    {
+      "shortDescription": "Short desc",
+      "longDescription": "Markdown and multiline supported", //Optional
+      "note": "A single line note, markdown supported", //Shouldn't exist if "notes" exists.
+      "notes": [ //Multiple notes if needed.
+        "Note #1",
+        "Note #2",
+        "..."
+      ]
+      "extra": "Markdown and multiple lines supported", //Extra information, (Optional).
+      "self": true, //Should the user use ':' when calling this method.
+      "arguments":[
+        {
+          //If the name was not provided, and the argument has a default value, then it's a constant value.
+          //The name can be "..." for varavg.
+          "name": "the argument name",
+          "type": "number", //Check the value types section.
+          "description": "Single line description",
+          "default": "none"
+          //This specified means that this argument is optional, and so do not specify "nil" in the supported types.
+          //If there is no default value, but this argument is optional, then specify "default": "nil".
+        }
+      ],
+      "returns":[
+        {
+          "name":"return name", //can be "..."
+          "type": "number", //Check the value types section.
+          "optional": true, //Please don't add nil to the types.
+          "description":"single line description"
+        }
+      ]
+    },
+    {
+      //Another usage.
+    }
+  ]
+}
+```
+
 ## OldSpec:
 
 ### API Functions:
