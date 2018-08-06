@@ -50,9 +50,13 @@ local function updateArguments(oldargs)
       if type(new.type) == "string" then
         if not standardTypes[new.type] then
           if new.type:lower() == "imagedata" then
-            new.type = {"Peripherals","GPU","imageData"}
+            new.type = {{"Peripherals","GPU","imageData"}}
           elseif new.type:lower() == "image" then
-            new.type = {"Peripherals","GPU","image"}
+            new.type = {{"Peripherals","GPU","image"}}
+          elseif new.type:lower() == "quad" then
+            new.type = {{"Peripherals","GPU","quad"}}
+          elseif new.type:lower() == "spritebatch" then
+            new.type = {{"Peripherals","GPU","spriteBatch"}}
           else
             error("NON-STANDARD TYPE: "..new.type)
           end
@@ -60,9 +64,13 @@ local function updateArguments(oldargs)
       end
     elseif not standardTypes[new.type] then
       if new.type:lower() == "imagedata" then
-        new.type = {"Peripherals","GPU","imageData"}
+        new.type = {{"Peripherals","GPU","imageData"}}
       elseif new.type:lower() == "image" then
-        new.type = {"Peripherals","GPU","image"}
+        new.type = {{"Peripherals","GPU","image"}}
+      elseif new.type:lower() == "quad" then
+        new.type = {{"Peripherals","GPU","quad"}}
+      elseif new.type:lower() == "spritebatch" then
+        new.type = {{"Peripherals","GPU","spriteBatch"}}
       else
         error("NON-STANDARD TYPE: "..new.type)
       end
@@ -106,9 +114,13 @@ local function updateReturns(oldrets)
     
     if not standardTypes[new.type] then
       if new.type:lower() == "imagedata" then
-        new.type = {"Peripherals","GPU","imageData"}
+        new.type = {{"Peripherals","GPU","imageData"}}
       elseif new.type:lower() == "image" then
-        new.type = {"Peripherals","GPU","image"}
+        new.type = {{"Peripherals","GPU","image"}}
+      elseif new.type:lower() == "quad" then
+        new.type = {{"Peripherals","GPU","quad"}}
+      elseif new.type:lower() == "spritebatch" then
+        new.type = {{"Peripherals","GPU","spriteBatch"}}
       else
         error("NON-STANDARD TYPE: "..new.type)
       end
@@ -183,8 +195,26 @@ local function updateMethods()
     local objectsPath = path..peripheral.."/objects/"
     if fs.exists(objectsPath) then
       for _, objectName in ipairs(fs.getDirectoryItems(objectsPath)) do
-        local methodsPath = objectsPath.."methods/"
         
+        log(6,"- ",peripheral," - ",objectName)
+        
+        local methodsPath = objectsPath..objectName.."/methods/"
+        
+        for _,method in ipairs(fs.getDirectoryItems(methodsPath)) do
+          log(5,method)
+          
+          local methodPath = methodsPath..method
+          local methodJSON = fs.read(methodPath)
+          local methodData = JSON:decode(methodJSON)
+          methodData = updateMethod(methodData)
+          methodJSON = JSON:encode(methodData,nil,{
+            pretty = true,
+            indent = "\t",
+            align_keys = false,
+            array_newline = false
+          })
+          fs.write(wpath..peripheral.."/objects/"..objectName.."/methods/"..method,methodJSON)
+        end
       end
     end
   end
