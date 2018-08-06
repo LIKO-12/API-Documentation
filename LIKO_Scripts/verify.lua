@@ -7,26 +7,16 @@ local function log(...)
 end
 
 function JSON:onDecodeError(message, text, location)
-  local counter = 0
-  local charPos = 0
-  local line = 0
+  local counter, charPos, line = 0,0,0
   
   if location then
-    for i=1, #text do
-      local char = text:sub(i,i)
-      counter = counter + 1
-      charPos = charPos + 1
-      if char == "\n" then
-        charPos = 0
-        line = line + 1
-      end
-      
-      if counter == location then
-        break
-      end
+    for char in text:gmatch(".") do
+      counter, charPos, location = counter + 1,charPos + 1, location -1
+      if char == "\n" then charPos, line = 0, line + 1 end
+      if location == 0 then break end
     end
     
-    error("Failed to decode: "..message.."at line #"..line.." char #"..charPos.." byte #"..location)
+    error("Failed to decode: "..message.."at line #"..line..", char #"..charPos..", byte #"..location)
   else
     error("Failed to decode: "..message..", unknown location.")
   end
