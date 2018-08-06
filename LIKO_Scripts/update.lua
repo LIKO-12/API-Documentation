@@ -155,7 +155,7 @@ local function updateMethod(old,object)
 end
 
 local function updateMethods()
-  local path = "D:/JSON_Source/Peripherals/"
+  local path = "D:/JSON_Old/Peripherals/"
   local wpath = "D:/JSON_Updated/Peripherals/"
   
   for _,peripheral in ipairs(fs.getDirectoryItems(path)) do
