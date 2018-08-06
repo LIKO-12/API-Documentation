@@ -1,3 +1,7 @@
 {
-  "desc":"End LIKO-12 screen Gif recording by code."
+	"arguments": [],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [],
+	"shortDescription": "End LIKO-12 screen Gif recording by code."
 }

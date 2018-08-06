@@ -1,10 +1,11 @@
 {
-  "desc":"Returns the imagedata object of LabelImage, which can be capture by pressing F6, It will automatically update to the latest capture.",
-  "rets":[
-    {
-      "name":"limg",
-      "type":"ImageData",
-      "desc":"The imagedata object of the label."
-    }
-  ]
+	"arguments": [],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [ {
+		"description": "The imagedata object of the label.",
+		"name": "limg",
+		"type": [ [ "Peripherals", "GPU", "imageData" ] ]
+	} ],
+	"shortDescription": "Returns the imagedata object of LabelImage, which can be capture by pressing F6, It will automatically update to the latest capture."
 }

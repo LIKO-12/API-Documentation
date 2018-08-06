@@ -1,3 +1,7 @@
 {
-	"desc":"Shutdown/exit LIKO-12"
+	"arguments": [],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [],
+	"shortDescription": "Shutdown/exit LIKO-12"
 }

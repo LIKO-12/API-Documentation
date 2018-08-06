@@ -1,3 +1,7 @@
 {
-  "desc":"Pop the last color mapping and transparent colors list from the palettes stack."
+	"arguments": [],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [],
+	"shortDescription": "Pop the last color mapping and transparent colors list from the palettes stack."
 }

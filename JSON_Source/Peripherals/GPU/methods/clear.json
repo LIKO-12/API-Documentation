@@ -1,11 +1,12 @@
 {
-	"desc":"Clears the screen and fills it with a specific color, useful when clearing the screen for a new frame.",
-	"args":[
-		{
-			"name":"id",
-			"type":"number",
-			"desc":"The ID of the color to fill the screen with, can be 0-15.",
-			"default":"0"
-		}
-	]
+	"arguments": [ {
+		"default": 0,
+		"description": "The ID of the color to fill the screen with, can be 0-15.",
+		"name": "id",
+		"type": "number"
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [],
+	"shortDescription": "Clears the screen and fills it with a specific color, useful when clearing the screen for a new frame."
 }

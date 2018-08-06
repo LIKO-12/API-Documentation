@@ -1,10 +1,11 @@
 {
-  "desc":"Returns height of the font character in pixels.",
-  "rets":[
-    {
-      "name":"height",
-      "type":"number",
-      "desc":"The height of the font character."
-    }
-  ]
+	"arguments": [],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [ {
+		"description": "The height of the font character.",
+		"name": "height",
+		"type": "number"
+	} ],
+	"shortDescription": "Returns height of the font character in pixels."
 }

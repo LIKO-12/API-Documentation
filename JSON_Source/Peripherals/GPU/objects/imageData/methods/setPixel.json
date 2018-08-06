@@ -1,28 +1,25 @@
 {
-  "desc":"Set a pixel color in the imagedata.",
-  "args":[
-    {
-      "name":"x",
-      "type":"number",
-      "desc":"The pixel x position."
-    },
-    {
-      "name":"y",
-      "type":"number",
-      "desc":"The pixel y position."
-    },
-    {
-      "name":"color",
-      "type":"number",
-      "desc":"The new pixel color (0-15)."
-    }
-  ],
-  "rets":[
-    {
-      "name":"imgdata",
-      "type":"imagedata",
-      "desc":"The imagedata itself."
-    }
-  ],
-  "note":"The function returns the imagedata object itself, so it can be used for chain calls."
+	"arguments": [ {
+		"description": "The pixel x position.",
+		"name": "x",
+		"type": "number"
+	}, {
+		"description": "The pixel y position.",
+		"name": "y",
+		"type": "number"
+	}, {
+		"description": "The new pixel color (0-15).",
+		"name": "color",
+		"type": "number"
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"note": "The function returns the imagedata object itself, so it can be used for chain calls.",
+	"returns": [ {
+		"description": "The imagedata itself.",
+		"name": "imgdata",
+		"type": [ [ "Peripherals", "GPU", "imageData" ] ]
+	} ],
+	"self": true,
+	"shortDescription": "Set a pixel color in the imagedata."
 }

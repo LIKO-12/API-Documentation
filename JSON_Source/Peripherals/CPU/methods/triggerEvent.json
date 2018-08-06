@@ -1,46 +1,41 @@
 {
-	"desc":"Add a new event to the events stack.",
-	"args":[
-		{
-			"name":"event",
-			"type":"string",
-			"desc":"The event name."
-		},
-		{
-			"name":"a",
-			"type":"any",
-			"desc":"First argument.",
-			"default":"nil"
-		},
-		{
-			"name":"b",
-			"type":"any",
-			"desc":"Second argument.",
-			"default":"nil"
-		},
-		{
-			"name":"c",
-			"type":"any",
-			"desc":"Third argument.",
-			"default":"nil"
-		},
-		{
-			"name":"d",
-			"type":"any",
-			"desc":"Forth argument.",
-			"default":"nil"
-		},
-		{
-			"name":"e",
-			"type":"any",
-			"desc":"Fifth argument.",
-			"default":"nil"
-		},
-		{
-			"name":"f",
-			"type":"any",
-			"desc":"Sixth argument.",
-			"default":"nil"
-		}
-	]
+	"arguments": [ {
+		"description": "The event name.",
+		"name": "event",
+		"type": "string"
+	}, {
+		"default": "nil",
+		"description": "First argument.",
+		"name": "a",
+		"type": "any"
+	}, {
+		"default": "nil",
+		"description": "Second argument.",
+		"name": "b",
+		"type": "any"
+	}, {
+		"default": "nil",
+		"description": "Third argument.",
+		"name": "c",
+		"type": "any"
+	}, {
+		"default": "nil",
+		"description": "Forth argument.",
+		"name": "d",
+		"type": "any"
+	}, {
+		"default": "nil",
+		"description": "Fifth argument.",
+		"name": "e",
+		"type": "any"
+	}, {
+		"default": "nil",
+		"description": "Sixth argument.",
+		"name": "f",
+		"type": "any"
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [],
+	"shortDescription": "Add a new event to the events stack."
 }

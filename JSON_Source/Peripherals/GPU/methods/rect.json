@@ -1,38 +1,33 @@
 {
-	"desc":"Draws a rectangle on the screen.",
-	"args":[
-		{
-			"name":"x",
-			"type":"number",
-			"desc":"The top-left x position of the rectangle."
-		},
-		{
-			"name":"y",
-			"type":"number",
-			"desc":"The top-left y position of the rectangle."
-		},
-		{
-			"name":"w",
-			"type":"number",
-			"desc":"The width of rectangle."
-		},
-		{
-			"name":"h",
-			"type":"number",
-			"desc":"The height of rectangle."
-		},
-		{
-			"name":"l",
-			"type":"boolean",
-			"desc":"(false/nil) The rectangle will be filled, (true) The rectangle will have only lines (border).",
-			"default":"false"
-		},
-		{
-			"name":"c",
-			"type":"number",
-			"desc":"The color of the rectangle (0-15), defaults to the active color.",
-			"default":"nil"
-		}
-	],
-	"note":"The arguments can be passed in a table"
+	"arguments": [ {
+		"description": "The top-left x position of the rectangle.",
+		"name": "x",
+		"type": "number"
+	}, {
+		"description": "The top-left y position of the rectangle.",
+		"name": "y",
+		"type": "number"
+	}, {
+		"description": "The width of rectangle.",
+		"name": "w",
+		"type": "number"
+	}, {
+		"description": "The height of rectangle.",
+		"name": "h",
+		"type": "number"
+	}, {
+		"default": "false",
+		"description": "(false/nil) The rectangle will be filled, (true) The rectangle will have only lines (border).",
+		"name": "l",
+		"type": "boolean"
+	}, {
+		"description": "The color of the rectangle (0-15), defaults to the active color.",
+		"name": "c",
+		"type": "number"
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"note": "The arguments can be passed in a table",
+	"returns": [],
+	"shortDescription": "Draws a rectangle on the screen."
 }

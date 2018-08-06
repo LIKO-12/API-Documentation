@@ -1,10 +1,12 @@
 {
-  "desc":"Returns the buffer size.",
-  "rets":[
-    {
-      "name":"size",
-      "type":"number",
-      "desc":"The size of the buffer."
-    }
-  ]
+	"arguments": [],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [ {
+		"description": "The size of the buffer.",
+		"name": "size",
+		"type": "number"
+	} ],
+	"self": true,
+	"shortDescription": "Returns the buffer size."
 }

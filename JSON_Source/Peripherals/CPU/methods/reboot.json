@@ -1,19 +1,19 @@
 {
-	"desc":"Reboot LIKO-12",
-	"usage":[
-		{
-			"name":"Soft Reboot:",
-			"desc":"Soft reboots LIKO-12 by doing an internal trick to reload the BIOS and bootup again, will leave some garbage that will be cleaned automatically by the Lua garbage collector."
-		},
-		{
-			"name":"Hard Reboot:",
-			"desc":"Hard reboots LIKO-12 by reinitializing the LÖVE engine, will clear the whole Lua state, and re-create the window.",
-			"args":[
-				{
-					"value":"true",
-					"type":"boolean"
-				}
-			]
-		}
-	]
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"shortDescription": "Reboot LIKO-12",
+	"usages": [ {
+		"arguments": [],
+		"name": "Soft Reboot:",
+		"returns": [],
+		"shortDescription": "Soft reboots LIKO-12 by doing an internal trick to reload the BIOS and bootup again, will leave some garbage that will be cleaned automatically by the Lua garbage collector."
+	}, {
+		"arguments": [ {
+			"default": "true",
+			"type": "boolean"
+		} ],
+		"name": "Hard Reboot:",
+		"returns": [],
+		"shortDescription": "Hard reboots LIKO-12 by reinitializing the LÖVE engine, will clear the whole Lua state, and re-create the window."
+	} ]
 }

@@ -1,17 +1,15 @@
 {
-  "desc":"Returns true if a file or directory exists.",
-  "args":[
-    {
-      "name":"file",
-      "type":"string",
-      "desc":"File to check."
-    }
-  ],
-  "rets":[
-    {
-      "name":"existent",
-      "type":"boolean",
-      "desc":"Existence of file or directory."
-    }
-  ]
+	"arguments": [ {
+		"description": "File to check.",
+		"name": "file",
+		"type": "string"
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [ {
+		"description": "Existence of file or directory.",
+		"name": "existent",
+		"type": "boolean"
+	} ],
+	"shortDescription": "Returns true if a file or directory exists."
 }

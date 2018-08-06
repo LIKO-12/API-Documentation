@@ -1,17 +1,15 @@
 {
-  "desc":"Returns a table containing items in a directory.",
-  "args":[
-    {
-      "name":"directory",
-      "type":"string",
-      "desc":"Directory to list items of."
-    }
-  ],
-  "rets":[
-    {
-      "name":"files",
-      "type":"table",
-      "desc":"List of files in the directory."
-    }
-  ]
+	"arguments": [ {
+		"description": "Directory to list items of.",
+		"name": "directory",
+		"type": "string"
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [ {
+		"description": "List of files in the directory.",
+		"name": "files",
+		"type": "table"
+	} ],
+	"shortDescription": "Returns a table containing items in a directory."
 }

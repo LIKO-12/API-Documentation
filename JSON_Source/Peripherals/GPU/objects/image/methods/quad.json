@@ -1,34 +1,28 @@
 {
-  "desc":"Creates a new quad passing the image dimensions automatically.",
-  "args":[
-    {
-      "name":"x",
-      "type":"number",
-      "desc":"The x coord of the quad's top-left corner."
-    },
-    {
-      "name":"y",
-      "type":"number",
-      "desc":"The y coord of the quad's top-left corner."
-    },
-    {
-      "name":"width",
-      "type":"number",
-      "desc":"The width of the quad.",
-      "default":"img:width"
-    },
-    {
-      "name":"height",
-      "type":"number",
-      "desc":"The height of the quad.",
-      "default":"img:height"
-    }
-  ],
-  "rets":[
-    {
-      "name":"q",
-      "type":"Quad",
-      "desc":"The created quad."
-    }
-  ]
+	"arguments": [ {
+		"description": "The x coord of the quad's top-left corner.",
+		"name": "x",
+		"type": "number"
+	}, {
+		"description": "The y coord of the quad's top-left corner.",
+		"name": "y",
+		"type": "number"
+	}, {
+		"description": "The width of the quad.",
+		"name": "width",
+		"type": "number"
+	}, {
+		"description": "The height of the quad.",
+		"name": "height",
+		"type": "number"
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [ {
+		"description": "The created quad.",
+		"name": "q",
+		"type": [ [ "Peripherals", "GPU", "quad" ] ]
+	} ],
+	"self": true,
+	"shortDescription": "Creates a new quad passing the image dimensions automatically."
 }

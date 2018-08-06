@@ -1,3 +1,8 @@
 {
-  "desc":"Reloads the Image's contents from the ImageData used to create the image."
+	"arguments": [],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [],
+	"self": true,
+	"shortDescription": "Reloads the Image's contents from the ImageData used to create the image."
 }

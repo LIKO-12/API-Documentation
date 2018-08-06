@@ -1,47 +1,41 @@
 {
-  "desc":"Draws the sprite batch",
-  "args":[
-    {
-      "name":"x",
-      "type":"number",
-      "desc":"The x position to draw the sprite batch.",
-      "default":"0"
-    },
-    {
-      "name":"y",
-      "type":"number",
-      "desc":"The y position to draw the sprite batch.",
-      "default":"0"
-    },
-    {
-      "name":"r",
-      "type":"number",
-      "desc":"The rotation to draw the sprite batch with."
-    },
-    {
-      "name":"sx",
-      "type":"number",
-      "desc":"The x scale to draw the sprite batch with.",
-      "default":"1"
-    },
-    {
-      "name":"sy",
-      "type":"number",
-      "desc":"The y sacle to draw the sprite batch with.",
-      "default":"1"
-    },
-    {
-      "name":"quad",
-      "type":["null","Quad"],
-      "desc":"The quad to draw the sprite batch with."
-    }
-  ],
-  "rets":[
-    {
-      "name":"sb",
-      "type":"SpriteBatch",
-      "desc":"The spritebatch itself."
-    }
-  ],
-  "note":"The function returns the spritebatch object itself, so it can be used for chain calls."
+	"arguments": [ {
+		"default": 0,
+		"description": "The x position to draw the sprite batch.",
+		"name": "x",
+		"type": "number"
+	}, {
+		"default": 0,
+		"description": "The y position to draw the sprite batch.",
+		"name": "y",
+		"type": "number"
+	}, {
+		"description": "The rotation to draw the sprite batch with.",
+		"name": "r",
+		"type": "number"
+	}, {
+		"default": 1,
+		"description": "The x scale to draw the sprite batch with.",
+		"name": "sx",
+		"type": "number"
+	}, {
+		"default": 1,
+		"description": "The y sacle to draw the sprite batch with.",
+		"name": "sy",
+		"type": "number"
+	}, {
+		"description": "The quad to draw the sprite batch with.",
+		"name": "quad",
+		"type": [ "null", "Quad" ]
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"note": "The function returns the spritebatch object itself, so it can be used for chain calls.",
+	"returns": [ {
+		"description": "The spritebatch itself.",
+		"name": "sb",
+		"type": [ [ "Peripherals", "GPU", "spriteBatch" ] ]
+	} ],
+	"self": true,
+	"shortDescription": "Draws the sprite batch"
 }

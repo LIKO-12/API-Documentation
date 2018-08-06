@@ -1,24 +1,24 @@
 {
-  "desc":"Makes a specific color transparent or not, By default the color 0 is transparent.",
-  "usage":[
-    {
-      "name":" Make a specific color transparent or not.",
-      "args":[
-        {
-          "name":"color",
-          "type":"number",
-          "desc":"The color id (0-15)."
-        },
-        {
-          "name":"transparent",
-          "type":["boolean","nil"],
-          "desc":"(true) The color will be transparent, (false/nil) The color will be opaque."
-        }
-      ]
-    },
-    {
-      "name":"Reset the colors to it's default."
-    }
-  ],
-  "note":"This only affects images."
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"note": "This only affects images.",
+	"shortDescription": "Makes a specific color transparent or not, By default the color 0 is transparent.",
+	"usages": [ {
+		"arguments": [ {
+			"description": "The color id (0-15).",
+			"name": "color",
+			"type": "number"
+		}, {
+			"default": "nil",
+			"description": "(true) The color will be transparent, (false/nil) The color will be opaque.",
+			"name": "transparent",
+			"type": "boolean"
+		} ],
+		"name": " Make a specific color transparent or not.",
+		"returns": []
+	}, {
+		"arguments": [],
+		"name": "Reset the colors to it's default.",
+		"returns": []
+	} ]
 }

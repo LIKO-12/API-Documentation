@@ -1,25 +1,22 @@
 {
-	"desc":"Read or write to/from the clipboard.",
-	"usage":[
-		{
-			"name":"Read the clipboard content:",
-			"rets":[
-				{
-					"name":"content",
-					"type":"string",
-					"desc":"The clipboard content."
-				}
-			]
-		},
-		{
-			"name":"Set the clipboard content:",
-			"args":[
-				{
-					"name":"content",
-					"type":["string","number"],
-					"desc":"The new clipboard content."
-				}
-			]
-		}
-	]
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"shortDescription": "Read or write to/from the clipboard.",
+	"usages": [ {
+		"arguments": [],
+		"name": "Read the clipboard content:",
+		"returns": [ {
+			"description": "The clipboard content.",
+			"name": "content",
+			"type": "string"
+		} ]
+	}, {
+		"arguments": [ {
+			"description": "The new clipboard content.",
+			"name": "content",
+			"type": [ "string", "number" ]
+		} ],
+		"name": "Set the clipboard content:",
+		"returns": []
+	} ]
 }

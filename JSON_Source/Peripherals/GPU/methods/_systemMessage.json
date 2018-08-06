@@ -1,28 +1,26 @@
 {
-	"desc":"Shows a system message: A single line message at the bottom of the screen.",
-	"args":[
-		{
-			"name":"msg",
-			"type":"string",
-			"desc":"The message to show."
-		},
-		{
-			"name":"time",
-			"type":"number",
-			"desc":"How long the message to be shown, (in seconds).",
-			"default":"1"
-		},
-		{
-			"name":"",
-			"type":"number",
-			"desc":"The color of the text (0-15).",
-			"default":"4"
-		},
-		{
-			"name":"",
-			"type":"number",
-			"desc":"The color of the background (0-15).",
-			"default":"9"
-		}
-	]
+	"arguments": [ {
+		"description": "The message to show.",
+		"name": "msg",
+		"type": "string"
+	}, {
+		"default": 1,
+		"description": "How long the message to be shown, (in seconds).",
+		"name": "time",
+		"type": "number"
+	}, {
+		"default": 4,
+		"description": "The color of the text (0-15).",
+		"name": "",
+		"type": "number"
+	}, {
+		"default": 9,
+		"description": "The color of the background (0-15).",
+		"name": "",
+		"type": "number"
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [],
+	"shortDescription": "Shows a system message: A single line message at the bottom of the screen."
 }

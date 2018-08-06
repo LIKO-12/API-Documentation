@@ -1,17 +1,15 @@
 {
-  "desc":"Returns true if the path given represents a directory.",
-  "args":[
-    {
-      "name":"file",
-      "type":"string",
-      "desc":"File to check if it is a directory."
-    }
-  ],
-  "rets":[
-    {
-      "name":"isDirectory",
-      "type":"boolean",
-      "desc":"True if it is a directory, false otherwise."
-    }
-  ]
+	"arguments": [ {
+		"description": "File to check if it is a directory.",
+		"name": "file",
+		"type": "string"
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [ {
+		"description": "True if it is a directory, false otherwise.",
+		"name": "isDirectory",
+		"type": "boolean"
+	} ],
+	"shortDescription": "Returns true if the path given represents a directory."
 }

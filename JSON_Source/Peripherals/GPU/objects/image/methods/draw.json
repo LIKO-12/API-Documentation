@@ -1,40 +1,37 @@
 {
-  "desc":"Draws the image on the screen.",
-  "args":[
-    {
-      "name":"x",
-      "type":"number",
-      "desc":"The top-left image corner x position.",
-      "default":"0"
-    },
-    {
-      "name":"y",
-      "type":"number",
-      "desc":"The top-left image corner y position.",
-      "default":"0"
-    },
-    {
-      "name":"r",
-      "type":"number",
-      "desc":"The image rotation in radians.",
-      "default":"0"
-    },
-    {
-      "name":"sw",
-      "type":"number",
-      "desc":"The image width scale.",
-      "default":"1"
-    },
-    {
-      "name":"sh",
-      "type":"number",
-      "desc":"The image height scale.",
-      "default":"1"
-    },
-    {
-      "name":"q",
-      "type":"Quad",
-      "desc":"Optional, A quad to draw the image with, check GPU.quad for more info."
-    }
-  ]
+	"arguments": [ {
+		"default": 0,
+		"description": "The top-left image corner x position.",
+		"name": "x",
+		"type": "number"
+	}, {
+		"default": 0,
+		"description": "The top-left image corner y position.",
+		"name": "y",
+		"type": "number"
+	}, {
+		"default": 0,
+		"description": "The image rotation in radians.",
+		"name": "r",
+		"type": "number"
+	}, {
+		"default": 1,
+		"description": "The image width scale.",
+		"name": "sw",
+		"type": "number"
+	}, {
+		"default": 1,
+		"description": "The image height scale.",
+		"name": "sh",
+		"type": "number"
+	}, {
+		"description": "Optional, A quad to draw the image with, check GPU.quad for more info.",
+		"name": "q",
+		"type": [ [ "Peripherals", "GPU", "quad" ] ]
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [],
+	"self": true,
+	"shortDescription": "Draws the image on the screen."
 }

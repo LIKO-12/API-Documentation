@@ -1,10 +1,11 @@
 {
-	"desc":"Returns LIKO-12 save directory (the appdata directory) in the HOST filesystem.",
-	"rets":[
-		{
-			"name":"dir",
-			"type":"string",
-			"desc":"LIKO-12 save directory (the appdata directory) in the HOST filesystem."
-		}
-	]
+	"arguments": [],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [ {
+		"description": "LIKO-12 save directory (the appdata directory) in the HOST filesystem.",
+		"name": "dir",
+		"type": "string"
+	} ],
+	"shortDescription": "Returns LIKO-12 save directory (the appdata directory) in the HOST filesystem."
 }

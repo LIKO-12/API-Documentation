@@ -1,17 +1,15 @@
 {
-  "desc":"Returns the content of a file.",
-  "args":[
-    {
-      "name":"file",
-      "type":"string",
-      "desc":"File to read."
-    }
-  ],
-  "rets":[
-    {
-      "name":"data",
-      "type":"string",
-      "desc":"The content of the file."
-    }
-  ]
+	"arguments": [ {
+		"description": "File to read.",
+		"name": "file",
+		"type": "string"
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [ {
+		"description": "The content of the file.",
+		"name": "data",
+		"type": "string"
+	} ],
+	"shortDescription": "Returns the content of a file."
 }

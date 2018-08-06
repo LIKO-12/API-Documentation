@@ -1,10 +1,11 @@
 {
-	"desc":"Returns the height of the screen",
-	"rets":[
-		{
-			"name":"h",
-			"type":"number",
-			"desc":"The height of the screen (By default - 128)"
-		}
-	]
+	"arguments": [],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [ {
+		"description": "The height of the screen (By default - 128)",
+		"name": "h",
+		"type": "number"
+	} ],
+	"shortDescription": "Returns the height of the screen"
 }

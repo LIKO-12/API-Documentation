@@ -1,10 +1,11 @@
 {
-  "desc":"Returns width of the font character in pixels.",
-  "rets":[
-    {
-      "name":"width",
-      "type":"number",
-      "desc":"The width of the font character."
-    }
-  ]
+	"arguments": [],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [ {
+		"description": "The width of the font character.",
+		"name": "width",
+		"type": "number"
+	} ],
+	"shortDescription": "Returns width of the font character in pixels."
 }

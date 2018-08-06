@@ -1,3 +1,7 @@
 {
-  "desc":"Pops the last active color from the ColorStack."
+	"arguments": [],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [],
+	"shortDescription": "Pops the last active color from the ColorStack."
 }

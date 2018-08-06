@@ -1,77 +1,65 @@
 {
-  "desc":"Changes a sprite to the batch.",
-  "args":[
-    {
-      "name":"id",
-      "type":"number",
-      "desc":"The index of the sprite to change."
-    },
-    {
-      "name":"quad",
-      "type":"Quad",
-      "desc":"The quad to add."
-    },
-    {
-      "name":"x",
-      "type":"number",
-      "desc":"The x position of the new sprite.",
-      "default":"0"
-    },
-    {
-      "name":"y",
-      "type":"number",
-      "desc":"The y position of the new sprite.",
-      "default":"0"
-    },
-    {
-      "name":"r",
-      "type":"number",
-      "desc":"The rotation of the new sprite.",
-      "default":"0"
-    },
-    {
-      "name":"sx",
-      "type":"number",
-      "desc":"The x scale of the new sprite.",
-      "default":"1"
-    },
-    {
-      "name":"sy",
-      "type":"number",
-      "desc":"The y scale of the new sprite.",
-      "default":["sx","1"]
-    },
-    {
-      "name":"ox",
-      "type":"number",
-      "desc":"The x origin offset of the new sprite.",
-      "default":"0"
-    },
-    {
-      "name":"oy",
-      "type":"number",
-      "desc":"The y origin offset of the new sprite.",
-      "default":"0"
-    },
-    {
-      "name":"kx",
-      "type":"number",
-      "desc":"The x shear factor of the new sprite.",
-      "default":"0"
-    },
-    {
-      "name":"ky",
-      "type":"number",
-      "desc":"The y shear factor of the new sprite.",
-      "default":"0"
-    }
-  ],
-  "rets":[
-    {
-      "name":"sb",
-      "type":"SpriteBatch",
-      "desc":"The spritebatch itself."
-    }
-  ],
-  "note":"The function returns the spritebatch object itself, so it can be used for chain calls."
+	"arguments": [ {
+		"description": "The index of the sprite to change.",
+		"name": "id",
+		"type": "number"
+	}, {
+		"description": "The quad to add.",
+		"name": "quad",
+		"type": [ [ "Peripherals", "GPU", "quad" ] ]
+	}, {
+		"default": 0,
+		"description": "The x position of the new sprite.",
+		"name": "x",
+		"type": "number"
+	}, {
+		"default": 0,
+		"description": "The y position of the new sprite.",
+		"name": "y",
+		"type": "number"
+	}, {
+		"default": 0,
+		"description": "The rotation of the new sprite.",
+		"name": "r",
+		"type": "number"
+	}, {
+		"default": 1,
+		"description": "The x scale of the new sprite.",
+		"name": "sx",
+		"type": "number"
+	}, {
+		"description": "The y scale of the new sprite.",
+		"name": "sy",
+		"type": "number"
+	}, {
+		"default": 0,
+		"description": "The x origin offset of the new sprite.",
+		"name": "ox",
+		"type": "number"
+	}, {
+		"default": 0,
+		"description": "The y origin offset of the new sprite.",
+		"name": "oy",
+		"type": "number"
+	}, {
+		"default": 0,
+		"description": "The x shear factor of the new sprite.",
+		"name": "kx",
+		"type": "number"
+	}, {
+		"default": 0,
+		"description": "The y shear factor of the new sprite.",
+		"name": "ky",
+		"type": "number"
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"note": "The function returns the spritebatch object itself, so it can be used for chain calls.",
+	"returns": [ {
+		"description": "The spritebatch itself.",
+		"name": "sb",
+		"type": [ [ "Peripherals", "GPU", "spriteBatch" ] ]
+	} ],
+	"self": true,
+	"shortDescription": "Changes a sprite to the batch."
 }

@@ -1,48 +1,41 @@
 {
-	"desc":"Draws a triangle on the screen.",
-	"args":[
-		{
-			"name":"x1",
-			"type":"number",
-			"desc":"The first x coordinate of triangle vector."
-		},
-		{
-			"name":"y1",
-			"type":"number",
-			"desc":"The first y coordinate of triangle vector."
-		},
-		{
-			"name":"x2",
-			"type":"number",
-			"desc":"The second x coordinate of triangle vector."
-		},
-		{
-			"name":"y2",
-			"type":"number",
-			"desc":"The second y coordinate of triangle vector."
-		},
-		{
-			"name":"x3",
-			"type":"number",
-			"desc":"The third x coordinate of triangle vector."
-		},
-		{
-			"name":"y3",
-			"type":"number",
-			"desc":"The third y coordinate of triangle vector."
-		},
-		{
-			"name":"l",
-			"type":"boolean",
-			"desc":"(false/nil) The triangle will be filled, (true) The triangle will have only lines (outline).",
-			"default":"false"
-		},
-		{
-			"name":"c",
-			"type":"number",
-			"desc":"The color of triangle (0-15), defaults to the active color.",
-			"default":"nil"
-		}
-	],
-	"note":"The arguments can be passed in a table"
+	"arguments": [ {
+		"description": "The first x coordinate of triangle vector.",
+		"name": "x1",
+		"type": "number"
+	}, {
+		"description": "The first y coordinate of triangle vector.",
+		"name": "y1",
+		"type": "number"
+	}, {
+		"description": "The second x coordinate of triangle vector.",
+		"name": "x2",
+		"type": "number"
+	}, {
+		"description": "The second y coordinate of triangle vector.",
+		"name": "y2",
+		"type": "number"
+	}, {
+		"description": "The third x coordinate of triangle vector.",
+		"name": "x3",
+		"type": "number"
+	}, {
+		"description": "The third y coordinate of triangle vector.",
+		"name": "y3",
+		"type": "number"
+	}, {
+		"default": "false",
+		"description": "(false/nil) The triangle will be filled, (true) The triangle will have only lines (outline).",
+		"name": "l",
+		"type": "boolean"
+	}, {
+		"description": "The color of triangle (0-15), defaults to the active color.",
+		"name": "c",
+		"type": "number"
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"note": "The arguments can be passed in a table",
+	"returns": [],
+	"shortDescription": "Draws a triangle on the screen."
 }

@@ -1,10 +1,12 @@
 {
-  "desc":"Returns the number of sprites currently in the batch.",
-  "rets":[
-    {
-      "name":"count",
-      "type":"number",
-      "desc":"Number of sprites in the batch.."
-    }
-  ]
+	"arguments": [],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [ {
+		"description": "Number of sprites in the batch..",
+		"name": "count",
+		"type": "number"
+	} ],
+	"self": true,
+	"shortDescription": "Returns the number of sprites currently in the batch."
 }

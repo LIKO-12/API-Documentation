@@ -1,10 +1,11 @@
 {
-  "desc":"Creates a directory.",
-  "args":[
-    {
-      "name":"path",
-      "type":"string",
-      "desc":"Path to new directory."
-    }
-  ]
+	"arguments": [ {
+		"description": "Path to new directory.",
+		"name": "path",
+		"type": "string"
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [],
+	"shortDescription": "Creates a directory."
 }

@@ -1,10 +1,11 @@
 {
-  "desc":"Deletes a file.",
-  "args":[
-    {
-      "name":"file",
-      "type":"string",
-      "desc":"File to delete."
-    }
-  ]
+	"arguments": [ {
+		"description": "File to delete.",
+		"name": "file",
+		"type": "string"
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [],
+	"shortDescription": "Deletes a file."
 }

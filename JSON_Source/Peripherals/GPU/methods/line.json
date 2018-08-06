@@ -1,36 +1,31 @@
 {
-  "desc":"Draws line(s) on the screen.",
-  "args":[
-    {
-      "name":"x1",
-      "type":"number",
-      "desc":"The x position of the first end of the line."
-    },
-    {
-      "name":"y1",
-      "type":"number",
-      "desc":"The y position of the first end of the line."
-    },
-    {
-      "name":"x2",
-      "type":"number",
-      "desc":"The x position of the second end of the line."
-    },
-    {
-      "name":"y2",
-      "type":"number",
-      "desc":"The y position of the second end of the line."
-    },
-    {
-      "name":"...",
-      "type":"number",
-      "desc":"Any other lines to draw at the same time."
-    },
-    {
-      "name":"color",
-      "type":"number",
-      "desc":"The color of the line(s) (0-15), defaults to the active color.",
-      "default":"active color"
-    }
-  ]
+	"arguments": [ {
+		"description": "The x position of the first end of the line.",
+		"name": "x1",
+		"type": "number"
+	}, {
+		"description": "The y position of the first end of the line.",
+		"name": "y1",
+		"type": "number"
+	}, {
+		"description": "The x position of the second end of the line.",
+		"name": "x2",
+		"type": "number"
+	}, {
+		"description": "The y position of the second end of the line.",
+		"name": "y2",
+		"type": "number"
+	}, {
+		"description": "Any other lines to draw at the same time.",
+		"name": "...",
+		"type": "number"
+	}, {
+		"description": "The color of the line(s) (0-15), defaults to the active color.",
+		"name": "color",
+		"type": "number"
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [],
+	"shortDescription": "Draws line(s) on the screen."
 }

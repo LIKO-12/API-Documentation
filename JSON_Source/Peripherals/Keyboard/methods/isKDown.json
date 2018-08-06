@@ -1,22 +1,19 @@
 {
-	"desc":"Checks whether a certain key is down.\n\nCheck [Enums/KeyConstants](../Enums/KeyConstants.md).",
-	"args":[
-		{
-			"name":"key",
-			"type":"string",
-			"desc":" A key to check."
-		},
-		{
-			"name":"...",
-			"type":"string",
-			"desc":"Additional keys to check."
-		}
-	],
-	"rets":[
-		{
-			"name":"down",
-			"type":"boolean",
-			"desc":"True if any supplied key is down, false if not."
-		}
-	]
+	"arguments": [ {
+		"description": " A key to check.",
+		"name": "key",
+		"type": "string"
+	}, {
+		"description": "Additional keys to check.",
+		"name": "...",
+		"type": "string"
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [ {
+		"description": "True if any supplied key is down, false if not.",
+		"name": "down",
+		"type": "boolean"
+	} ],
+	"shortDescription": "Checks whether a certain key is down.\n\nCheck [Enums/KeyConstants](../Enums/KeyConstants.md)."
 }

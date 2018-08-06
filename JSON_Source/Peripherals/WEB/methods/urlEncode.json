@@ -1,17 +1,15 @@
 {
-  "desc":"Encode a url to send it.",
-  "args":[
-    {
-      "name":"url",
-      "type":"string",
-      "desc":"URL to encode."
-    }
-  ],
-  "rets":[
-    {
-      "name":"url",
-      "type":"string",
-      "desc":"The encoded URL."
-    }
-  ]
+	"arguments": [ {
+		"description": "URL to encode.",
+		"name": "url",
+		"type": "string"
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [ {
+		"description": "The encoded URL.",
+		"name": "url",
+		"type": "string"
+	} ],
+	"shortDescription": "Encode a url to send it."
 }

@@ -1,22 +1,20 @@
 {
-  "desc":"Get a pixel color in the imagedata.",
-  "args":[
-    {
-      "name":"x",
-      "type":"number",
-      "desc":"The pixel x position."
-    },
-    {
-      "name":"y",
-      "type":"number",
-      "desc":"The pixel y position."
-    }
-  ],
-  "rets":[
-    {
-      "name":"color",
-      "type":"number",
-      "desc":"The pixel color (0-15)."
-    }
-  ]
+	"arguments": [ {
+		"description": "The pixel x position.",
+		"name": "x",
+		"type": "number"
+	}, {
+		"description": "The pixel y position.",
+		"name": "y",
+		"type": "number"
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [ {
+		"description": "The pixel color (0-15).",
+		"name": "color",
+		"type": "number"
+	} ],
+	"self": true,
+	"shortDescription": "Get a pixel color in the imagedata."
 }

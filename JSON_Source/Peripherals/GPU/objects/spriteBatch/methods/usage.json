@@ -1,10 +1,12 @@
 {
-  "desc":"Returns the batch usage.",
-  "rets":[
-    {
-      "name":"usage",
-      "type":"string",
-      "desc":"The usage of the sprite batch."
-    }
-  ]
+	"arguments": [],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [ {
+		"description": "The usage of the sprite batch.",
+		"name": "usage",
+		"type": "string"
+	} ],
+	"self": true,
+	"shortDescription": "Returns the batch usage."
 }

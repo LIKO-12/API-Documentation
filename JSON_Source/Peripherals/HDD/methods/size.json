@@ -1,17 +1,15 @@
 {
-  "desc":"Gets the size of a file in bytes.",
-  "args":[
-    {
-      "name":"file",
-      "type":"string",
-      "desc":"File to get size of."
-    }
-  ],
-  "rets":[
-    {
-      "name":"size",
-      "type":"number",
-      "desc":"The size of the file in bytes."
-    }
-  ]
+	"arguments": [ {
+		"description": "File to get size of.",
+		"name": "file",
+		"type": "string"
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [ {
+		"description": "The size of the file in bytes.",
+		"name": "size",
+		"type": "number"
+	} ],
+	"shortDescription": "Gets the size of a file in bytes."
 }

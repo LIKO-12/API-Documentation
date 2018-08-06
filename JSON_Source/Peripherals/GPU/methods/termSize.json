@@ -1,16 +1,16 @@
 {
-	"desc":"Returns size of the terminal in characters.",
-	"rets":[
-		{
-			"name":"w",
-			"type":"number",
-			"desc":"The width of the terminal"
-		},
-		{
-			"name":"h",
-			"type":"number",
-			"desc":"The height of the terminal"
-		}
-	],
-	"note":"Custom fonts can change the output values, don't assume anything."
+	"arguments": [],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"note": "Custom fonts can change the output values, don't assume anything.",
+	"returns": [ {
+		"description": "The width of the terminal",
+		"name": "w",
+		"type": "number"
+	}, {
+		"description": "The height of the terminal",
+		"name": "h",
+		"type": "number"
+	} ],
+	"shortDescription": "Returns size of the terminal in characters."
 }

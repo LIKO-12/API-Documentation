@@ -1,17 +1,16 @@
 {
-  "desc":"This function will multiply the image dimensions with the given scale, and automatically scales the image data, then returns the result imagedata.",
-  "args":[
-    {
-      "name":"scale",
-      "type":"number",
-      "desc":"The scale to multiply the image dimensions with, must be bigger than zero and integer."
-    }
-  ],
-  "rets":[
-    {
-      "name":"enimgdata",
-      "type":"imagedata",
-      "desc":"The resulting imagedata."
-    }
-  ]
+	"arguments": [ {
+		"description": "The scale to multiply the image dimensions with, must be bigger than zero and integer.",
+		"name": "scale",
+		"type": "number"
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [ {
+		"description": "The resulting imagedata.",
+		"name": "enimgdata",
+		"type": [ [ "Peripherals", "GPU", "imageData" ] ]
+	} ],
+	"self": true,
+	"shortDescription": "This function will multiply the image dimensions with the given scale, and automatically scales the image data, then returns the result imagedata."
 }

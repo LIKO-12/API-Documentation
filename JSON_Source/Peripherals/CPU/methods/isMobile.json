@@ -1,10 +1,11 @@
 {
-	"desc":"Returns true if LIKO-12 is running on a mobile device (Android or iOS).",
-	"rets":[
-		{
-			"name":"mobile",
-			"type":"boolean",
-			"desc":"Is LIKO-12 running on a mobile device ?"
-		}
-	]
+	"arguments": [],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [ {
+		"description": "Is LIKO-12 running on a mobile device ?",
+		"name": "mobile",
+		"type": "boolean"
+	} ],
+	"shortDescription": "Returns true if LIKO-12 is running on a mobile device (Android or iOS)."
 }

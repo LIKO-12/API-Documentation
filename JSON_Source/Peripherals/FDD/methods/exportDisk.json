@@ -1,10 +1,11 @@
 {
-  "desc":"Exports current floppy disk",
-  "rets":[
-    {
-      "name":"fimg",
-      "type":"string",
-      "desc":"The current floppy disk."
-    }
-  ]
+	"arguments": [],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [ {
+		"description": "The current floppy disk.",
+		"name": "fimg",
+		"type": "string"
+	} ],
+	"shortDescription": "Exports current floppy disk"
 }

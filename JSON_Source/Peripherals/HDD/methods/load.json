@@ -1,24 +1,21 @@
 {
-  "desc":"Loads the contents of a Lua script as a function.",
-  "args":[
-    {
-      "name":"file",
-      "type":"string",
-      "desc":"File to load."
-    }
-  ],
-  "rets":[
-    {
-      "name":"chunk",
-      "type":"function",
-      "desc":"Loaded file function, nil when fails to load.",
-      "optional":true
-    },
-    {
-      "name":"ok",
-      "type":"string",
-      "desc":"The error message when failed to load.",
-      "optional":true
-    }
-  ]
+	"arguments": [ {
+		"description": "File to load.",
+		"name": "file",
+		"type": "string"
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [ {
+		"description": "Loaded file function, nil when fails to load.",
+		"name": "chunk",
+		"optional": true,
+		"type": "function"
+	}, {
+		"description": "The error message when failed to load.",
+		"name": "ok",
+		"optional": true,
+		"type": "string"
+	} ],
+	"shortDescription": "Loads the contents of a Lua script as a function."
 }

@@ -1,15 +1,16 @@
 {
-	"desc":"Gets reference image dimensions initially specified in GPU.quad().",
-	"rets":[
-		{
-			"name":"sw",
-			"type":"number",
-			"desc":"The image width used by the quad."
-		},
-		{
-			"name":"sh",
-			"type":"number",
-			"desc":"The image height used by the quad."
-		}
-	]
+	"arguments": [],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [ {
+		"description": "The image width used by the quad.",
+		"name": "sw",
+		"type": "number"
+	}, {
+		"description": "The image height used by the quad.",
+		"name": "sh",
+		"type": "number"
+	} ],
+	"self": true,
+	"shortDescription": "Gets reference image dimensions initially specified in GPU.quad()."
 }

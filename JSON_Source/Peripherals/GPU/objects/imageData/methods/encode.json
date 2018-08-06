@@ -1,10 +1,12 @@
 {
-  "desc":"Encodes the imagedata into lk12 image string.",
-  "rets":[
-    {
-      "name":"data",
-      "type":"string",
-      "desc":"The imagedata into lk12 image string."
-    }
-  ]
+	"arguments": [],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [ {
+		"description": "The imagedata into lk12 image string.",
+		"name": "data",
+		"type": "string"
+	} ],
+	"self": true,
+	"shortDescription": "Encodes the imagedata into lk12 image string."
 }

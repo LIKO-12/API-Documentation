@@ -1,17 +1,15 @@
 {
-  "desc":"Creats a new image that can be used for drawing.",
-  "args":[
-    {
-      "name":"data",
-      "type":"string",
-      "desc":"The image data, must be in Image format."
-    }
-  ],
-  "rets":[
-    {
-      "name":"img",
-      "type":"Image",
-      "desc":"The created image object."
-    }
-  ]
+	"arguments": [ {
+		"description": "The image data, must be in Image format.",
+		"name": "data",
+		"type": "string"
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [ {
+		"description": "The created image object.",
+		"name": "img",
+		"type": [ [ "Peripherals", "GPU", "image" ] ]
+	} ],
+	"shortDescription": "Creats a new image that can be used for drawing."
 }

@@ -1,10 +1,12 @@
 {
-  "desc":"Returns the imagedata height.",
-  "rets":[
-    {
-      "name":"height",
-      "type":"number",
-      "desc":"The imagedata height in pixels."
-    }
-  ]
+	"arguments": [],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [ {
+		"description": "The imagedata height in pixels.",
+		"name": "height",
+		"type": "number"
+	} ],
+	"self": true,
+	"shortDescription": "Returns the imagedata height."
 }

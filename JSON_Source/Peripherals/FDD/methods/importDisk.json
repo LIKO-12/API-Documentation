@@ -1,10 +1,11 @@
 {
-  "desc":"Imports and mounts a floppy disk",
-  "args":[
-    {
-      "name":"data",
-      "type":"string",
-      "desc":"Disk to import."
-    }
-  ]
+	"arguments": [ {
+		"description": "Disk to import.",
+		"name": "data",
+		"type": "string"
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [],
+	"shortDescription": "Imports and mounts a floppy disk"
 }

@@ -1,10 +1,11 @@
 {
-  "desc":"Checks if it has Luasec.",
-  "rets":[
-    {
-      "name":"hasLuaSec",
-      "type":"boolean",
-      "desc":"True if it has LuaSec, false otherwise."
-    }
-  ]
+	"arguments": [],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [ {
+		"description": "True if it has LuaSec, false otherwise.",
+		"name": "hasLuaSec",
+		"type": "boolean"
+	} ],
+	"shortDescription": "Checks if it has Luasec."
 }

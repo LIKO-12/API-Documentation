@@ -1,17 +1,15 @@
 {
-  "desc":"Returns true if the path given represents a file.",
-  "args":[
-    {
-      "name":"file",
-      "type":"string",
-      "desc":"Checks if it is a file."
-    }
-  ],
-  "rets":[
-    {
-      "name":"isFile",
-      "type":"boolean",
-      "desc":"True if it is a file, false otherwise."
-    }
-  ]
+	"arguments": [ {
+		"description": "Checks if it is a file.",
+		"name": "file",
+		"type": "string"
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [ {
+		"description": "True if it is a file, false otherwise.",
+		"name": "isFile",
+		"type": "boolean"
+	} ],
+	"shortDescription": "Returns true if the path given represents a file."
 }

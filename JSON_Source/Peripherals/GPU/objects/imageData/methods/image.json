@@ -1,11 +1,13 @@
 {
-  "desc":"Converts the imagedata to an image, which can be drawn to the screen.",
-  "rets":[
-    {
-      "name":"img",
-      "type":"image",
-      "desc":"The created image object."
-    }
-  ],
-  "note":"This function is slow if called repeatly, unlike image:data(). image:refresh() will reload it's content from it's source imagedata."
+	"arguments": [],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"note": "This function is slow if called repeatly, unlike image:data(). image:refresh() will reload it's content from it's source imagedata.",
+	"returns": [ {
+		"description": "The created image object.",
+		"name": "img",
+		"type": [ [ "Peripherals", "GPU", "image" ] ]
+	} ],
+	"self": true,
+	"shortDescription": "Converts the imagedata to an image, which can be drawn to the screen."
 }

@@ -1,15 +1,15 @@
 {
-  "desc":"Appends content to the end of a file.",
-  "args":[
-    {
-      "name":"file",
-      "type":"string",
-      "desc":"File to append to."
-    },
-    {
-      "name":"text",
-      "type":"string",
-      "desc":"Text to append."
-    }
-  ]
+	"arguments": [ {
+		"description": "File to append to.",
+		"name": "file",
+		"type": "string"
+	}, {
+		"description": "Text to append.",
+		"name": "text",
+		"type": "string"
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [],
+	"shortDescription": "Appends content to the end of a file."
 }

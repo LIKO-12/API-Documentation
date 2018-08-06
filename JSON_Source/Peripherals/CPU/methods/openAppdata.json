@@ -1,10 +1,11 @@
 {
-	"desc":"Opens a specific directory inside the LIKO-12 appdata folder using the HOST file explorer.\n\nIn order to show a folder inside the virtual drives open `/drives/[driveName]/...`.",
-	"args":[
-		{
-			"name":"dir",
-			"type":"string",
-			"desc":"The directory to open in the HOST file explorer."
-		}
-	]
+	"arguments": [ {
+		"description": "The directory to open in the HOST file explorer.",
+		"name": "dir",
+		"type": "string"
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [],
+	"shortDescription": "Opens a specific directory inside the LIKO-12 appdata folder using the HOST file explorer.\n\nIn order to show a folder inside the virtual drives open `/drives/[driveName]/...`."
 }

@@ -1,26 +1,23 @@
 {
-  "desc":"Draws point(s) on the screen.",
-  "args":[
-    {
-      "name":"x",
-      "type":"number",
-      "desc":"The x position of the point."
-    },
-    {
-      "name":"y",
-      "type":"number",
-      "desc":"The y position of the point."
-    },
-    {
-      "name":"...",
-      "type":"number",
-      "desc":"Any other points to draw at the same time."
-    },
-    {
-      "name":"color",
-      "type":"number",
-      "desc":"The color of the point(s) (0-15), defaults to the active color.",
-      "default":"active color"
-    }
-  ]
+	"arguments": [ {
+		"description": "The x position of the point.",
+		"name": "x",
+		"type": "number"
+	}, {
+		"description": "The y position of the point.",
+		"name": "y",
+		"type": "number"
+	}, {
+		"description": "Any other points to draw at the same time.",
+		"name": "...",
+		"type": "number"
+	}, {
+		"description": "The color of the point(s) (0-15), defaults to the active color.",
+		"name": "color",
+		"type": "number"
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [],
+	"shortDescription": "Draws point(s) on the screen."
 }

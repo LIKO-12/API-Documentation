@@ -1,15 +1,15 @@
 {
-  "desc":"Gets position of the mouse.",
-  "rets":[
-    {
-      "name":"mx",
-      "type":"number",
-      "desc":"The x position of the mouse."
-    },
-    {
-      "name":"my",
-      "type":"number",
-      "desc":"The y position of the mouse."
-    }
-  ]
+	"arguments": [],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [ {
+		"description": "The x position of the mouse.",
+		"name": "mx",
+		"type": "number"
+	}, {
+		"description": "The y position of the mouse.",
+		"name": "my",
+		"type": "number"
+	} ],
+	"shortDescription": "Gets position of the mouse."
 }

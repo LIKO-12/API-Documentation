@@ -1,36 +1,29 @@
 {
-	"desc":"Takes a screenshot of the canvas (without the cursor), and returns it's imagedata.",
-	"args":[
-		{
-			"name":"x",
-			"type":"number",
-			"desc":"The top-left X coord of the area to take the screenshot of.",
-			"default":"0"
-		},
-		{
-			"name":"y",
-			"type":"number",
-			"desc":"The top-left Y coord of the area to take the screenshot of.",
-			"default":"0"
-		},
-		{
-			"name":"w",
-			"type":"number",
-			"desc":"The width of the area to take the screenshot of.",
-			"default":"ScreenWidth"
-		},
-		{
-			"name":"h",
-			"type":"number",
-			"desc":"The height of the area to take the screenshot of.",
-			"default":"ScreenHeight"
-		}
-	],
-	"rets":[
-		{
-			"name":"imgdata",
-			"type":"imagedata",
-			"desc":"The created imagedata object."
-		}
-	]
+	"arguments": [ {
+		"default": 0,
+		"description": "The top-left X coord of the area to take the screenshot of.",
+		"name": "x",
+		"type": "number"
+	}, {
+		"default": 0,
+		"description": "The top-left Y coord of the area to take the screenshot of.",
+		"name": "y",
+		"type": "number"
+	}, {
+		"description": "The width of the area to take the screenshot of.",
+		"name": "w",
+		"type": "number"
+	}, {
+		"description": "The height of the area to take the screenshot of.",
+		"name": "h",
+		"type": "number"
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [ {
+		"description": "The created imagedata object.",
+		"name": "imgdata",
+		"type": [ [ "Peripherals", "GPU", "imageData" ] ]
+	} ],
+	"shortDescription": "Takes a screenshot of the canvas (without the cursor), and returns it's imagedata."
 }

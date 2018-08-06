@@ -1,15 +1,16 @@
 {
-  "desc":"Returns the imagedata dimensions.",
-  "rets":[
-    {
-      "name":"width",
-      "type":"number",
-      "desc":"The imagedata width in pixels."
-    },
-    {
-      "name":"height",
-      "type":"number",
-      "desc":"The imagedata height in pixels."
-    }
-  ]
+	"arguments": [],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [ {
+		"description": "The imagedata width in pixels.",
+		"name": "width",
+		"type": "number"
+	}, {
+		"description": "The imagedata height in pixels.",
+		"name": "height",
+		"type": "number"
+	} ],
+	"self": true,
+	"shortDescription": "Returns the imagedata dimensions."
 }
