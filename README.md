@@ -20,6 +20,7 @@
 * "nil"
 * "table"
 * "userdata"
+* "function"
 
 ### Folder Structure:
 
