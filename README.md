@@ -105,7 +105,7 @@
 			"name": "the argument name",
 			"type": "number", //Check the value types section.
 			"description": "Single line description", //Optional when name is null.
-			"default": "none"
+			"default": "nil"
 			//This specified means that this argument is optional, and so do not specify "nil" in the supported types.
 			//If there is no default value, but this argument is optional, then specify "default": "nil".
 		}
@@ -155,7 +155,7 @@
           "name": "the argument name",
           "type": "number", //Check the value types section.
           "description": "Single line description", //optional when name is null
-          "default": "none"
+          "default": "nil"
           //This specified means that this argument is optional, and so do not specify "nil" in the supported types.
           //If there is no default value, but this argument is optional, then specify "default": "nil".
         }
