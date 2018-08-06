@@ -1,5 +1,5 @@
 
-local JSON = require("Libraries.JSON")
+local JSON = fs.load("C:/Libraries/JSON.lua")()
 local function log(...)
   local t = table.concat({...}," ")
   cprint(...)
@@ -7,68 +7,52 @@ local function log(...)
   flip()
 end
 
-local paths = {}
-local decoded = {}
-local anadata = {}
-
-local function indexFolder(p)
-  local items = fs.getDirectoryItems(p)
-  for id,name in ipairs(items) do
-    if fs.isFile(p..name) then
-      if name:sub(-5,-1) == ".json" then
-        table.insert(paths,p..name)
+function JSON:onDecodeError(message, text, location)
+  local counter = 0
+  local charPos = 0
+  local line = 0
+  
+  if location then
+    for i=1, #text do
+      local char = text:sub(i,i)
+      counter = counter + 1
+      charPos = charPos + 1
+      if char == "\n" then
+        charPos = 0
+        line = line + 1
       end
-    else
-      indexFolder(p..name.."/")
-    end
-  end
-end
-
-indexFolder("D:/DOCS/")
-
-color(12) log("Verifying JSON files") color(5)
-
-for id, path in ipairs(paths) do
-  local data = fs.read(path)
-  log(id.."/"..#paths,path)
-  decoded[id] = JSON:decode(data)
-end
-
-color(12) log("Collecting variables types") color(5)
-
-local temptypes = {}
-
-local function indexTypes(t)
-  for _, v1 in ipairs(t) do
-    if type(v1.type) == "table" then
-      for _, v2 in ipairs(v1.type) do
-        temptypes[v2] = true
+      
+      if counter == location then
+        break
       end
-    else
-      temptypes[v1.type] = true
     end
-  end
-end
-
-color(5)
-
-for id, data in ipairs(decoded) do
-  log(id.."/"..#paths,paths[id])
-  if data.Usage then
-    for _,usage in ipairs(data.Usage) do
-      if usage.args then indexTypes(usage.args) end
-      if usage.rets then indexTypes(usage.rets) end
-    end
+    
+    error("Failed to decode: "..message.."at line #"..line.." char #"..charPos.." byte #"..location)
   else
-    if data.args then indexTypes(data.args) end
-    if data.rets then indexTypes(data.rets) end
+    error("Failed to decode: "..message..", unknown location.")
   end
 end
 
-local types = {}
-for k,v in pairs(temptypes) do table.insert(types,k) end
-anadata.Types = types
+--Path should have a trailing /
+local function loadDirectory(path)
+  local dirName = fs.getName(path)
+  
+  local base = {}
+  if fs.exists(path..dirName..".json") then
+    log(6,"* Decode: "..path..dirName..".json")
+    JSON:decode(fs.read(path..dirName..".json"))
+  end
+  
+  for id, name in ipairs(fs.getDirectoryItems(path)) do
+    if fs.isFile(path..name) then
+      if name:sub(-5,-1) == ".json" then
+        log(5,"* Decode: "..path..name)
+        base[name:sub(1,-6)] = JSON:decode(fs.read(path..name))
+      end
+    else
+      base[name] = loadDirectory(path..name.."/")
+    end
+  end
+end
 
-color(12) log("Saving analyze result")
-
-fs.write("D:/analistics.json",JSON:encode_pretty(anadata))
+loadDirectory("D:/JSON_Source/Peripherals/")
