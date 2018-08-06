@@ -1,0 +1,17 @@
+{
+  "desc":"Load a luasec submodule.",
+  "args":[
+    {
+      "name":"name",
+      "type":"string",
+      "desc":"Name of submodule to load."
+    }
+  ],
+  "rets":[
+    {
+      "name":"submodule",
+      "type":"table",
+      "desc":"The loaded submodule."
+    }
+  ]
+}

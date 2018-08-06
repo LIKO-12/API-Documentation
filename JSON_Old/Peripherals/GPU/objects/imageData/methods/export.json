@@ -1,0 +1,10 @@
+{
+  "desc":"Exports the imagedata to png, all transparent pixel in palt() will be transparent in the result png.",
+  "rets":[
+    {
+      "name":"png",
+      "type":"string",
+      "desc":"The binary png data."
+    }
+  ]
+}
