@@ -1,0 +1,10 @@
+{
+  "desc":"Imports and mounts a floppy disk",
+  "args":[
+    {
+      "name":"data",
+      "type":"string",
+      "desc":"Disk to import."
+    }
+  ]
+}

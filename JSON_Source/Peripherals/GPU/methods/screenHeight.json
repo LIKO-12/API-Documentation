@@ -1,0 +1,10 @@
+{
+	"desc":"Returns the height of the screen",
+	"rets":[
+		{
+			"name":"h",
+			"type":"number",
+			"desc":"The height of the screen (By default - 128)"
+		}
+	]
+}

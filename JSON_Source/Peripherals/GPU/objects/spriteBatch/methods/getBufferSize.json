@@ -1,0 +1,10 @@
+{
+  "desc":"Returns the buffer size.",
+  "rets":[
+    {
+      "name":"size",
+      "type":"number",
+      "desc":"The size of the buffer."
+    }
+  ]
+}

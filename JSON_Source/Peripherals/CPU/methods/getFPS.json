@@ -1,0 +1,10 @@
+{
+	"desc":"Returns the current frame per second count.",
+	"rets":[
+		{
+			"name":"fps",
+			"type":"number",
+			"desc":"The FPS."
+		}
+	]
+}
