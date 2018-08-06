@@ -6,7 +6,7 @@
 * string: A simple type.
 * table: A collection of types.
 * "any": Any type.
-* table: This has to exist in a collection of types, the collection can contain only one
+* table: This has to exist in a collection of types, the collection could contain only one.
 
 ```js
 ["GPU","image"] //This type references to a format/object of the GPU peripheral, with the name "image"
@@ -81,7 +81,7 @@
 
 ### Method Json:
 
-* Located in `Peripheral/Methods/methodName.JSON`
+* Located in `Peripheral/Methods/methodName.JSON` or `Peripheral/objects/methods/methodName.json`
 
 ```js
 //Single usage variant.
@@ -97,14 +97,14 @@
 		"..."
 	]
 	"extra": "Markdown and multiple lines supported", //Extra information, (Optional).
-  "self": true, //Should the user use ':' when calling this method.
+  "self": true, //Should the user use ':' when calling this method (Objects only).
 	"arguments":[
 		{
 			//If the name was not provided, and the argument has a default value, then it's a constant value.
 			//The name can be "..." for varavg.
 			"name": "the argument name",
 			"type": "number", //Check the value types section.
-			"description": "Single line description",
+			"description": "Single line description", //Optional when name is null.
 			"default": "none"
 			//This specified means that this argument is optional, and so do not specify "nil" in the supported types.
 			//If there is no default value, but this argument is optional, then specify "default": "nil".
@@ -137,6 +137,7 @@
 	"extra": "Markdown and multiple lines supported", //Extra information, (Optional).
   "usages":[
     {
+      "name": "Usage name",
       "shortDescription": "Short desc",
       "longDescription": "Markdown and multiline supported", //Optional
       "note": "A single line note, markdown supported", //Shouldn't exist if "notes" exists.
@@ -146,14 +147,14 @@
         "..."
       ]
       "extra": "Markdown and multiple lines supported", //Extra information, (Optional).
-      "self": true, //Should the user use ':' when calling this method.
+      "self": true, //Should the user use ':' when calling this method (Objects only).
       "arguments":[
         {
           //If the name was not provided, and the argument has a default value, then it's a constant value.
-          //The name can be "..." for varavg.
+          //The name can be "..." for vararg.
           "name": "the argument name",
           "type": "number", //Check the value types section.
-          "description": "Single line description",
+          "description": "Single line description", //optional when name is null
           "default": "none"
           //This specified means that this argument is optional, and so do not specify "nil" in the supported types.
           //If there is no default value, but this argument is optional, then specify "default": "nil".
