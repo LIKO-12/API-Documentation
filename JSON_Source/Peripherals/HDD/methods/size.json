@@ -10,7 +10,7 @@
   "rets":[
     {
       "name":"size",
-      "type":"integer",
+      "type":"number",
       "desc":"The size of the file in bytes."
     }
   ]

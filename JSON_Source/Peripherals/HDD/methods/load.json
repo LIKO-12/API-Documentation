@@ -9,19 +9,16 @@
   ],
   "rets":[
     {
-      "name":"file",
+      "name":"chunk",
       "type":"function",
-      "desc":"Loaded function"
+      "desc":"Loaded file function, nil when fails to load.",
+      "optional":true
     },
     {
       "name":"ok",
-      "type":"unknown",
-      "desc":"First item returned from pcall on success, second item on error"
-    },
-    {
-      "name":"err",
-      "type":"unknown",
-      "desc":"Second item returned from pcall on success, third item on error"
+      "type":"string",
+      "desc":"The error message when failed to load.",
+      "optional":true
     }
   ]
 }

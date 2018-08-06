@@ -10,7 +10,7 @@
   "rets":[
     {
       "name":"timestamp",
-      "type":"integer",
+      "type":"number",
       "desc":"Unix timestamp of the file."
     }
   ]

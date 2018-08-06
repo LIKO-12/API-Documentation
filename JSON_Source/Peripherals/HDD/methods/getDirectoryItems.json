@@ -10,7 +10,7 @@
   "rets":[
     {
       "name":"files",
-      "type":"list",
+      "type":"table",
       "desc":"List of files in the directory."
     }
   ]

@@ -10,7 +10,7 @@
   "rets":[
     {
       "name":"submodule",
-      "type":"module",
+      "type":"table",
       "desc":"The loaded submodule."
     }
   ]
