@@ -9,7 +9,7 @@
 * table: This has to exist in a collection of types, the collection could contain only one.
 
 ```js
-["GPU","image"] //This type references to a format/object of the GPU peripheral, with the name "image"
+["Peripherals","GPU","image"] //This type references to a format/object of the GPU peripheral, with the name "image"
 ```
 
 #### Default types:
