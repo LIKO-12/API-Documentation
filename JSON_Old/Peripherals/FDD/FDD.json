@@ -1,8 +1,0 @@
-{
-	"availableForGames": false,
-	"version": [ 1,0,0 ],
-	"availableSince": [ 0,6,0 ],
-	"lastUpdatedIn": [ 0,8,0 ],
-	"name": "Floppy Disk Drive",
-	"shortDescription": "This peripheral is responsible for loading and reading data inside of PNGs, invisibly to the user."
-}

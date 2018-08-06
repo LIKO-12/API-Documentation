@@ -1,8 +1,0 @@
-{
-	"availableForGames": false,
-	"version": [ 1,0,0 ],
-	"availableSince": [ 0,6,0 ],
-	"lastUpdatedIn": [ 0,8,0 ],
-	"name": "WEB",
-	"shortDescription": "This peripheral gives access into the Internet."
-}

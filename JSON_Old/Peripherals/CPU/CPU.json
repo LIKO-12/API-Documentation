@@ -1,8 +1,0 @@
-{
-	"availableForGames": true,
-	"version": [ 1,0,0 ],
-	"availableSince": [ 0,6,0 ],
-	"lastUpdatedIn": [ 0,8,0 ],
-	"name": "Central Processing Unit",
-	"shortDescription": "This peripheral contains most of miscellaneous functions that LIKO-12 would use."
-}
