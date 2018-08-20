@@ -1,15 +1,17 @@
 {
-	"arguments": [],
+  "shortDescription": "Returns the dimensions of the screen.",
 	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
 	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
-	"returns": [ {
-		"description": "The width of the screen (By default - 192)",
-		"name": "w",
-		"type": "number"
-	}, {
-		"description": "The height of the screen (By default - 128)",
-		"name": "h",
-		"type": "number"
-	} ],
-	"shortDescription": "Returns the dimensions of the screen"
+  
+	"returns": [
+    {
+      "description": "The width of the screen (By default - 192)",
+      "name": "w",
+      "type": "number"
+    },{
+      "description": "The height of the screen (By default - 128)",
+      "name": "h",
+      "type": "number"
+    }
+  ]
 }

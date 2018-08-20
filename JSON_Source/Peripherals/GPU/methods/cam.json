@@ -1,70 +1,88 @@
 {
+  "shortDescription": "Transforms the drawing operations.",
+  "note": "The transforming operations sums up, to reset check the fifth usage of this function.",
 	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
 	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
-	"note": "The transforming operations sums up, to reset check the fifth variant of this function.",
-	"shortDescription": "Transforms the drawing operations",
-	"usages": [ {
-		"arguments": [ {
-			"default": "translate",
-			"type": "string"
-		}, {
-			"description": "The translation relative to the x-axis.",
-			"name": "x",
-			"type": "number"
-		}, {
-			"description": "The translation relative to the y-axis.",
-			"name": "y",
-			"type": "number"
-		} ],
-		"name": "Translate drawing positions:",
-		"returns": [],
-		"shortDescription": "Shifts all drawing operations."
-	}, {
-		"arguments": [ {
-			"default": "scale",
-			"type": "string"
-		}, {
-			"description": "The scaling in the direction of the x-axis.",
-			"name": "sx",
-			"type": "number"
-		}, {
-			"description": "The scaling in the direction of the y-axis.",
-			"name": "sy",
-			"type": "number"
-		} ],
-		"name": "Scale drawing operations:",
-		"returns": [],
-		"shortDescription": "Scales all the drawing operations."
-	}, {
-		"arguments": [ {
-			"default": "rotate",
-			"type": "string"
-		}, {
-			"description": "The amount to rotate the coordinate system in radians.",
-			"name": "a",
-			"type": "number"
-		} ],
-		"name": "Rotate drawing operations:",
-		"returns": []
-	}, {
-		"arguments": [ {
-			"default": "shear",
-			"type": "string"
-		}, {
-			"description": "The shear factor on the x-axis.",
-			"name": "x",
-			"type": "number"
-		}, {
-			"description": "The shear factor on the y-axis.",
-			"name": "y",
-			"type": "number"
-		} ],
-		"name": "Shear drawing operations:",
-		"returns": []
-	}, {
-		"arguments": [],
-		"name": "Reset all the tranformations:",
-		"returns": [],
-		"shortDescription": "Resets all the tranformations done back to their original state."
-	} ]
+  
+	"usages": [
+    {
+      "name": "Translate drawing positions:",
+      "shortDescription": "Shifts all drawing operations.",
+      
+      "arguments": [
+        {
+          "default": "translate",
+          "type": "string"
+        },
+        {
+          "description": "The translation relative to the x-axis.",
+          "name": "x",
+          "type": "number"
+        },
+        {
+          "description": "The translation relative to the y-axis.",
+          "name": "y",
+          "type": "number"
+        }
+      ]
+    },
+    {
+      "name": "Scale drawing operations:",
+      "shortDescription": "Scales all the drawing operations.",
+      
+      "arguments": [
+        {
+          "default": "scale",
+          "type": "string"
+        },
+        {
+          "description": "The scaling in the direction of the x-axis.",
+          "name": "sx",
+          "type": "number"
+        },
+        {
+          "description": "The scaling in the direction of the y-axis.",
+          "name": "sy",
+          "type": "number"
+        }
+      ]
+    },
+    {
+      "name": "Rotate drawing operations:",
+      "arguments": [
+        {
+          "default": "rotate",
+          "type": "string"
+        }, {
+          "description": "The amount to rotate the coordinate system in radians.",
+          "name": "a",
+          "type": "number"
+        }
+      ]
+    },
+    {
+      "name": "Shear drawing operations:",
+      
+      "arguments": [
+        {
+          "default": "shear",
+          "type": "string"
+        },
+        {
+          "description": "The shear factor on the x-axis.",
+          "name": "x",
+          "type": "number"
+        },
+        {
+          "description": "The shear factor on the y-axis.",
+          "name": "y",
+          "type": "number"
+        }
+      ]
+    },
+    {
+      "name": "Reset all the tranformations:",
+      "shortDescription": "Resets all the tranformations done back to their original state."
+    }
+  ]
 }

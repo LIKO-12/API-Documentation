@@ -1,31 +1,39 @@
 {
-	"arguments": [ {
-		"description": "The x coord of the quad's top-left corner.",
-		"name": "x",
-		"type": "number"
-	}, {
-		"description": "The y coord of the quad's top-left corner.",
-		"name": "y",
-		"type": "number"
-	}, {
-		"description": "The width of the quad.",
-		"name": "w",
-		"type": "number"
-	}, {
-		"description": "The height of the quad.",
-		"name": "h",
-		"type": "number"
-	}, {
-		"description": "The width of the reference image.",
-		"name": "sw",
-		"type": "number"
-	}, {
-		"description": "The height of the reference image.",
-		"name": "sh",
-		"type": "number"
-	} ],
-	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+  "shortDescription": "Creates a new quad.",
+  "longDescription": "Creates a new quad.\n\nQuads can be used to select a part of an image to draw. In this way, one large images atlas (sheet) can be loaded, and then split up into sub-images.",
+  "availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
 	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
-	"returns": [],
-	"shortDescription": "Creates a new quad.\n\nQuads can be used to select a part of an image to draw. In this way, one large images atlas (sheet) can be loaded, and then split up into sub-images."
+  
+	"arguments": [
+    {
+      "description": "The x coord of the quad's top-left corner.",
+      "name": "x",
+      "type": "number"
+    },
+    {
+      "description": "The y coord of the quad's top-left corner.",
+      "name": "y",
+      "type": "number"
+    },
+    {
+      "description": "The width of the quad.",
+      "name": "w",
+      "type": "number"
+    },
+    {
+      "description": "The height of the quad.",
+      "name": "h",
+      "type": "number"
+    },
+    {
+      "description": "The width of the reference image.",
+      "name": "sw",
+      "type": "number"
+    },
+    {
+      "description": "The height of the reference image.",
+      "name": "sh",
+      "type": "number"
+    }
+  ]
 }

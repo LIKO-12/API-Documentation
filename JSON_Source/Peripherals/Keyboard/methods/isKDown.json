@@ -1,4 +1,6 @@
 {
+  "shortDescription": "Checks whether a certain key is down.",
+	"longDescription": "Checks whether a certain key is down.\n\nCheck [Enums/KeyConstants](/Documentation/Enums/KeyConstants.md).",
 	"arguments": [ {
 		"description": " A key to check.",
 		"name": "key",
@@ -14,6 +16,5 @@
 		"description": "True if any supplied key is down, false if not.",
 		"name": "down",
 		"type": "boolean"
-	} ],
-	"shortDescription": "Checks whether a certain key is down.\n\nCheck [Enums/KeyConstants](../Enums/KeyConstants.md)."
+	} ]
 }

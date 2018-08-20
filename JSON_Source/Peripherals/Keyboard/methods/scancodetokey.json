@@ -11,5 +11,6 @@
 		"name": "key",
 		"type": "string"
 	} ],
-	"shortDescription": "Gets the key corresponding to the given hardware scancode.\n\nUnlike key constants, Scancodes are keyboard layout-independent. For example the scancode \"w\" will be generated if the key in the same place as the \"w\" key on an American keyboard is pressed, no matter what the key is labelled or what the user's operating system settings are.\n\nScancodes are useful for creating default controls that have the same physical locations on on all systems.\n\nCheck [Enums/Scancodes](../Enums/Scancodes.md) and [Enums/KeyConstants](../Enums/KeyConstants.md)."
+  "shortDescription": "Gets the key corresponding to the given hardware scancode.",
+	"longDescription": "Gets the key corresponding to the given hardware scancode.\n\nUnlike key constants, Scancodes are keyboard layout-independent. For example the scancode \"w\" will be generated if the key in the same place as the \"w\" key on an American keyboard is pressed, no matter what the key is labelled or what the user's operating system settings are.\n\nScancodes are useful for creating default controls that have the same physical locations on on all systems.\n\nCheck [Enums/Scancodes](/Documentation/Enums/Scancodes.md) and [Enums/KeyConstants](/Documentation/Enums/KeyConstants.md)."
 }

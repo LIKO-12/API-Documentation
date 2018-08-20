@@ -1,7 +1,7 @@
 {
 	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
 	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
-	"shortDescription": "Reboot LIKO-12",
+	"shortDescription": "Reboot LIKO-12.",
 	"usages": [ {
 		"arguments": [],
 		"name": "Soft Reboot:",
