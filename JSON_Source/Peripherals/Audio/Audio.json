@@ -1,0 +1,8 @@
+{
+	"availableForGames": true,
+	"version": [ 1,0,0 ],
+	"availableSince": [ 0,7,0 ],
+	"lastUpdatedIn": [ 0,8,0 ],
+	"name": "Audio Output",
+	"shortDescription": "Allows the generation of chiptune audio."
+}
