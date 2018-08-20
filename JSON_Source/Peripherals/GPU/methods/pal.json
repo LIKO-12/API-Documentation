@@ -17,8 +17,7 @@
 			"name": "palette",
 			"type": [ "number", "boolean" ]
 		} ],
-		"name": "Reset the whole palette.",
-		"returns": []
+		"name": "Reset the whole palette."
 	}, {
 		"arguments": [ {
 			"description": "The color to reset to it's default.",
@@ -33,7 +32,6 @@
 			"name": "p",
 			"type": [ "number", "boolean" ]
 		} ],
-		"name": "Reset a specific color to it's default.",
-		"returns": []
+		"name": "Reset a specific color to it's default."
 	} ]
 }

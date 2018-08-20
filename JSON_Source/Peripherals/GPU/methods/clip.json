@@ -21,11 +21,8 @@
 			"type": "number"
 		} ],
 		"name": "Enable clipping:",
-		"note": "The arguments can be passed in a table.",
-		"returns": []
+		"note": "The arguments can be passed in a table."
 	}, {
-		"arguments": [],
-		"name": "Disable clipping:",
-		"returns": []
+		"name": "Disable clipping:"
 	} ]
 }

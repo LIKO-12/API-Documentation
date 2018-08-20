@@ -10,6 +10,5 @@
 	} ],
 	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
 	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
-	"returns": [],
 	"shortDescription": "Writes content to a file (Will override anything in the file)."
 }

@@ -6,6 +6,5 @@
 	} ],
 	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
 	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
-	"returns": [],
 	"shortDescription": "Sleeps (pauses) the current execution for specific amount of seconds."
 }

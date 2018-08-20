@@ -9,10 +9,8 @@
 			"name": "state",
 			"type": "boolean"
 		} ],
-		"name": "Disable/Enable key repeat:",
-		"returns": []
+		"name": "Disable/Enable key repeat:"
 	}, {
-		"arguments": [],
 		"name": "Get the current key repeat state:",
 		"returns": [ {
 			"description": "Whether repeat keypress events should be enabled when a key is held down.",

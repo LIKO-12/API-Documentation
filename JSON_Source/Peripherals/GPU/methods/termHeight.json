@@ -1,5 +1,4 @@
 {
-	"arguments": [],
 	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
 	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
 	"note": "Custom fonts can change the output values, don't assume anything.",

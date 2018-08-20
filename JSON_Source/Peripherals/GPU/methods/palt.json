@@ -14,11 +14,8 @@
 			"name": "transparent",
 			"type": "boolean"
 		} ],
-		"name": " Make a specific color transparent or not.",
-		"returns": []
+		"name": " Make a specific color transparent or not."
 	}, {
-		"arguments": [],
-		"name": "Reset the colors to it's default.",
-		"returns": []
+		"name": "Reset the colors to it's default."
 	} ]
 }

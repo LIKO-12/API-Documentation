@@ -99,7 +99,7 @@
 	]
 	"extra": "Markdown and multiple lines supported", //Extra information, (Optional).
 	"self": true, //Should the user use ':' when calling this method (Objects only).
-	"arguments":[
+	"arguments":[ //Shouldn't exists when there are no arguments
 		{
 			//If the name was not provided, and the argument has a default value, then it's a constant value.
 			//The name can be "..." for varavg.
@@ -111,7 +111,7 @@
 			//If there is no default value, but this argument is optional, then specify "default": "nil".
 		}
 	],
-	"returns":[
+	"returns":[ //Shouldn't exists when there are not returns
 		{
 			"name":"return name", //can be "..."
 			"type": "number", //Check the value types section.
@@ -149,7 +149,7 @@
       ]
       "extra": "Markdown and multiple lines supported", //Extra information, (Optional).
       "self": true, //Should the user use ':' when calling this method (Objects only).
-      "arguments":[
+      "arguments":[ //Shouldn't exists when there are no arguments
         {
           //If the name was not provided, and the argument has a default value, then it's a constant value.
           //The name can be "..." for vararg.
@@ -161,7 +161,7 @@
           //If there is no default value, but this argument is optional, then specify "default": "nil".
         }
       ],
-      "returns":[
+      "returns":[ //Shouldn't exists when there are not returns
         {
           "name":"return name", //can be "..."
           "type": "number", //Check the value types section.

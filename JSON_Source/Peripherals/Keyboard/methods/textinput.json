@@ -8,10 +8,8 @@
 			"name": "state",
 			"type": "boolean"
 		} ],
-		"name": "Disable/Enable textinput:",
-		"returns": []
+		"name": "Disable/Enable textinput:"
 	}, {
-		"arguments": [],
 		"name": "Get the current textinput state:",
 		"returns": [ {
 			"description": "True if the textinput is enabled, false is the text input is disabled.",

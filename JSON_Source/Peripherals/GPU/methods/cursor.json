@@ -13,10 +13,8 @@
 			"name": "grap",
 			"type": "boolean"
 		} ],
-		"name": "Set the current mouse cursor:",
-		"returns": []
+		"name": "Set the current mouse cursor:"
 	}, {
-		"arguments": [],
 		"name": "Get the current mouse cursor:",
 		"returns": [ {
 			"description": "The current active cursor name.",
@@ -44,7 +42,6 @@
 			"name": "hy",
 			"type": "number"
 		} ],
-		"name": "Create a new cursor:",
-		"returns": []
+		"name": "Create a new cursor:"
 	} ]
 }

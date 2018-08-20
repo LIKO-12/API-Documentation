@@ -36,6 +36,5 @@
 	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
 	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
 	"note": "The arguments can be passed in a table",
-	"returns": [],
 	"shortDescription": "Draws a triangle on the screen."
 }

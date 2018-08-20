@@ -40,11 +40,8 @@
 			"name": "b",
 			"type": "number"
 		} ],
-		"name": "Set the RGB values of a color:",
-		"returns": []
+		"name": "Set the RGB values of a color:"
 	}, {
-		"arguments": [],
-		"name": "Reset the palette colors to their defaults (PICO-8 Palette):",
-		"returns": []
+		"name": "Reset the palette colors to their defaults (PICO-8 Palette):"
 	} ]
 }

@@ -3,7 +3,6 @@
 	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
 	"shortDescription": "Read or write to/from the clipboard.",
 	"usages": [ {
-		"arguments": [],
 		"name": "Read the clipboard content:",
 		"returns": [ {
 			"description": "The clipboard content.",
@@ -16,7 +15,6 @@
 			"name": "content",
 			"type": [ "string", "number" ]
 		} ],
-		"name": "Set the clipboard content:",
-		"returns": []
+		"name": "Set the clipboard content:"
 	} ]
 }
