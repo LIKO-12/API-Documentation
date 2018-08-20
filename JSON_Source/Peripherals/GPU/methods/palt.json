@@ -2,7 +2,7 @@
 	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
 	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
 	"note": "This only affects images.",
-	"shortDescription": "Makes a specific color transparent or not, By default the color 0 is transparent.",
+	"shortDescription": "Makes a specific color transparent or not, by default the color 0 is transparent.",
 	"usages": [ {
 		"arguments": [ {
 			"description": "The color id (0-15).",

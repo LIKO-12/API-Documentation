@@ -25,5 +25,5 @@
 		"name": "imgdata",
 		"type": [ [ "Peripherals", "GPU", "imageData" ] ]
 	} ],
-	"shortDescription": "Takes a screenshot of the canvas (without the cursor), and returns it's imagedata."
+	"shortDescription": "Takes a screenshot of the canvas (without the cursor), and returns its imagedata."
 }
