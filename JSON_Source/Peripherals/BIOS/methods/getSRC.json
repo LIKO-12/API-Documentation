@@ -1,0 +1,19 @@
+{
+  "availableSince": [[1,18,2], [0,9,0]],
+  "lastUpdatedIn": [[1,18,2], [0,9,0]],
+  "shortDescription": "Returns `LIKO-12_Source.love` data.",
+  "returns":[
+    {
+      "name":"LIKO_SRC",
+      "type":["string","boolean"],
+      "description":"The file data of LIKO-12's source code .love file."
+    },
+    {
+      "name":"err",
+      "type":"string",
+      "description":"The failure reason if `LIKO_SRC` was `false`.",
+      "optional":true
+    }
+  ],
+  "note":"`LIKO-12_Source.love` is created at the first boot whenever a different LIKO-12 version is used, with the message `Generating internal file...` shown."
+}
