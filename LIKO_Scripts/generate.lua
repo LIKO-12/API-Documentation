@@ -72,10 +72,10 @@ local function generateType(t)
   elseif type(t) == "table" then
     local tc = {}
     for k,v in ipairs(t) do
-      if type(t2) == "table" then
-        tc[k] = "["..table.concat(t2,"/").."](/Documentation/"..t2[1].."/"..t2[2].."/objects/"..t2[3].."/)"
+      if type(v) == "table" then
+        tc[k] = "["..table.concat(v,"/").."](/Documentation/"..v[1].."/"..v[2].."/objects/"..v[3].."/)"
       else
-        tc[k] = t2
+        tc[k] = v
       end
     end
     return table.concat(tc,", ")
