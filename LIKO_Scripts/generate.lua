@@ -85,10 +85,14 @@ local function generateType(t)
 end
 
 local function generateArguments(args,multiUsage)
-  local adoc = multiUsage and "\n---\n## Arguments\n---\n\n" or "\n---\n# Arguments\n---\n\n"
+  local adoc = multiUsage and "\n---\n#### Arguments\n---\n\n" or "\n---\n### Arguments\n---\n\n"
   for _, arg in ipairs(args) do
     if arg.name then
-      adoc = adoc.."* **"..arg.name.." ("..generateType(arg.type).."):** "..arg.description.."\n"
+      if arg.default then
+        adoc = adoc.."* **"..arg.name.." ("..generateType(arg.type)..", nil) (Default:`"..(type(arg.default) == "string" and '"'..arg.default..'"' or tostring(arg.default)).."`):** "..arg.description.."\n"
+      else
+        adoc = adoc.."* **"..arg.name.." ("..generateType(arg.type).."):** "..arg.description.."\n"
+      end
     else
       if type(arg.default) == "string" then
         adoc = adoc.."* **`\""..tostring(arg.default).."\"` ("..generateType(arg.type)..")**\n"
@@ -105,10 +109,10 @@ local function generateArguments(args,multiUsage)
 end
 
 local function generateReturns(rets,multiUsage)
-  local rdoc = multiUsage and "\n---\n## Returns\n---\n\n" or "\n---\n# Returns\n---\n\n"
+  local rdoc = multiUsage and "\n---\n#### Returns\n---\n\n" or "\n---\n### Returns\n---\n\n"
   for _, ret in ipairs(rets) do
     if ret.optional then
-      rdoc = rdoc.."* **"..ret.name.." ("..generateType(ret.type)..") _(Can be nil)_:** "..ret.description.."\n"
+      rdoc = rdoc.."* **"..ret.name.." ("..generateType(ret.type)..", nil):** "..ret.description.."\n"
     else
       rdoc = rdoc.."* **"..ret.name.." ("..generateType(ret.type).."):** "..ret.description.."\n"
     end
@@ -191,7 +195,7 @@ local function generateMethod(mname,method,pname)
     end
     mdoc = mdoc.."---"
   else
-    mdoc = mdoc.."\n---\n# Syntax\n---\n\n"..generateSyntax(mname,method,pname).."\n"
+    mdoc = mdoc.."\n---\n\n"..generateSyntax(mname,method,pname).."\n"
     
     if method.arguments then
       mdoc = mdoc .. generateArguments(method.arguments,false)
@@ -224,10 +228,14 @@ for pname, peripheral in pairs(JAPI.Peripherals) do
   
   if peripheral.methods then
     local mlist, moslist = {}, {}
+    local mnlist, mosnlist = {}, {}
     
     for mname, method in pairs(peripheral.methods) do
       local ttable = mname:sub(1,1) == "_" and moslist or mlist
       ttable[#ttable+1] = "* ["..mname.."](/Documentation/Peripherals/"..pname.."/"..mname..".md): "..(method.shortDescription or "**NO DESCRIPTION**")
+      
+      local ntable = mname:sub(1,1) == "_" and mosnlist or mnlist
+      ntable[#ntable+1] = mname
       
       --Generate the method documentation
       local mdoc = generateMethod(mname,method,pname)
@@ -238,13 +246,25 @@ for pname, peripheral in pairs(JAPI.Peripherals) do
     table.sort(mlist)
     table.sort(moslist)
     
+    local psbar = "* ["..pname.."](/Documentation/Peripherals/"..pname.."/)\n"
+    
     if #mlist > 0 then
-      preadme = preadme.."\n---\n## Methods\n---\n"..table.concat(mlist,"\n").."\n"
+      preadme = preadme.."\n---\n### Methods\n---\n"..table.concat(mlist,"\n").."\n"
+      psbar = psbar.."* Methods\n"
+      for _,mname in ipairs(mnlist) do
+        psbar = psbar.."  * ["..mname.."](/Documentation/Peripherals/"..pname.."/"..mname..".md)\n"
+      end
     end
     
     if #moslist > 0 then
-      preadme = preadme.."\n---\n## OS Methods\n---\n!> Those methods are not available for games.\n"..table.concat(moslist,"\n").."\n"
+      preadme = preadme.."\n---\n### OS Methods\n---\n!> Those methods are not available for games.\n"..table.concat(moslist,"\n").."\n"
+      psbar = psbar.."* OS Methods\n"
+      for _,mname in ipairs(mosnlist) do
+        psbar = psbar.."  * ["..mname.."](/Documentation/Peripherals/"..pname.."/"..mname..".md)\n"
+      end
     end
+    
+    fs.write("D:/MD_Generated/Peripherals/"..pname.."/_sidebar.md",psbar)
   end
   
   fs.write("D:/MD_Generated/Peripherals/"..pname.."/README.md",preadme)
