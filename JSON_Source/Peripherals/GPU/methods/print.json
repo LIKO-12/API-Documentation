@@ -157,7 +157,7 @@
       ]
     },
     {
-      "name": "Print in terminal grid directly without wrapping nor updating the cursor pos.",
+      "name": "Print in terminal grid directly without wrapping nor new line.",
       "arguments": [
         {
           "description": "The text to draw.",
