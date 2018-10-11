@@ -1,0 +1,21 @@
+{
+  "shortDescription": "Gets data from RAM.",
+	"longDescription": "Returns a string of data from video memory.",
+	"arguments": [ {
+		"description": "The address of the data to read.",
+		"name": "address",
+		"type": "number"
+	},
+  {
+    "description": "Length of the data to read.",
+		"name": "length",
+		"type": "number"
+  } ],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+  "returns": [ {
+		"description": "Data that was read.",
+		"name": "data",
+		"type": "string"
+	} ]
+}

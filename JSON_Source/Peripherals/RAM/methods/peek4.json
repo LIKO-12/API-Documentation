@@ -1,0 +1,17 @@
+{
+  "shortDescription": "Peeks a half byte section in RAM.",
+	"longDescription": "Peeks (reads) a half byte section in video memory.",
+  "note": "The address is for the specific half byte.",
+	"arguments": [ {
+		"description": "An address to the location to read.",
+		"name": "address",
+		"type": "number"
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+  "returns": [ {
+		"description": "Value of the half byte, that was read.",
+		"name": "value",
+		"type": "number"
+	} ]
+}
