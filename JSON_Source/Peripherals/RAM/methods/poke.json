@@ -6,7 +6,7 @@
 		"name": "address",
 		"type": "number"
 	}, {
-		"description": "Value to write to the half byte.",
+		"description": "Value to write to the byte.",
 		"name": "value",
 		"type": "number"
 	} ],
