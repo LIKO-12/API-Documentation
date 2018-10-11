@@ -1,0 +1,16 @@
+{
+  "shortDescription": "Peeks a byte section in RAM.",
+	"longDescription": "Peeks (reads) a byte section in video memory.",
+	"arguments": [ {
+		"description": "An address to the location to read.",
+		"name": "address",
+		"type": "number"
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+  "returns": [ {
+		"description": "Value of the byte, that was read.",
+		"name": "value",
+		"type": "number"
+	} ]
+}
