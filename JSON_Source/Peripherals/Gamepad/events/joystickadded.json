@@ -1,0 +1,10 @@
+{
+  "desc":"Triggered when a joystick is connected.",
+  "args":[
+    {
+      "name":"joystick",
+      "type":"table",
+      "desc":"The joystick that was added."
+    }
+  ]
+}

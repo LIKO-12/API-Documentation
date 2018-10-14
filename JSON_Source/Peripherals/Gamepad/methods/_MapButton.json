@@ -1,0 +1,5 @@
+{
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+  "shortDescription": "Sets mapping state to MapButton."
+}

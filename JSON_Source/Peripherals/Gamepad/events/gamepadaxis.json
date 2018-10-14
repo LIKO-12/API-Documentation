@@ -1,0 +1,15 @@
+{
+  "desc":"Triggered when the joystick is moved.",
+  "args":[
+    {
+      "name":"joystick",
+      "type":"table",
+      "desc":"The joystick that was moved."
+    },
+    {
+      "name":"axis",
+      "type":"string",
+      "desc":"The axis is was pushed on (leftx or lefty)."
+    }
+  ]
+}

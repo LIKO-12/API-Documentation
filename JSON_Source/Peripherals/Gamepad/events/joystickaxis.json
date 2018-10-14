@@ -1,0 +1,20 @@
+{
+  "desc":"Map the joystick movements.",
+  "args":[
+    {
+      "name":"joystick",
+      "type":"table",
+      "desc":"The joystick to map."
+    },
+    {
+      "name":"axis",
+      "type":"number",
+      "desc":"The index to map to."
+    },
+    {
+      "name":"value",
+      "type":"number",
+      "desc":"Value of the axis."
+    }
+  ]
+}

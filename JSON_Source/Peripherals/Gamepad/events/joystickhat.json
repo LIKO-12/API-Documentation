@@ -1,0 +1,21 @@
+{
+  "desc":"Map the 8-direction hat movements.",
+  "note":"direction can be: 'd' (down), 'l' (left), 'r' (right), or 'u' (up)",
+  "args":[
+    {
+      "name":"joystick",
+      "type":"table",
+      "desc":"The joystick to map."
+    },
+    {
+      "name":"hat",
+      "type":"number",
+      "desc":"The index to map to."
+    },
+    {
+      "name":"direction",
+      "type":"string",
+      "desc":"Direction to map for."
+    }
+  ]
+}
