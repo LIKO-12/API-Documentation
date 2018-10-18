@@ -1,0 +1,15 @@
+{
+  "desc":"Map a button on the joysitck.",
+  "args":[
+    {
+      "name":"joystick",
+      "type":"table",
+      "desc":"The joystick with the button."
+    },
+    {
+      "name":"button",
+      "type":"string",
+      "desc":"The button to map."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "desc":"A button on the gamepad was pressed.",
+  "args":[
+    {
+      "name":"joystick",
+      "type":"table",
+      "desc":"The joystick with the pressed button."
+    },
+    {
+      "name":"button",
+      "type":"string",
+      "desc":"The name of the pressed button."
+    }
+  ]
+}

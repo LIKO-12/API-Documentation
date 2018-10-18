@@ -1,0 +1,15 @@
+{
+  "desc":"A button on the gamepad was released.",
+  "args":[
+    {
+      "name":"joystick",
+      "type":"table",
+      "desc":"The joystick with the released button."
+    },
+    {
+      "name":"button",
+      "type":"string",
+      "desc":"The name of the released button."
+    }
+  ]
+}
