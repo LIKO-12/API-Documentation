@@ -6,7 +6,7 @@
     {
       "name":"LIKO_Version",
       "type":"string",
-      "description":"Current LIKO-12's version string (ex: `0.9.0_DEV`)."
+      "description":"Current LIKO-12's version string (ex: `1.0.0_DEV`)."
     },
     {
       "name":"LIKO_Old",
