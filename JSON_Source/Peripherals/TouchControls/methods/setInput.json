@@ -1,0 +1,13 @@
+{
+	"availableSince": [[1,0,0], [0,6,0]],
+	"lastUpdatedIn": [[1,0,0],[0,8,0]],
+	"shortDescription": "Turns on or off the touch controls.",
+	"self": true,
+	"arguments":[
+		{
+			"name": "bool",
+			"type": "boolean",
+			"description": "Wheather the touch controls should be on"
+		}
+	]
+}
