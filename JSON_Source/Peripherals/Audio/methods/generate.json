@@ -1,0 +1,22 @@
+{
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 7, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 8, 0 ] ],
+	"shortDescription": "Generates a tune from wave, frequency, and amplitude",
+	"arguments": [
+    {
+			"description": "The waveform id, it should be at least 0, but no more then 5.",
+			"name": "wave",
+			"type": "number"
+		},
+    {
+      "description": "The frequency of the tune.",
+			"name": "freq",
+			"type": "number"
+    },
+    {
+      "description": "The amplitude of the tune.",
+			"name": "amp",
+			"type": "number"
+    }
+  ]
+}
