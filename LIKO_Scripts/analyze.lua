@@ -1,10 +1,10 @@
 local common = require("common")
 
-data = common.loadDirectory("D:/JSON_Source/Peripherals/")
+local data = common.loadDirectory("D:/JSON_Source/Peripherals/")
 
-peripherals = {}
+local peripherals = {}
 
-plugins = {}
+local plugins = {}
 
 function plugins.pnames(pname, peripheral)
     return pname
