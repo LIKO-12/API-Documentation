@@ -42,6 +42,9 @@ end
 local function loadDirectory(path)
   local dirName = fs.getName(path)
   
+  local errors = {}
+  local error
+
   local base = {}
   if fs.exists(path..dirName..".json") then
     base = JSON:decode(fs.read(path..dirName..".json"))
@@ -50,14 +53,17 @@ local function loadDirectory(path)
   for id, name in ipairs(fs.getDirectoryItems(path)) do
     if fs.isFile(path..name) then
       if name:sub(-5,-1) == ".json" then
-        base[name:sub(1,-6)] = JSON:decode(fs.read(path..name))
+        base[name:sub(1,-6)], error = JSON:decode(fs.read(path..name))
+        if error then
+          table.append(errors, error)
+        end
       end
     else
       base[name] = loadDirectory(path..name.."/")
     end
   end
   
-  return base
+  return base, errors
 end
 
 return {log = log, clog = clog, loadDirectory = loadDirectory}
