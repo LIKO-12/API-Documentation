@@ -1,0 +1,63 @@
+local JSON = fs.load("C:/Libraries/JSON.lua")()
+
+local function log(...)
+  local t = table.concat({...}," ")
+  cprint(...)
+  print(t)
+  flip()
+end
+
+local function clog(c, ...)
+    color(c)
+    log(...)
+  end
+
+function JSON:onDecodeError(message, text, location)
+  local counter = 0
+  local charPos = 0
+  local line = 0
+  
+  if location then
+    for i=1, #text do
+      local char = text:sub(i,i)
+      counter = counter + 1
+      charPos = charPos + 1
+      if char == "\n" then
+        charPos = 0
+        line = line + 1
+      end
+      
+      if counter == location then
+        break
+      end
+    end
+    
+    error("Failed to decode: "..message.."at line #"..line.." char #"..charPos.." byte #"..location)
+  else
+    error("Failed to decode: "..message..", unknown location.")
+  end
+end
+
+--Path should have a trailing /
+local function loadDirectory(path)
+  local dirName = fs.getName(path)
+  
+  local base = {}
+  if fs.exists(path..dirName..".json") then
+    base = JSON:decode(fs.read(path..dirName..".json"))
+  end
+  
+  for id, name in ipairs(fs.getDirectoryItems(path)) do
+    if fs.isFile(path..name) then
+      if name:sub(-5,-1) == ".json" then
+        base[name:sub(1,-6)] = JSON:decode(fs.read(path..name))
+      end
+    else
+      base[name] = loadDirectory(path..name.."/")
+    end
+  end
+  
+  return base
+end
+
+return {log = log, clog = clog, loadDirectory = loadDirectory}
