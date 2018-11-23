@@ -32,7 +32,7 @@ end
 
 for pname, peripheral in pairs(data) do
     for k, v in plugins do
-        log(k)
+        common.log(k)
         result = v(pname, peripheral)
         if type(result) == "string" then
             common.log(string)
