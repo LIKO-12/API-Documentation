@@ -1,58 +1,45 @@
+local common = require("common")
 
-local JSON = fs.load("C:/Libraries/JSON.lua")()
-local function log(...)
-  local t = table.concat({...}," ")
-  cprint(...)
-  print(t)
-  flip()
+data = common.loadDirectory("D:/JSON_Source/Peripherals/")
+
+peripherals = {}
+
+plugins = {}
+
+function plugins.pnames(pname, peripheral)
+    return pname
 end
 
-function JSON:onDecodeError(message, text, location)
-  local counter = 0
-  local charPos = 0
-  local line = 0
-  
-  if location then
-    for i=1, #text do
-      local char = text:sub(i,i)
-      counter = counter + 1
-      charPos = charPos + 1
-      if char == "\n" then
-        charPos = 0
-        line = line + 1
-      end
-      
-      if counter == location then
-        break
-      end
+function plugins.methods(pname, peripheral)
+    mnames = {}
+    for mname, method in pairs(peripheral) do
+        table.append(mnames, mname)
     end
-    
-    error("Failed to decode: "..message.."at line #"..line.." char #"..charPos.." byte #"..location)
-  else
-    error("Failed to decode: "..message..", unknown location.")
-  end
+    return mnames
 end
 
---Path should have a trailing /
-local function loadDirectory(path)
-  local dirName = fs.getName(path)
-  
-  local base = {}
-  if fs.exists(path..dirName..".json") then
-    log(6,"* Decode: "..path..dirName..".json")
-    JSON:decode(fs.read(path..dirName..".json"))
-  end
-  
-  for id, name in ipairs(fs.getDirectoryItems(path)) do
-    if fs.isFile(path..name) then
-      if name:sub(-5,-1) == ".json" then
-        log(5,"* Decode: "..path..name)
-        base[name:sub(1,-6)] = JSON:decode(fs.read(path..name))
-      end
-    else
-      base[name] = loadDirectory(path..name.."/")
+function plugins.defaulted(pname, peripheral)
+    defaults = {}
+    for mname, method in pairs(peripheral) do
+        for k,v in ipairs(method.arguments) do
+            if v.default then
+                table.append(defaults, v.default)
+            end
+        end
     end
-  end
+    return defaults
 end
 
-loadDirectory("D:/JSON_Source/Peripherals/")
+for pname, peripheral in pairs(data) do
+    for k, v in plugins do
+        log(k)
+        result = v(pname, peripheral)
+        if type(result) == "string" then
+            common.log(string)
+        elseif type(result) == "table" then
+            for k,v in ipairs(result) do
+                common.log(v)
+            end
+        end
+    end
+end
