@@ -5,23 +5,30 @@ local data, errors = common.loadDirectory("D:/JSON_Source/Peripherals/")
 local plugins = {}
 
 function plugins.syntax(data, errors)
-  if errors then
+  if #errors > 0 then
     return false, errors
   else
     return true
   end
 end
 
-function plugins.data(data, _errors)
+function plugins.methods(data, _errors)
   local flag = true
   local errors = {}
   for pname, peripheral in pairs(data) do
-    for mname, method in pairs(peripheral) do
-      if (not method.availableSince) or (not method.lastUpdatedIn) or (not method.shortDescription) then
-        flag = false
-        table.insert(errors, "in peripheral "..pname.." in method "..mname)
+    if peripheral.methods then
+      for mname, method in pairs(peripheral.methods) do
+        if (not method.availableSince) or (not method.lastUpdatedIn) or (not method.shortDescription) then
+          flag = false
+          table.insert(errors, "in peripheral "..pname.." in method "..mname)
+        end
       end
     end
+  end
+  if flag then
+    return true
+  else
+    return false, errors
   end
 end
 
