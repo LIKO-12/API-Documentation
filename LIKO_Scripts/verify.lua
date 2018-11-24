@@ -19,15 +19,15 @@ function plugins.data(data, _errors)
     for mname, method in pairs(peripheral) do
       if (not method.availableSince) or (not method.lastUpdatedIn) or (not method.shortDescription) then
         flag = false
-        table.append(errors, "in peripheral "..pname.." in method "..mname)
+        table.insert(errors, "in peripheral "..pname.." in method "..mname)
       end
     end
   end
 end
 
-color(12) log("Verifying JSON files") color(5)
+color(12) common.log("Verifying JSON files") color(5)
 
-for k, v in plugins do
+for k, v in pairs(plugins) do
   common.log(k)
   local ok, errors = v(data, errors)
   if ok then
@@ -39,4 +39,4 @@ for k, v in plugins do
   end
 end
 
-color(12) log("Verified all JSONs successfully.")
+color(12) common.log("Verified all JSONs successfully.")

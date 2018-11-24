@@ -55,7 +55,7 @@ local function loadDirectory(path)
       if name:sub(-5,-1) == ".json" then
         base[name:sub(1,-6)], error = JSON:decode(fs.read(path..name))
         if error then
-          table.append(errors, error)
+          table.insert(errors, error)
         end
       end
     else

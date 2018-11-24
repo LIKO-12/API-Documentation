@@ -13,7 +13,7 @@ end
 function plugins.methods(pname, peripheral)
     mnames = {}
     for mname, method in pairs(peripheral) do
-        table.append(mnames, mname)
+        table.insert(mnames, mname)
     end
     return mnames
 end
@@ -23,7 +23,7 @@ function plugins.defaulted(pname, peripheral)
     for mname, method in pairs(peripheral) do
         for k,v in ipairs(method.arguments) do
             if v.default then
-                table.append(defaults, v.default)
+                table.insert(defaults, v.default)
             end
         end
     end
@@ -31,7 +31,7 @@ function plugins.defaulted(pname, peripheral)
 end
 
 for pname, peripheral in pairs(data) do
-    for k, v in plugins do
+    for k, v in pairs(plugins) do
         common.log(k)
         result = v(pname, peripheral)
         if type(result) == "string" then
