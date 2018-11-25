@@ -1,4 +1,4 @@
-local common = require("common")
+local common = require("docscripts")
 
 local verbose, path = common.parseargs({...})
 
