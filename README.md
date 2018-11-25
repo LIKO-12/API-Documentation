@@ -1,5 +1,19 @@
 # LIKO-12-API
 
+## Generating Docs
+
+### Preperation
+
+1. Move docscripts.lua into D:/OS.
+2. Move the other scripts into D:/Programs.
+3. Move documentation into D:/JSON_Source.
+
+### Usage
+
+* Run verify to make sure the docs are well made.
+* Run analyze to learn more about the docs.
+* Run generate to create the docs
+
 ## Spec:
 
 ### Value Types:
