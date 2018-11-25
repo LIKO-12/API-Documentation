@@ -66,4 +66,16 @@ local function loadDirectory(path)
   return base, errors
 end
 
-return {log = log, clog = clog, loadDirectory = loadDirectory}
+local function parseargs(args)
+  local verbose = false, path = nil
+  for key, value in ipairs(args) do
+    if value == "-v" or value == "--verbose" then
+      verbose = true
+    elseif value == "-p" or value == "--path" then
+      path = args[key+1]
+    end
+  end
+  return verbose, path
+end
+
+return {log = log, clog = clog, loadDirectory = loadDirectory, parseargs = parseargs}
