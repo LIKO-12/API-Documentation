@@ -1,6 +1,8 @@
 local common = require("common")
 
-local data, errors = common.loadDirectory("D:/JSON_Source/Peripherals/")
+local verbose, path = common.parseargs({...})
+
+local data, errors = common.loadDirectory(path)
 
 local plugins = {}
 
@@ -43,6 +45,7 @@ for k, v in pairs(plugins) do
     for _,error in ipairs(errors) do
       common.log(error)
     end
+    return 1, k .. " FAILED"
   end
 end
 

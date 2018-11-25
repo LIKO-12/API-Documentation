@@ -1,6 +1,8 @@
 local common = require("common")
 
-local data = common.loadDirectory("D:/JSON_Source/Peripherals/")
+local verbose, path = common.parseargs({...})
+
+local data = common.loadDirectory(path)
 
 local peripherals = {}
 
@@ -38,14 +40,14 @@ end
 
 
 for k, v in pairs(plugins) do
-    common.log(k)
+    common.clog(9, k)
     for pname, peripheral in pairs(data) do
     result = v(pname, peripheral)
     if type(result) == "string" then
-        common.log(result)
+        common.clog(6, result)
     elseif type(result) == "table" then
         for k,v in ipairs(result) do
-            common.log(v)
+            common.clog(6, v)
         end
     end
 end

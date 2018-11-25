@@ -1,4 +1,5 @@
 local JSON = fs.load("C:/Libraries/JSON.lua")()
+local term = require("terminal")
 
 local function log(...)
   local t = table.concat({...}," ")
@@ -67,12 +68,12 @@ local function loadDirectory(path)
 end
 
 local function parseargs(args)
-  local verbose = false, path = nil
+  local verbose = false, path = "D:/JSON_Source/Peripherals/"
   for key, value in ipairs(args) do
     if value == "-v" or value == "--verbose" then
       verbose = true
     elseif value == "-p" or value == "--path" then
-      path = args[key+1]
+      path = term.resolve(args[key+1])
     end
   end
   return verbose, path

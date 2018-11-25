@@ -1,9 +1,15 @@
 
 local common = require("common")
 
-local data, errors = common.loadDirectory("D:/JSON_Source/Peripherals/")
+local verbose, path = common.parseargs({...})
+
+local data = common.loadDirectory(path)
 
 fs.newDirectory("D:/MD_Generated/Peripherals/")
+
+if verbose then
+  common.log("Generating Docs.")
+end
 
 local function generateType(t)
   if type(t) == "string" then
@@ -151,7 +157,7 @@ local function generateMethod(mname,method,pname)
 end
 
 for pname, peripheral in pairs(data) do
-  common.log(6,pname)
+  common.clog(6,pname)
   fs.newDirectory("D:/MD_Generated/Peripherals/"..pname)
   
   local preadme = "# "..pname.." - The "..peripheral.name.."\n---\n\n"
