@@ -1,70 +1,15 @@
 
-local JSON = fs.load("C:/Libraries/JSON.lua")()
-local function log(c,...)
-  color(c)
-  local t = table.concat({...}," ")
-  cprint(...)
-  print(t)
-  flip()
-end
+local common = require("docscripts")
 
-function JSON:onDecodeError(message, text, location)
-  local counter = 0
-  local charPos = 0
-  local line = 0
-  
-  if location then
-    for i=1, #text do
-      local char = text:sub(i,i)
-      counter = counter + 1
-      charPos = charPos + 1
-      if char == "\n" then
-        charPos = 0
-        line = line + 1
-      end
-      
-      if counter == location then
-        break
-      end
-    end
-    
-    error("Failed to decode: "..message.."at line #"..line.." char #"..charPos.." byte #"..location)
-  else
-    error("Failed to decode: "..message..", unknown location.")
-  end
-end
+local verbose, path = common.parseargs({...})
 
---Path should have a trailing /
-local function loadDirectory(path)
-  local dirName = fs.getName(path)
-  
-  local base = {}
-  if fs.exists(path..dirName..".json") then
-    --log(6,"* Decode: "..path..dirName..".json")
-    base = JSON:decode(fs.read(path..dirName..".json"))
-  end
-  
-  for id, name in ipairs(fs.getDirectoryItems(path)) do
-    if fs.isFile(path..name) then
-      if name:sub(-5,-1) == ".json" then
-        --log(5,"* Decode: "..path..name)
-        base[name:sub(1,-6)] = JSON:decode(fs.read(path..name))
-      end
-    else
-      base[name] = loadDirectory(path..name.."/")
-    end
-  end
-  
-  return base
-end
-
-log(12,"Loading JSON...")
-
-local JAPI = loadDirectory("D:/JSON_Source/")
-
-log(12,"Generating Peripherals Markdown...")
+local data = common.loadDirectory(path)
 
 fs.newDirectory("D:/MD_Generated/Peripherals/")
+
+if verbose then
+  common.log("Generating Docs.")
+end
 
 local function generateType(t)
   if type(t) == "string" then
@@ -211,8 +156,8 @@ local function generateMethod(mname,method,pname)
   return mdoc
 end
 
-for pname, peripheral in pairs(JAPI.Peripherals) do
-  log(6,pname)
+for pname, peripheral in pairs(data) do
+  common.clog(6,pname)
   fs.newDirectory("D:/MD_Generated/Peripherals/"..pname)
   
   local preadme = "# "..pname.." - The "..peripheral.name.."\n---\n\n"

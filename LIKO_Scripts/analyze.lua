@@ -1,58 +1,54 @@
+local common = require("docscripts")
 
-local JSON = fs.load("C:/Libraries/JSON.lua")()
-local function log(...)
-  local t = table.concat({...}," ")
-  cprint(...)
-  print(t)
-  flip()
+local verbose, path = common.parseargs({...})
+
+local data = common.loadDirectory(path)
+
+local peripherals = {}
+
+local plugins = {}
+
+function plugins.pnames(pname, peripheral)
+    return pname
 end
 
-function JSON:onDecodeError(message, text, location)
-  local counter = 0
-  local charPos = 0
-  local line = 0
-  
-  if location then
-    for i=1, #text do
-      local char = text:sub(i,i)
-      counter = counter + 1
-      charPos = charPos + 1
-      if char == "\n" then
-        charPos = 0
-        line = line + 1
-      end
-      
-      if counter == location then
-        break
-      end
+function plugins.methods(pname, peripheral)
+    mnames = {}
+    if peripheral.methods then
+        for mname, method in pairs(peripheral.methods) do
+            table.insert(mnames, mname)
+        end
     end
-    
-    error("Failed to decode: "..message.."at line #"..line.." char #"..charPos.." byte #"..location)
-  else
-    error("Failed to decode: "..message..", unknown location.")
-  end
+    return mnames
 end
 
---Path should have a trailing /
-local function loadDirectory(path)
-  local dirName = fs.getName(path)
-  
-  local base = {}
-  if fs.exists(path..dirName..".json") then
-    log(6,"* Decode: "..path..dirName..".json")
-    JSON:decode(fs.read(path..dirName..".json"))
-  end
-  
-  for id, name in ipairs(fs.getDirectoryItems(path)) do
-    if fs.isFile(path..name) then
-      if name:sub(-5,-1) == ".json" then
-        log(5,"* Decode: "..path..name)
-        base[name:sub(1,-6)] = JSON:decode(fs.read(path..name))
-      end
-    else
-      base[name] = loadDirectory(path..name.."/")
+function plugins.defaulted(pname, peripheral)
+    defaults = {}
+    if peripheral.methods then
+        for mname, method in pairs(peripheral.methods) do
+            if method.arguements then
+                for k,v in ipairs(method.arguments) do
+                    if v.default then
+                        table.insert(defaults, v.default)
+                    end
+                end
+            end
+        end
     end
-  end
+    return defaults
 end
 
-loadDirectory("D:/JSON_Source/Peripherals/")
+
+for k, v in pairs(plugins) do
+    common.clog(9, k)
+    for pname, peripheral in pairs(data) do
+    result = v(pname, peripheral)
+    if type(result) == "string" then
+        common.clog(6, result)
+    elseif type(result) == "table" then
+        for k,v in ipairs(result) do
+            common.clog(6, v)
+        end
+    end
+end
+end
