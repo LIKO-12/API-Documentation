@@ -166,7 +166,7 @@ for pname, peripheral in pairs(data) do
     preadme = preadme.."!> This peripheral is not available for games.\n\n"
   end
   
-  preadme = preadme..(peripheral.shortDescription or "!> Short Description is missing !").."\n\n---\n\n"
+  preadme = preadme..(peripheral.longDescription or peripheral.shortDescription or "!> Short Description is missing !").."\n\n---\n\n"
   preadme = preadme.."* **Version:** "..table.concat(peripheral.version,".").."\n"
   preadme = preadme.."* **Available since LIKO-12:** v"..table.concat(peripheral.availableSince,".").."\n"
   preadme = preadme.."* **Last updated in LIKO-12:** v"..table.concat(peripheral.lastUpdatedIn,".").."\n"
