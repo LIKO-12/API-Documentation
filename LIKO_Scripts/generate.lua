@@ -167,6 +167,16 @@ for pname, peripheral in pairs(data) do
   end
   
   preadme = preadme..(peripheral.longDescription or peripheral.shortDescription or "!> Short Description is missing !").."\n\n---\n\n"
+
+  if peripheral.notes then
+    for _, note in ipairs(peripheral.notes) do
+      preadme = preadme.."?> "..note.."\n\n"
+    end
+    preadme = preadme.."---\n\n"
+  elseif peripheral.note then
+    preadme = preadme.."?> "..peripheral.note.."\n\n---\n\n"
+  end
+
   preadme = preadme.."* **Version:** "..table.concat(peripheral.version,".").."\n"
   preadme = preadme.."* **Available since LIKO-12:** v"..table.concat(peripheral.availableSince,".").."\n"
   preadme = preadme.."* **Last updated in LIKO-12:** v"..table.concat(peripheral.lastUpdatedIn,".").."\n"
