@@ -68,7 +68,8 @@ local function loadDirectory(path)
 end
 
 local function parseargs(args)
-  local verbose = false, path = "D:/JSON_Source/Peripherals/"
+  local verbose = false
+  local path = "D:/JSON_Source/Peripherals/"
   for key, value in ipairs(args) do
     if value == "-v" or value == "--verbose" then
       verbose = true
