@@ -34,6 +34,26 @@ function plugins.methods(data, _errors)
   end
 end
 
+function plugins.isDocumented(data, _errors)
+  flag = true
+  local errors = {}
+  local list = BIOS.HandledAPIS()
+  for peripheral, methods in pairs(list) do
+    if not data[peripheral] then
+      flag = false
+      table.insert(errors, "Peripheral " .. peripheral .. " is not documented.")
+    else
+      for method, _ in pairs(methods) do
+        if not data[peripheral][method] then
+          flag = false
+          table.insert(errors, "Method " .. method .. " in peripheral " .. peripheral .. " is not documented.")
+        end
+      end
+    end
+  end
+  return flag, errors
+end
+
 color(12) common.log("Verifying JSON files") color(5)
 
 for k, v in pairs(plugins) do
