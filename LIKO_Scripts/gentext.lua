@@ -191,6 +191,7 @@ for pname,p in pairs(docs.Peripherals) do
 end
 
 --Append changelog
+text[#text+1] = ""
 text[#text+1] = sharpFrame("Changelog")
 
 local changelog = fs.read("C:/help/whatsnew"):gsub("\r","")
