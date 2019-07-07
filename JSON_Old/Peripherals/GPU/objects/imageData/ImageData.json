@@ -1,5 +1,0 @@
-{
-	"availableSince": [[1,0,0], [0,6,0]],
-	"lastUpdatedIn": [[1,0,0], [0,8,0]],
-	"shortDescription": "ImageData, modifiable pixel data, not drawable, convert to an image to draw."
-}

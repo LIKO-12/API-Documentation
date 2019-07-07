@@ -1,5 +1,0 @@
-{
-	"availableSince": [[1,0,0], [0,9,0]],
-	"lastUpdatedIn": [[1,0,0], [0,9,0]],
-	"shortDescription": "Spritebatch, draw multiple parts of an image at once instantly, useful for maps."
-}
