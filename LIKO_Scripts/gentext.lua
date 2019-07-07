@@ -190,5 +190,14 @@ for pname,p in pairs(docs.Peripherals) do
 	end
 end
 
+--Append changelog
+text[#text+1] = sharpFrame("Changelog")
+
+local changelog = fs.read("C:/help/whatsnew"):gsub("\r","")
+changelog = changelog:gsub("\\%x","") --Clear color tags
+changelog = changelog:gsub("\\L","L") --Clear LIKO-12 tags
+changelog = changelog:sub(12,-1)
+text[#text+1] = changelog
+
 text = table.concat(text,"\n"):gsub("\n","\r\n")
 fs.write("D:/documentation.txt",text)
