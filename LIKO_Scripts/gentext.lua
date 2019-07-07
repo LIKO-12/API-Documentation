@@ -49,10 +49,29 @@ local function type2string(t)
 	return t
 end
 
-local function method2text(text,ident,pname,m)
+local function method2text(text,ident,pname,oname,mname,m)
 	text[#text+1] = ""
-	text[#text+1] = string.format("%s- Introduced in %s V%s, LIKO-12 V%s",ident,pname,table.concat(m.availableSince[1],"."),table.concat(m.availableSince[2],"."))
+	text[#text+1] = string.format("%s- %s%s%s",ident,oname,m.self and ":" or ".",mname)
+	text[#text+1] = ident..string.rep("-",text[#text]:len()-#ident)
+	text[#text+1] = ident.." "..(m.shortDescription or "!!! NO SHORT DESCRIPTION !!!")
+	text[#text+1] = ""
+	text[#text+1] = string.format("%s - Introduced in %s V%s, LIKO-12 V%s",ident,pname,table.concat(m.availableSince[1],"."),table.concat(m.availableSince[2],"."))
+	text[#text+1] = string.format("%s - Last updated in %s V%s, LIKO-12 V%s",ident,pname,table.concat(m.lastUpdatedIn[1],"."),table.concat(m.lastUpdatedIn[2],"."))
+	text[#text+1] = ""
+	text[#text+1] = ident.." "..(m.fullDescription or "!!! NO FULL DESCRIPTION !!!")
+	text[#text+1] = ""
+	if m.usages then
+		text[#text+1] = ident.." = Usages:"
+		for i=1, #m.usages do
+			local u = m.usages[i]
+			text[#text+1] = ""
+			text[#text+1] = string.format("%s  %d. %s",ident,i,u.name)
+			text[#text+1] = string.format("%s   %s",ident,u.shortDescription or "!!! NO SHORT DESCIPTION !!!")
 
+		end
+	else
+		--text[#text+1] = "= Usage:"
+	end
 end
 
 local text = {sharpFrame("Peripherals")}
@@ -61,22 +80,18 @@ for pname,p in pairs(docs.Peripherals) do
 	text[#text+1] = ""
 	text[#text+1] = frame(string.format("%s (%s)",pname,p.name))
 	text[#text+1] = p.shortDescription or "!!! NO SHORT DESCRIPTION !!!"
+	text[#text+1] = " - Version: V"..table.concat(p.version,".")
+	text[#text+1] = " - Introduced in LIKO-12 V"..table.concat(p.availableSince,".")
+	text[#text+1] = " - Last updated in LIKO-12 V"..table.concat(p.lastUpdatedIn,".")
+	text[#text+1] = p.availableForGames and " - Accessible by games and the operating system." or " - Accessible by the operating system only !"
 	text[#text+1] = ""
 	text[#text+1] = p.fullDescription or "!!! NO FULL DESCRIPTION !!!"
-	text[#text+1] = ""
-	text[#text+1] = "- Version: V"..table.concat(p.version,".")
-	text[#text+1] = "- Introduced in LIKO-12 V"..table.concat(p.availableSince,".")
-	text[#text+1] = "- Last updated in LIKO-12 V"..table.concat(p.lastUpdatedIn,".")
-	text[#text+1] = p.availableForGames and "- Accessible by games and the operating system." or "- Accessible by the operating system only !"
 
 	if p.methods then
 		text[#text+1] = ""
 		text[#text+1] = "=-----=# Methods #=-----="
 		for mname, m in pairs(p.methods) do
-			text[#text+1] = ""
-			text[#text+1] = string.format(" - %s.%s",pname,mname)
-			text[#text+1] = " "..string.rep("-",text[#text]:len()-1)
-			method2text(text, "  ", pname, m)
+			method2text(text, "  ", pname, pname, mname, m)
 		end
 	end
 
@@ -91,8 +106,7 @@ for pname,p in pairs(docs.Peripherals) do
 				text[#text+1] = ""
 				text[#text+1] = "  == Methods =="
 				for mname, m in pairs(o.methods) do
-					text[#text+1] = ""
-					text[#text+1] = string.format("   - %s:%s",oname,mname)
+					method2text(text, "  ", pname, oname, mname, m)
 				end
 			end
 		end
