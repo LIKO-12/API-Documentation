@@ -49,6 +49,35 @@ local function type2string(t)
 	return t
 end
 
+local function arguments2text(text,ident,args)
+	text[#text+1] = ""
+	text[#text+1] = ident.."- Arguments:"
+	for i=1, #args do
+		local a = args[i]
+		if type(a.default) == "string" then a.default = '"'..a.default..'"' end
+		if not a.name then --Constant
+			text[#text+1] = string.format("%s   * literal (%s): %s",ident,type2string(a.type),tostring(a.default))
+		elseif type(a.default) ~= "nil" then --Optional arg
+			text[#text+1] = string.format("%s   * [%s] (%s) [%s]: %s",ident,a.name,type2string(a.type),tostring(a.default),a.description or "!!! NO ARG DESC !!!")
+		else --Required arg
+			text[#text+1] = string.format("%s   * <%s> (%s): %s",ident,a.name,type2string(a.type),a.description or "!!! NO ARG DESC !!!")
+		end
+	end
+end
+
+local function returns2text(text,ident,rets)
+	text[#text+1] = ""
+	text[#text+1] = ident.."- Returns:"
+	for i=1, #rets do
+		local r = rets[i]
+		if r.optional then
+			text[#text+1] = string.format("%s   * [%s] (%s): %s",ident,r.name,type2string(r.type),r.description or "!!! NO RET DESC !!!")
+		else
+			text[#text+1] = string.format("%s   * %s (%s): %s",ident,r.name,type2string(r.type),r.description or "!!! NO RET DESC !!!")
+		end
+	end
+end
+
 local function method2text(text,ident,pname,oname,mname,m)
 	text[#text+1] = ""
 	text[#text+1] = string.format("%s- %s%s%s",ident,oname,m.self and ":" or ".",mname)
@@ -57,20 +86,32 @@ local function method2text(text,ident,pname,oname,mname,m)
 	text[#text+1] = ""
 	text[#text+1] = string.format("%s - Introduced in %s V%s, LIKO-12 V%s",ident,pname,table.concat(m.availableSince[1],"."),table.concat(m.availableSince[2],"."))
 	text[#text+1] = string.format("%s - Last updated in %s V%s, LIKO-12 V%s",ident,pname,table.concat(m.lastUpdatedIn[1],"."),table.concat(m.lastUpdatedIn[2],"."))
-	text[#text+1] = ""
-	text[#text+1] = ident.." "..(m.fullDescription or "!!! NO FULL DESCRIPTION !!!")
-	text[#text+1] = ""
+	if m.fullDescription then
+		text[#text+1] = ""
+		text[#text+1] = ident.." "..m.fullDescription
+	end
 	if m.usages then
+		text[#text+1] = ""
 		text[#text+1] = ident.." = Usages:"
 		for i=1, #m.usages do
 			local u = m.usages[i]
 			text[#text+1] = ""
 			text[#text+1] = string.format("%s  %d. %s",ident,i,u.name)
 			text[#text+1] = string.format("%s   %s",ident,u.shortDescription or "!!! NO SHORT DESCIPTION !!!")
-
+			if u.arguments then
+				arguments2text(text, ident.."   ", u.arguments)
+			end
+			if u.returns then
+				returns2text(text, ident.."   ", u.returns)
+			end
 		end
 	else
-		--text[#text+1] = "= Usage:"
+		if m.arguments then
+			arguments2text(text, ident.." ", m.arguments)
+		end
+		if m.returns then
+			returns2text(text, ident.." ", m.returns)
+		end
 	end
 end
 
@@ -84,8 +125,10 @@ for pname,p in pairs(docs.Peripherals) do
 	text[#text+1] = " - Introduced in LIKO-12 V"..table.concat(p.availableSince,".")
 	text[#text+1] = " - Last updated in LIKO-12 V"..table.concat(p.lastUpdatedIn,".")
 	text[#text+1] = p.availableForGames and " - Accessible by games and the operating system." or " - Accessible by the operating system only !"
-	text[#text+1] = ""
-	text[#text+1] = p.fullDescription or "!!! NO FULL DESCRIPTION !!!"
+	if p.fullDescription then
+		text[#text+1] = ""
+		text[#text+1] = p.fullDescription
+	end
 
 	if p.methods then
 		text[#text+1] = ""
