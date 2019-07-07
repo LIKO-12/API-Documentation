@@ -190,4 +190,5 @@ for pname,p in pairs(docs.Peripherals) do
 	end
 end
 
-fs.write("D:/documentation.txt",table.concat(text,"\n"))
+text = table.concat(text,"\n"):gsub("\n","\r\n")
+fs.write("D:/documentation.txt",text)
