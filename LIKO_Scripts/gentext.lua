@@ -59,6 +59,8 @@ local function arguments2text(text,ident,args)
 			text[#text+1] = string.format("%s   * literal (%s): %s",ident,type2string(a.type),tostring(a.default))
 		elseif type(a.default) ~= "nil" then --Optional arg
 			text[#text+1] = string.format("%s   * [%s] (%s) [%s]: %s",ident,a.name,type2string(a.type),tostring(a.default),a.description or "!!! NO ARG DESC !!!")
+		elseif a.name == "..." then --Vararg
+			text[#text+1] = string.format("%s   * [%s] (%ss): %s",ident,a.name,type2string(a.type),a.description or "!!! NO ARG DESC !!!")
 		else --Required arg
 			text[#text+1] = string.format("%s   * <%s> (%s): %s",ident,a.name,type2string(a.type),a.description or "!!! NO ARG DESC !!!")
 		end
@@ -78,6 +80,24 @@ local function returns2text(text,ident,rets)
 	end
 end
 
+local function notes2text(text,ident,notes)
+	text[#text+1] = ""
+	text[#text+1] = ident.."- Notes:"
+	ident = ident.."   "
+	for i=1, #notes do
+		local n = notes[i]
+		text[#text+1] = ident.."* "..(n:gsub("\n","\n"..ident) or n)
+	end
+end
+
+local function extra2text(text,ident,extra)
+	text[#text+1] = ""
+	text[#text+1] = ident.."- Extra Info:"
+	ident = ident.."   "
+	extra = extra:gsub("\n","\n"..ident) or extra
+	text[#text+1] = ident..extra
+end
+
 local function method2text(text,ident,pname,oname,mname,m)
 	text[#text+1] = ""
 	text[#text+1] = string.format("%s- %s%s%s",ident,oname,m.self and ":" or ".",mname)
@@ -90,6 +110,12 @@ local function method2text(text,ident,pname,oname,mname,m)
 		text[#text+1] = ""
 		text[#text+1] = ident.." "..m.fullDescription
 	end
+	if m.note then
+		text[#text+1] = ""
+		text[#text+1] = ident.." - Note: "..(m.note:gsub("\n","\n    "..ident) or m.note)
+	elseif m.notes then
+		notes2text(text, ident.." ", m.notes)
+	end
 	if m.usages then
 		text[#text+1] = ""
 		text[#text+1] = ident.." = Usages:"
@@ -98,12 +124,19 @@ local function method2text(text,ident,pname,oname,mname,m)
 			text[#text+1] = ""
 			text[#text+1] = string.format("%s  %d. %s",ident,i,u.name)
 			text[#text+1] = string.format("%s   %s",ident,u.shortDescription or "!!! NO SHORT DESCIPTION !!!")
+			if u.note then
+				text[#text+1] = ""
+				text[#text+1] = ident.."   - Note: "..(u.note:gsub("\n","\n     "..ident) or u.note)
+			elseif u.notes then
+				notes2text(text, ident.."   ", u.notes)
+			end
 			if u.arguments then
 				arguments2text(text, ident.."   ", u.arguments)
 			end
 			if u.returns then
 				returns2text(text, ident.."   ", u.returns)
 			end
+			if u.extra then extra2text(text, ident.."   ", u.extra) end
 		end
 	else
 		if m.arguments then
@@ -113,6 +146,7 @@ local function method2text(text,ident,pname,oname,mname,m)
 			returns2text(text, ident.." ", m.returns)
 		end
 	end
+	if m.extra then extra2text(text, ident.." ", m.extra) end
 end
 
 local text = {sharpFrame("Peripherals")}
