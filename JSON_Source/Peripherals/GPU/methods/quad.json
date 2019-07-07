@@ -35,5 +35,13 @@
       "name": "sh",
       "type": "number"
     }
+  ],
+
+  "returns": [
+    {
+      "description": "The created quad",
+      "name": "q",
+      "type": [["Peripherals","GPU","quad"]]
+    }
   ]
 }
