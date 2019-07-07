@@ -43,14 +43,14 @@
     ├───CPU
     │   └...
     ├───GPU
-    │   ├───Formats
+    │   ├───formats
     │   │   └───string
     │   │       └───...
-    │   ├───Methods
+    │   ├───methods
     │   │   └───...
-    │   └───Objects
-    │       ├───ImageData
-    │       │   └───Methods
+    │   └───objects
+    │       ├───imageData
+    │       │   └───methods
     │       │       └───...
     │       └───...
     └...
@@ -150,6 +150,7 @@
 		"..."
 	]
 	"extra": "Markdown and multiple lines supported", //Extra information, (Optional).
+  "self": true, //Should the user use ':' when calling this method (Objects only).
   "usages":[
     {
       "name": "Usage name",
@@ -162,7 +163,6 @@
         "..."
       ]
       "extra": "Markdown and multiple lines supported", //Extra information, (Optional).
-      "self": true, //Should the user use ':' when calling this method (Objects only).
       "arguments":[ //Shouldn't exists when there are no arguments
         {
           //If the name was not provided, and the argument has a default value, then it's a constant value.
