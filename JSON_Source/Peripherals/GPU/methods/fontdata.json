@@ -1,0 +1,51 @@
+{
+	"availableSince": [[1,0,0], [1,1,0]],
+	"lastUpdatedIn": [[1,0,0],[1,1,0]],
+	"shortDescription": "Creates an fontdata, which could be used for font edittors.",
+	"longDescription": "Markdown and multiline supported", //Optional
+	"note": "A single line note, markdown supported", //Shouldn't exist if "notes" exists.
+	"notes": [ //Multiple notes if needed.
+		"Note #1",
+		"Note #2",
+		"..."
+	]
+	"extra": "Markdown and multiple lines supported", //Extra information, (Optional).
+  "self": true, //Should the user use ':' when calling this method (Objects only).
+  "usages":[
+    {
+      "name": "Usage name",
+      "shortDescription": "Short desc",
+      "longDescription": "Markdown and multiline supported", //Optional
+      "note": "A single line note, markdown supported", //Shouldn't exist if "notes" exists.
+      "notes": [ //Multiple notes if needed.
+        "Note #1",
+        "Note #2",
+        "..."
+      ]
+      "extra": "Markdown and multiple lines supported", //Extra information, (Optional).
+      "arguments":[ //Shouldn't exists when there are no arguments
+        {
+          //If the name was not provided, and the argument has a default value, then it's a constant value.
+          //The name can be "..." for vararg.
+          "name": "the argument name",
+          "type": "number", //Check the value types section.
+          "description": "Single line description", //optional when name is null
+          "default": "nil"
+          //This specified means that this argument is optional, and so do not specify "nil" in the supported types.
+          //If there is no default value, but this argument is optional, then specify "default": "nil".
+        }
+      ],
+      "returns":[ //Shouldn't exists when there are not returns
+        {
+          "name":"return name", //can be "..."
+          "type": "number", //Check the value types section.
+          "optional": true, //Please don't add nil to the types.
+          "description":"single line description"
+        }
+      ]
+    },
+    {
+      //Another usage.
+    }
+  ]
+}
