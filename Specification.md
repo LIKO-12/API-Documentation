@@ -239,6 +239,7 @@ Methods have 2 possible structures:
 - Removed the available for games field in peripherals meta, that should be contained on DiskOS's documentation side.
 - Removed the `note` field, instead the `notes` field is now used all time.
 - Specified a better files structure.
+- New `Events`, `Fields` and `Documentation Meta` structures.
 
 ### 2018/??/?? (Unknown)
 
