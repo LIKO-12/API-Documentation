@@ -4,4 +4,4 @@ This repository contains the official documentation of LIKO-12's engine.
 
 ## Documentation Specification
 
-The documentation specification could be found in Specification.md
+The documentation specification could be found in [Specification.md](../blob/master/Specification.md)
