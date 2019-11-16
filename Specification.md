@@ -214,7 +214,6 @@ Methods have 2 possible structures:
 
 ## Files structure
 
-```md
 - `Engine_Documentation`: the root directory of the whole documentation.
   - `Engine_Documentation.json`: The `Documentation Meta` structure.
   - `Peripherals`: Peripherals documentation directory.
@@ -229,7 +228,6 @@ Methods have 2 possible structures:
             - `documents`: Markdown documents about the object.
         - `events`: Contains `Events` structures.
         - `documents`: Markdown documents about the peripheral.
-```
 
 ## Changlog
 
