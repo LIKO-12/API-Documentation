@@ -223,17 +223,17 @@ Methods have 2 possible structures:
 - `Engine_Documentation`: the root directory of the whole documentation.
   - `Engine_Documentation.json`: The `Documentation Meta` structure.
   - `Peripherals`: Peripherals documentation directory.
-    - `PeripheralShortName`: the documentation of a peripheral, considered a `category`.
+    - `PeripheralShortName`: (Optional) the documentation of a peripheral, considered a `category`.
       - `PeripheralShortName.json`: the `Peripherals Meta` structure of the peripheral.
-        - `methods`: the methods of the peripheral, contains `Methods` structures.
-        - `objects`: objects defined by the peripheral.
-          - `ObjectName`: the documented object.
+        - `methods`: (Optional, MUST NOT exist when empty) the methods of the peripheral, contains `Methods` structures.
+        - `objects`: (Optional, MUST NOT exist when empty) objects defined by the peripheral.
+          - `ObjectName`: (Optional) the documented object.
             - `ObjectName.json`: The `Object Meta` structure.
-            - `methods`: The methods of the object.
-            - `fields`: The fields of the object.
-            - `documents`: Markdown documents about the object.
-        - `events`: Contains `Events` structures.
-        - `documents`: Markdown documents about the peripheral.
+            - `methods`: (Optional) The methods of the object.
+            - `fields`: (Optional) The fields of the object.
+            - `documents`: (Optional) Markdown documents about the object.
+        - `events`: (Optional) Contains `Events` structures.
+        - `documents`: (Optional) Markdown documents about the peripheral.
 
 ## Changlog
 
@@ -241,6 +241,7 @@ Methods have 2 possible structures:
 
 - Added a new seciton about links in markdown content.
 - Added `specificationLink` to the documentation meta structure.
+- Mark what folders are optional and what are not.
 
 ### 2019/11/16
 
