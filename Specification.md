@@ -234,6 +234,7 @@ Methods have 2 possible structures:
             - `documents`: (Optional) Markdown documents about the object.
         - `events`: (Optional) Contains `Events` structures.
         - `documents`: (Optional) Markdown documents about the peripheral.
+  - `Media`: This directory contains all the media files used in the markdown content.
 
 ## Changlog
 
@@ -242,6 +243,7 @@ Methods have 2 possible structures:
 - Added a new seciton about links in markdown content.
 - Added `specificationLink` to the documentation meta structure.
 - Mark what folders are optional and what are not.
+- Add the `Media` folder to the folders structures.
 
 ### 2019/11/16
 
