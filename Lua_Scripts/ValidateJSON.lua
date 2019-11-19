@@ -123,7 +123,7 @@ local executionTime = endClock - startClock
 
 ANSI.setGraphicsMode(0, 1, 32) --Green output
 print("")
-print("The documentation files structure has been validated successfully in "..executionTime.."s.")
+print("The documentation JSON files has been validated successfully in "..executionTime.."s.")
 print("")
 
 ANSI.setGraphicsMode(0, 1, 37) --White output
