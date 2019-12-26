@@ -136,6 +136,18 @@ function validateDate(date)
 	return true
 end
 
+--Returns true of the value was a plain text string with no control charactes, false otherwise, with reason followed
+function validatePlainText(text)
+	if type(text) ~= "string" then return false, "It must be a string, not a "..type(text).."!" end
+
+	for i=1, #text do
+		local c = string.byte(text, i)
+		if c < 32 or c == 127 then return false, "Control characters (including new line) are not allowed, found one at "..i.."!" end
+	end
+
+	return true
+end
+
 --== The end of the script ==--
 
 local endClock = os.clock()
