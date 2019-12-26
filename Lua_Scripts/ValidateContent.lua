@@ -28,6 +28,8 @@ end
 
 if not pcall(require,"lfs") then fail("Could not load luafilesystem, please make sure it's installed using luarocks first!") end
 local lfs = require("lfs")
+if not pcall(require, "JSON") then fail("Could not load JSON module, please make sure that the script is executed with the repository being the working directory!") end
+local JSON = require("JSON")
 
 --== Validate the files content ==--
 
