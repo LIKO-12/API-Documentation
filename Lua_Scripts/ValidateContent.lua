@@ -120,6 +120,22 @@ local function validateVersion(version)
 	return true
 end
 
+--Returns true if the date was valid, false otherwise, with reason followed
+function validateDate(date)
+	if type(date) ~= "string" then return false, "The date can be only a string, provided: "..type(date).."" end
+	if not date:match("%d%d%d%d%-%d%d%-%d%d") then return false, "Invalid date: "..date.."!" end
+
+	--For the sake of simplicity I'm not going to validate if the month has 31 or 30 days, especially that some years are longer then others by 1 day (in an integer system)...
+
+	local month = tonumber(date:sub(6,7))
+	local day = tonumber(date:sub(9,10))
+
+	if month < 1 or month > 12 then return false, "Invalid month ("..month..") in date: "..date.."!" end
+	if day < 1 or day > 31 then return false, "Invalid day ("..day..") in date: "..date.."!" end
+
+	return true
+end
+
 --== The end of the script ==--
 
 local endClock = os.clock()
