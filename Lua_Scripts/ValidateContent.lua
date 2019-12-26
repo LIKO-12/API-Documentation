@@ -93,6 +93,33 @@ local function validateType(vtype)
 	end
 end
 
+--Returns true if the version was valid, false otherwise, with reason followed
+local function validateVersion(version)
+	if type(version) ~= "table" then return false, "The version must be a table, provided: "..type(version).."!" end
+	if #version ~= 2 then return false, "The version must be an array (table) with exactly 2 tables in it only!" end
+
+	for k,v in pairs(version) do
+		if type(k) ~= "number" or k > 2 or k < 1 or type(v) ~= "table" then return false, "The version must be an array (table) with exactly 2 tables in it only!" end
+	end
+
+	if #version[1] ~= 3 then return false, "The category version must be an array of 3 natural numbers!" end
+	for k,v in pairs(version[1]) do
+		if type(k) ~= "number" or k > 3 or k < 1 or type(v) ~= "number" or v < 0 or v ~= math.floor(v) then
+			return false, "The category version must be an array of 3 natural numbers!"
+		end
+	end
+
+	if #version[2] ~= 3 then return false, "The LIKO-12 version must be an array of 3 natural numbers!" end
+	for k,v in pairs(version[2]) do
+		if type(k) ~= "number" or k > 3 or k < 1 or type(v) ~= "number" or v < 0 or v ~= math.floor(v) then
+			return false, "The LIKO-12 version must be an array of 3 natural numbers!"
+		end
+	end
+
+	--Validated successfully
+	return true
+end
+
 --== The end of the script ==--
 
 local endClock = os.clock()
