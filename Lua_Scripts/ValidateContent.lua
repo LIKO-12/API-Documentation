@@ -58,7 +58,7 @@ local function validateType(vtype)
 		if simpleTypes[vtype] then return true end
 
 		--Otherwise it's an invalid type
-		return false, "Invalid simple type: "..vtype.."!" end
+		return false, "Invalid simple type: "..vtype.."!"
 
 	elseif type(vtype) == "table" then
 		local l1 = #vtype
