@@ -9,13 +9,11 @@
 	"returns": [ {
 		"description": "Loaded file function, nil when fails to load.",
 		"name": "chunk",
-		"optional": true,
-		"type": "function"
+		"type": ["function", "nil"]
 	}, {
 		"description": "The error message when failed to load.",
 		"name": "ok",
-		"optional": true,
-		"type": "string"
+		"type": ["string", "nil"]
 	} ],
 	"shortDescription": "Loads the contents of a Lua script as a function."
 }
