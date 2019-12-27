@@ -1,6 +1,6 @@
 {
   "shortDescription": "Changes the print cursor position used by `print()` in the grid variant.",
-  "note": "The positions are on a characters grid, the size of the grid can be requested from `termSize()`.",
+  "notes": ["The positions are on a characters grid, the size of the grid can be requested from `termSize()`."],
 	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
 	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
 	

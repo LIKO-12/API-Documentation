@@ -14,11 +14,11 @@
 	} ],
 	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
 	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
-	"note": "The function returns the imagedata object itself, so it can be used for chain calls.",
+	"notes": ["The function returns the imagedata object itself, so it can be used for chain calls."],
 	"returns": [ {
 		"description": "The imagedata itself.",
 		"name": "imgdata",
-		"type": [ [ "Peripherals", "GPU", "imageData" ] ]
+		"type": [ [ "Peripherals", "GPU", "objects", "imageData" ] ]
 	} ],
 	"self": true,
 	"shortDescription": "Set a pixel color in the imagedata."

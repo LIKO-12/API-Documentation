@@ -18,7 +18,6 @@
 	} ],
 	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
 	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
-	"returns": [],
 	"self": true,
 	"shortDescription": "Sets the viewport of the quad."
 }

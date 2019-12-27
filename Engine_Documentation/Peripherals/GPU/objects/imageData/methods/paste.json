@@ -2,24 +2,24 @@
 	"arguments": [ {
 		"description": "The source imagedata (To copy from).",
 		"name": "source",
-		"type": [ [ "Peripherals", "GPU", "imageData" ] ]
+		"type": [ [ "Peripherals", "GPU", "objects", "imageData" ] ]
 	}, {
-		"default": 0,
+		"default": "0",
 		"description": "Destination top-left x position.",
 		"name": "dx",
 		"type": "number"
 	}, {
-		"default": 0,
+		"default": "0",
 		"description": "Destination top-left y position.",
 		"name": "dy",
 		"type": "number"
 	}, {
-		"default": 0,
+		"default": "0",
 		"description": "Source top-left x position.",
 		"name": "sx",
 		"type": "number"
 	}, {
-		"default": 0,
+		"default": "0",
 		"description": "Source top-left y position.",
 		"name": "sy",
 		"type": "number"
@@ -34,11 +34,11 @@
 	} ],
 	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
 	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
-	"note": "The function returns the imagedata object itself, so it can be used for chain calls.",
+	"notes": ["The function returns the imagedata object itself, so it can be used for chain calls."],
 	"returns": [ {
 		"description": "The imagedata itself.",
 		"name": "imgdata",
-		"type": [ [ "Peripherals", "GPU", "imageData" ] ]
+		"type": [ [ "Peripherals", "GPU", "objects", "imageData" ] ]
 	} ],
 	"self": true,
 	"shortDescription": "Paste into ImageData from another source ImageData."

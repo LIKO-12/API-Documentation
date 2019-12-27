@@ -6,8 +6,7 @@
 	} ],
 	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
 	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
-	"note": "The function that's passed as an argument will be called for every pixel in the image, starting with the top-left one, and going in horizental lines.",
-	"returns": [],
+	"notes": ["The function that's passed as an argument will be called for every pixel in the image, starting with the top-left one, and going in horizental lines."],
 	"self": true,
 	"shortDescription": "Transform an image by applying a function to every pixel."
 }

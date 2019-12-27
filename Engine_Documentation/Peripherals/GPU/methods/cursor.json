@@ -25,19 +25,19 @@
 		"arguments": [ {
 			"description": "The imagedata of the cursor.",
 			"name": "imgdata",
-			"type": [ [ "Peripherals", "GPU", "imageData" ] ]
+			"type": [ [ "Peripherals", "GPU", "objects", "imageData" ] ]
 		}, {
-			"default": "default",
+			"default": "\"default\"",
 			"description": "The name of the cursor.",
 			"name": "name",
 			"type": "string"
 		}, {
-			"default": 0,
+			"default": "0",
 			"description": "The X coord of the cursor hot position.",
 			"name": "hx",
 			"type": "number"
 		}, {
-			"default": 0,
+			"default": "0",
 			"description": "The Y coord of the cursor hot position.",
 			"name": "hy",
 			"type": "number"

@@ -1,37 +1,36 @@
 {
 	"arguments": [ {
-		"default": 0,
+		"default": "0",
 		"description": "The top-left image corner x position.",
 		"name": "x",
 		"type": "number"
 	}, {
-		"default": 0,
+		"default": "0",
 		"description": "The top-left image corner y position.",
 		"name": "y",
 		"type": "number"
 	}, {
-		"default": 0,
+		"default": "0",
 		"description": "The image rotation in radians.",
 		"name": "r",
 		"type": "number"
 	}, {
-		"default": 1,
+		"default": "1",
 		"description": "The image width scale.",
 		"name": "sw",
 		"type": "number"
 	}, {
-		"default": 1,
+		"default": "1",
 		"description": "The image height scale.",
 		"name": "sh",
 		"type": "number"
 	}, {
 		"description": "Optional, A quad to draw the image with, check GPU.quad for more info.",
 		"name": "q",
-		"type": [ [ "Peripherals", "GPU", "quad" ] ]
+		"type": [ [ "Peripherals", "GPU", "objects", "quad" ] ]
 	} ],
 	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
 	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
-	"returns": [],
 	"self": true,
 	"shortDescription": "Draws the image on the screen."
 }

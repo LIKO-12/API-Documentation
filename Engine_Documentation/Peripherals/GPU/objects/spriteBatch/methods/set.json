@@ -6,24 +6,24 @@
 	}, {
 		"description": "The quad to add.",
 		"name": "quad",
-		"type": [ [ "Peripherals", "GPU", "quad" ] ]
+		"type": [ [ "Peripherals", "GPU", "objects", "quad" ] ]
 	}, {
-		"default": 0,
+		"default": "0",
 		"description": "The x position of the new sprite.",
 		"name": "x",
 		"type": "number"
 	}, {
-		"default": 0,
+		"default": "0",
 		"description": "The y position of the new sprite.",
 		"name": "y",
 		"type": "number"
 	}, {
-		"default": 0,
+		"default": "0",
 		"description": "The rotation of the new sprite.",
 		"name": "r",
 		"type": "number"
 	}, {
-		"default": 1,
+		"default": "1",
 		"description": "The x scale of the new sprite.",
 		"name": "sx",
 		"type": "number"
@@ -32,33 +32,33 @@
 		"name": "sy",
 		"type": "number"
 	}, {
-		"default": 0,
+		"default": "0",
 		"description": "The x origin offset of the new sprite.",
 		"name": "ox",
 		"type": "number"
 	}, {
-		"default": 0,
+		"default": "0",
 		"description": "The y origin offset of the new sprite.",
 		"name": "oy",
 		"type": "number"
 	}, {
-		"default": 0,
+		"default": "0",
 		"description": "The x shear factor of the new sprite.",
 		"name": "kx",
 		"type": "number"
 	}, {
-		"default": 0,
+		"default": "0",
 		"description": "The y shear factor of the new sprite.",
 		"name": "ky",
 		"type": "number"
 	} ],
 	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
 	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
-	"note": "The function returns the spritebatch object itself, so it can be used for chain calls.",
+	"notes": ["The function returns the spritebatch object itself, so it can be used for chain calls."],
 	"returns": [ {
 		"description": "The spritebatch itself.",
 		"name": "sb",
-		"type": [ [ "Peripherals", "GPU", "spriteBatch" ] ]
+		"type": [ [ "Peripherals", "GPU", "objects", "spriteBatch" ] ]
 	} ],
 	"self": true,
 	"shortDescription": "Changes a sprite to the batch."

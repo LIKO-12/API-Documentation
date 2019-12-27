@@ -9,7 +9,7 @@
 	"returns": [ {
 		"description": "The created image object.",
 		"name": "img",
-		"type": [ [ "Peripherals", "GPU", "image" ] ]
+		"type": [ [ "Peripherals", "GPU", "objects", "image" ] ]
 	} ],
 	"shortDescription": "Creats a new image that can be used for drawing."
 }

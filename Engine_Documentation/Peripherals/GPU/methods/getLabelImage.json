@@ -4,7 +4,7 @@
 	"returns": [ {
 		"description": "The imagedata object of the label.",
 		"name": "limg",
-		"type": [ [ "Peripherals", "GPU", "imageData" ] ]
+		"type": [ [ "Peripherals", "GPU", "objects", "imageData" ] ]
 	} ],
 	"shortDescription": "Returns the imagedata object of LabelImage, which can be capture by pressing F6, It will automatically update to the latest capture."
 }

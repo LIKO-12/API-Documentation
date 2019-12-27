@@ -1,11 +1,11 @@
 {
 	"arguments": [ {
-		"default": 0,
+		"default": "0",
 		"description": "The top-left X coord of the area to take the screenshot of.",
 		"name": "x",
 		"type": "number"
 	}, {
-		"default": 0,
+		"default": "0",
 		"description": "The top-left Y coord of the area to take the screenshot of.",
 		"name": "y",
 		"type": "number"
@@ -23,7 +23,7 @@
 	"returns": [ {
 		"description": "The created imagedata object.",
 		"name": "imgdata",
-		"type": [ [ "Peripherals", "GPU", "imageData" ] ]
+		"type": [ [ "Peripherals", "GPU", "objects", "imageData" ] ]
 	} ],
 	"shortDescription": "Takes a screenshot of the canvas (without the cursor), and returns its imagedata."
 }

@@ -6,7 +6,7 @@
 	} ],
 	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
 	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
-	"note": "For GPUImg, it returns true for the folowing types: 'GPU', 'image', 'GPU.image', 'LK12'",
+	"notes": ["For GPUImg, it returns true for the folowing types: 'GPU', 'image', 'GPU.image', 'LK12'"],
 	"returns": [ {
 		"description": "True if the object is of the specified type, false otherwise.",
 		"name": "bool",

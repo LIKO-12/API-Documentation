@@ -21,7 +21,7 @@
 	"returns": [ {
 		"description": "The created quad.",
 		"name": "q",
-		"type": [ [ "Peripherals", "GPU", "quad" ] ]
+		"type": [ [ "Peripherals", "GPU", "objects", "quad" ] ]
 	} ],
 	"self": true,
 	"shortDescription": "Creates a new quad passing the imagedata dimensions automatically."

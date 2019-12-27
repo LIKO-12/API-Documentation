@@ -1,12 +1,11 @@
 {
-	"arguments": [],
 	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
 	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
-	"note": "The function returns the spritebatch object itself, so it can be used for chain calls.",
+	"notes": ["The function returns the spritebatch object itself, so it can be used for chain calls."],
 	"returns": [ {
 		"description": "The spritebatch itself.",
 		"name": "sb",
-		"type": [ [ "Peripherals", "GPU", "spriteBatch" ] ]
+		"type": [ [ "Peripherals", "GPU", "objects", "spriteBatch" ] ]
 	} ],
 	"self": true,
 	"shortDescription": "Clears the sprites from the buffer."

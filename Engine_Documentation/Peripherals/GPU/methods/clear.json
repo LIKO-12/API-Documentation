@@ -1,6 +1,6 @@
 {
 	"arguments": [ {
-		"default": 0,
+		"default": "0",
 		"description": "The ID of the color to fill the screen with, can be 0-15.",
 		"name": "id",
 		"type": "number"

@@ -6,11 +6,11 @@
 	} ],
 	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
 	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
-	"note": "All transparent pixels and all colors that are not from the palette will be loaded as black!",
+	"notes": ["All transparent pixels and all colors that are not from the palette will be loaded as black!"],
 	"returns": [ {
 		"description": "The created imagedata object.",
 		"name": "imgdata",
-		"type": [ [ "Peripherals", "GPU", "imageData" ] ]
+		"type": [ [ "Peripherals", "GPU", "objects", "imageData" ] ]
 	} ],
 	"shortDescription": "Creates a new imagedata object, which can be used for images processing (Set pixels, Get Pixels, encode, export, etc...)."
 }

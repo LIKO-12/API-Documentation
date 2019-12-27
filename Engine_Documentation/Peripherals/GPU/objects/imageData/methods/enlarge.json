@@ -9,7 +9,7 @@
 	"returns": [ {
 		"description": "The resulting imagedata.",
 		"name": "enimgdata",
-		"type": [ [ "Peripherals", "GPU", "imageData" ] ]
+		"type": [ [ "Peripherals", "GPU", "objects", "imageData" ] ]
 	} ],
 	"self": true,
 	"shortDescription": "This function will multiply the image dimensions with the given scale, and automatically scales the image data, then returns the result imagedata."
