@@ -1,9 +1,7 @@
 {
-	"availableForGames": true,
-	"version": [ 1,0,0 ],
 	"availableSince": [ 0,6,0 ],
 	"lastUpdatedIn": [ 0,8,0 ],
 	"name": "Random Access Memory",
 	"shortDescription": "Allows the creation of video memory effects.",
-	"longDescription": "Allows the creation of video memory effects.\n\n## Memory Table:\n\n```\n0x0 -> 0x2FFF - The Video RAM\n0x3000 -> 0x5FFF - The Label Image\n0x6000 -> 0x15FFF - The FDD RAM\n```\n**Note:** The FDD RAM is used by DiskOS when saving your game into a `.png`"
+	"fullDescription": "Allows the creation of video memory effects.\n\n## Memory Table:\n\n```\n0x0 -> 0x2FFF - The Video RAM\n0x3000 -> 0x5FFF - The Label Image\n0x6000 -> 0x15FFF - The FDD RAM\n```\n**Note:** The FDD RAM is used by DiskOS when saving your game into a `.png`"
 }
