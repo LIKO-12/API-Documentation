@@ -1,5 +1,6 @@
 {
 	"arguments": [ {
+		"name": "key",
 		"description": "The key to get the scancode from.",
 		"type": "string"
 	} ],
