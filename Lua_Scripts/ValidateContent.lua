@@ -414,6 +414,8 @@ local function validateMethod(method)
 					return false, "Invalid data field with the key: "..k.."!"
 				end
 			end
+
+			method.usages = nil
 		end
 
 	elseif type(method.usages) ~= "nil" then
