@@ -121,7 +121,7 @@ local function validateVersion(version)
 end
 
 --Returns true if the date was valid, false otherwise, with reason followed
-function validateDate(date)
+local function validateDate(date)
 	if type(date) ~= "string" then return false, "The date can be only a string, provided: "..type(date).."" end
 	if not date:match("%d%d%d%d%-%d%d%-%d%d") then return false, "Invalid date: "..date.."!" end
 
@@ -137,7 +137,7 @@ function validateDate(date)
 end
 
 --Returns true of the value was a simple text string with no control charactes, false otherwise, with reason followed
-function validateSimpleText(text)
+local function validateSimpleText(text)
 	if type(text) ~= "string" then return false, "It must be a string, not a "..type(text).."!" end
 
 	for i=1, #text do
