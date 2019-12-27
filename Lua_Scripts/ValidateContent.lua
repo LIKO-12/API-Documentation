@@ -136,8 +136,8 @@ function validateDate(date)
 	return true
 end
 
---Returns true of the value was a plain text string with no control charactes, false otherwise, with reason followed
-function validatePlainText(text)
+--Returns true of the value was a simple text string with no control charactes, false otherwise, with reason followed
+function validateSimpleText(text)
 	if type(text) ~= "string" then return false, "It must be a string, not a "..type(text).."!" end
 
 	for i=1, #text do
