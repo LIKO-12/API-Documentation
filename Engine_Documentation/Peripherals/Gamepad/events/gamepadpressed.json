@@ -1,15 +1,18 @@
 {
-  "desc":"A button on the gamepad was pressed.",
-  "args":[
+  "availableSince": [[1,0,0], [0,6,0]],
+  "lastUpdatedIn": [[1,0,0], [0,8,0]],
+
+  "shortDescription":"A button on the gamepad was pressed.",
+  "arguments":[
     {
       "name":"joystick",
       "type":"table",
-      "desc":"The joystick with the pressed button."
+      "description":"The joystick with the pressed button."
     },
     {
       "name":"button",
       "type":"string",
-      "desc":"The name of the pressed button."
+      "description":"The name of the pressed button."
     }
   ]
 }
