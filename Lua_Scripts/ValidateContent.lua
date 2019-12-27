@@ -304,6 +304,137 @@ local function validateMethodReturns(returns)
 	return true
 end
 
+--Returns true if the method was valid, false otherwise, with reason followed
+local function validateMethod(method)
+	--Every field that's been validated is set to nil => This function destroys the data it has been passed
+	--Why doing so? Inorder to find any unwanted extra values in the data
+
+	local ok1, reason1 = validateVersion(method.availableSince)
+	if not ok1 then return false, "Failed to validate 'availableSince': "..reason1 end
+	method.availableSince = nil
+
+	local ok2, reason2 = validateVersion(method.lastUpdatedIn)
+	if not ok2 then return false, "Failed to validate 'lastUpdatedIn': "..reason2 end
+	method.lastUpdatedIn = nil
+
+	if type(method.shortDescription) ~= "nil" then
+		local ok3, reason3 = validateSimpleText(method.shortDescription)
+		if not ok3 then return false, "Failed to validate 'shortDescription': "..reason3 end
+		method.shortDescription = nil
+	end
+
+	if type(method.longDescription) ~= "nil" and type(method.longDescription) ~= "string" then
+		return false, "Failed to validate 'longDescription': It must be a string!"
+	end
+	method.longDescription = nil
+
+	if type(method.notes) ~= "nil" then
+		local ok4, reason4 = validateNotes(method.notes)
+		if not ok4 then return false, "Failed to validate 'notes': "..reason4 end
+		method.notes = nil
+	end
+
+	if type(method.extra) ~= "nil" and type(method.extra) ~= "string" then
+		return false, "Failed to validate 'extra': It must be a string!"
+	end
+	method.extra = nil
+
+	if type(method.self) ~= "nil" and type(method.self) ~= "boolean" then
+		return false, "Failed to validate 'self': It must be a boolean!"
+	end
+	method.self = nil
+
+	if type(method.usages) == "table" then
+		if type(method.arguments) ~= "nil" or type(method.returns) ~= "nil" then
+			return false, "Arguments and returns do not exist in the multi-usage varient!"
+		end
+
+		local count = #method.usages
+		if count == 0 then return false, "Failed to validate 'usages': It must not be empty!" end
+		for k, usage in pairs(method.usages) do
+			if type(k) ~= "number" or k < 1 or k > count or k ~= math.floor(k) or type(usage) ~= "table" then
+				return false, "Failed to validate 'usages': Invalid array!"
+			end
+
+			local ok4, reason4 = validateSimpleText(usage.name)
+			if not ok4 then return false, "Failed to validate 'name' in the #"..k.." usage: "..reason4 end
+			usage.name = nil
+
+			if type(usage.shortDescription) ~= "nil" then
+				local ok5, reason5 = validateSimpleText(usage.shortDescription)
+				if not ok5 then return false, "Failed to validate 'shortDescription' in the #"..k.." usage: "..reason5 end
+				usage.shortDescription = nil
+			end
+
+			if type(usage.longDescription) ~= "nil" and type(usage.longDescription) ~= "string" then
+				return false, "Failed to validate 'longDescription' in the #"..k.." usage: It must be a string!"
+			end
+			usage.longDescription = nil
+
+			if type(usage.note) ~= "nil" then
+				local ok6, reason6 = validateSimpleText(usage.note)
+				if not ok6 then return false, "Failed to validate 'note' in the #"..k.." usage: "..reason6 end
+				usage.note = nil
+			end
+
+			if type(usage.notes) ~= "nil" then
+				local ok7, reason7 = validateNotes(usage.notes)
+				if not ok7 then return false, "Failed to validate 'notes' in the #"..k.." usage: "..reason7 end
+				usage.notes = nil
+			end
+
+			if type(usage.extra) ~= "nil" and type(usage.extra) ~= "string" then
+				return false, "Failed to validate 'extra' in the #"..k.." usage: It must be a string!"
+			end
+			usage.extra = nil
+
+			if type(usage.arguments) ~= "nil" then
+				local ok8, reason8 = validateMethodArguments(usage.arguments)
+				if not ok8 then return false, "Failed to validate 'arguments' in the #"..k.." usage: "..reason8 end
+				usage.arguments = nil
+			end
+
+			if type(usage.returns) ~= "nil" then
+				local ok9, reason9 = validateMethodReturns(usage.returns)
+				if not ok9 then return false, "Failed to validate 'returns' in the #"..k.." usage: "..reason9 end
+				usage.returns = nil
+			end
+
+			--Reject any extra data in the usage
+			for k,v in pairs(usage) do
+				if type(v) ~= "nil" then
+					return false, "Invalid data field with the key: "..k.."!"
+				end
+			end
+		end
+
+	elseif type(method.usages) ~= "nil" then
+		return false, "Failed to validate 'usages': It must be a table!"
+	else
+		if type(method.arguments) ~= "nil" then
+			local ok10, reason10 = validateMethodArguments(method.arguments)
+			if not ok10 then return false, "Failed to validate 'arguments': "..reason10 end
+			method.arguments = nil
+		end
+
+		if type(method.returns) ~= "nil" then
+			local ok11, reason11 = validateMethodReturns(method.returns)
+			if not ok11 then return false, "Failed to validate 'returns': "..reason11 end
+			method.returns = nil
+		end
+	end
+
+	--Reject any extra data in the method
+	for k,v in pairs(method) do
+		if type(v) ~= "nil" then
+			return false, "Invalid data field with the key: "..k.."!"
+		end
+	end
+
+	--Validated successfully
+	return true
+end
+
 --Returns true if the peripheral meta was valid, false otherwise, with reason followed
 local function validatePeripheralMeta(meta)
 	--Every field that's been validated is set to nil => This function destroys the data it has been passed
