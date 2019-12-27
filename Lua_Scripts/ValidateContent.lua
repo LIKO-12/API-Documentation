@@ -48,6 +48,11 @@ print("")
 ANSI.setGraphicsMode(0, 1, 36) --Cyan output
 print("Validating the engine documentation in \"Engine_Documentation\".")
 
+local function isFile(path)
+	local mode, err = lfs.attributes(path, "mode")
+	return mode and mode == "file"
+end
+
 local function isDirectory(path)
 	local mode, err = lfs.attributes(path, "mode")
 	return mode and mode == "directory"
@@ -76,7 +81,7 @@ local function validateType(vtype)
 
 			if type(v1) == "string" then
 				if v1 == "any" then return false, "The \"any\" type can't be used in a table of types!" end
-				if not simpleTypes[v1] then return false, "Invalid simple type: "..vtype.."!" end
+				if not simpleTypes[v1] then return false, "Invalid simple type: "..v1.."!" end
 
 			elseif type(v1) == "table" then --Complex type
 				--Make sure that it's a valid array
@@ -88,8 +93,8 @@ local function validateType(vtype)
 				end
 
 				--Make sure that it's a valid path
-				local complexPath = table.concat(v1, "/") .. "/" .. v1[l2] .. ".json"
-				if l2 < 2 or v1[l1-1] ~= "objects" or not isFile(complexPath) then return false, "Invalid object path for the complex type in the table of types at index #"..k1.."!" end
+				local complexPath = "Engine_Documentation/" .. table.concat(v1, "/") .. "/" .. v1[l2] .. ".json"
+				if l2 < 2 or v1[l2-1] ~= "objects" or not isFile(complexPath) then return false, "Invalid object path for the complex type in the table of types at index #"..k1.."!" end
 			else
 				return false, "Invalid type of a type value in the types table at index #"..k1..": "..type(v1)..", it can be only a string or a table!"
 			end
