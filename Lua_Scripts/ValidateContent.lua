@@ -293,7 +293,7 @@ local function validateMethodReturns(returns)
 		end
 
 		--Reject any extra data in the return
-		for k,v in pairs(meta) do
+		for k,v in pairs(ret) do
 			if type(v) ~= "nil" then
 				return false, "Invalid data field with the key: "..k.."!"
 			end
