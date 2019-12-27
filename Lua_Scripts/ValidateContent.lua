@@ -154,7 +154,7 @@ local function validateNotes(notes)
 	
 	local length = #notes
 	for k,v in pairs(notes) do
-		if type(k) ~= "number" or k < 1 or k > length or or k ~= math.floor(k) or type(v) ~= "string" then
+		if type(k) ~= "number" or k < 1 or k > length or k ~= math.floor(k) or type(v) ~= "string" then
 			return false, "Notes must be an array of strings with continuous values!"
 		end
 	end
