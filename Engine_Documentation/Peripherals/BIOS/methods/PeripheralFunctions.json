@@ -17,5 +17,5 @@
     }
   ],
   "extra":"The peripheral functions list is a table where the keys and values are:\n- **Keys**: The function/method name.\n- **Values**: The function/method type (`\"Direct\"` or `\"Yield\"`).",
-  "note":"It's good to know if a method/function is a yield or direct one:\n- **Direct Methods** are called directly, _fast_.\n- **Yielding Methods** requires a coroutine yield, _slow_."
+  "notes":["It's good to know if a method/function is a yield or direct one:\n- **Direct Methods** are called directly, _fast_.\n- **Yielding Methods** requires a coroutine yield, _slow_."]
 }

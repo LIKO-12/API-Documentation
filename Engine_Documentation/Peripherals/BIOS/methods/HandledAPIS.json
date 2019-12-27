@@ -10,5 +10,5 @@
     }
   ],
   "extra":"The peripherals handled APIS is a table where the keys and values are:\n- **Keys**: The mount name.\n- **Values**: The peripheral methods (functions).",
-  "note":"The HandledAPIS table is passed to the operating system's `boot.lua` as an argument:\n```lua\n--In C:/boot.lua\nlocal HandledAPIS = ...\n```"
+  "notes":["The HandledAPIS table is passed to the operating system's `boot.lua` as an argument:\n```lua\n--In C:/boot.lua\nlocal HandledAPIS = ...\n```"]
 }

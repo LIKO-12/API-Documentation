@@ -10,10 +10,9 @@
     },
     {
       "name":"err",
-      "type":"string",
-      "description":"The failure reason if `LIKO_SRC` was `false`.",
-      "optional":true
+      "type":["string","nil"],
+      "description":"The failure reason if `LIKO_SRC` was `false`."
     }
   ],
-  "note":"`LIKO-12_Source.love` is created at the first boot whenever a different LIKO-12 version is used, with the message `Generating internal file...` shown."
+  "notes":["`LIKO-12_Source.love` is created at the first boot whenever a different LIKO-12 version is used, with the message `Generating internal file...` shown."]
 }
