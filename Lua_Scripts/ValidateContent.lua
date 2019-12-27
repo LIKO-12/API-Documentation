@@ -435,6 +435,44 @@ local function validateMethod(method)
 	return true
 end
 
+--Returns true if the arguments were valid, false otherwise, with reason followed
+local function validateEventsArguments(arguments)
+	--Every field that's been validated is set to nil => This function destroys the data it has been passed
+	--Why doing so? Inorder to find any unwanted extra values in the data
+
+	local count = #arguments
+	if count == 0 then return false, "It must not be empty when specified!" end
+	for k, argument in pairs(arguments) do
+		if type(k) ~= "number" or k < 1 or k > count or k ~= math.floor(k) or type(argument) ~= "table" then
+			return false, "Invalid arguments entry with the index: "..k.."!"
+		end
+
+		local ok1, reason1 = validateSimpleText(argument.name)
+		if not ok1 then return false, "Failed to validate 'name': "..reason1 end
+		argument.name = nil
+
+		local ok2, reason2 = validateType(argument.type)
+		if not ok2 then return false, "Failed to validate 'type': "..reason2 end
+		argument.type = nil
+
+		if type(argument.description) ~= "nil" then
+			local ok3, reason3 = validateSimpleText(argument.description)
+			if not ok3 then return false, "Failed to validate 'description': "..reason3 end
+			argument.description = nil
+		end
+
+		--Reject any extra data in the argument
+		for k,v in pairs(argument) do
+			if type(v) ~= "nil" then
+				return false, "Invalid data field with the key: "..k.."!"
+			end
+		end
+	end
+
+	--Validated successfully
+	return true
+end
+
 --Returns true if the peripheral meta was valid, false otherwise, with reason followed
 local function validatePeripheralMeta(meta)
 	--Every field that's been validated is set to nil => This function destroys the data it has been passed
