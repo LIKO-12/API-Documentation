@@ -64,7 +64,7 @@ local function validateType(vtype)
 		local l1 = #vtype
 		if l1 == 0 then return false, "The type as a table of types must not be empty!" end
 		for k1, v1 in pairs(vtype) do
-			if type(k1) ~= "number" or k1 > l1 or k1 < 1 then return false, "The type as a table of types can be only an array of continuous values!" end
+			if type(k1) ~= "number" or k1 > l1 or k1 < 1 or k1 ~= math.floor(k1) then return false, "The type as a table of types can be only an array of continuous values!" end
 
 			if type(v1) == "string" then
 				if v1 == "any" then return false, "The \"any\" type can't be used in a table of types!" end
@@ -75,7 +75,7 @@ local function validateType(vtype)
 				local l2 = #v1
 				if l2 == 0 then return false, "The complex type in the table of types at index #"..k1.." must not be an empty array!" end
 				for k2, v2 in pairs(v1) do
-					if type(k2) ~= "number" or k2 > l2 or k2 < 1 then return false, "The complex type in the table of types at index #"..k1..": can be only an array of continuous values!" end
+					if type(k2) ~= "number" or k2 > l2 or k2 < 1 or k2 ~= math.floor(k2) then return false, "The complex type in the table of types at index #"..k1..": can be only an array of continuous values!" end
 					if type(v2) ~= "string" then return false, "The complex type in the table of types at index #"..k1..": has a non-string value!" end
 				end
 
@@ -99,19 +99,19 @@ local function validateVersion(version)
 	if #version ~= 2 then return false, "The version must be an array (table) with exactly 2 tables in it only!" end
 
 	for k,v in pairs(version) do
-		if type(k) ~= "number" or k > 2 or k < 1 or type(v) ~= "table" then return false, "The version must be an array (table) with exactly 2 tables in it only!" end
+		if type(k) ~= "number" or k > 2 or k < 1 or k ~= math.floor(k) or type(v) ~= "table" then return false, "The version must be an array (table) with exactly 2 tables in it only!" end
 	end
 
 	if #version[1] ~= 3 then return false, "The category version must be an array of 3 natural numbers!" end
 	for k,v in pairs(version[1]) do
-		if type(k) ~= "number" or k > 3 or k < 1 or type(v) ~= "number" or v < 0 or v ~= math.floor(v) then
+		if type(k) ~= "number" or k > 3 or k < 1 or k ~= math.floor(k) or type(v) ~= "number" or v < 0 or v ~= math.floor(v) then
 			return false, "The category version must be an array of 3 natural numbers!"
 		end
 	end
 
 	if #version[2] ~= 3 then return false, "The LIKO-12 version must be an array of 3 natural numbers!" end
 	for k,v in pairs(version[2]) do
-		if type(k) ~= "number" or k > 3 or k < 1 or type(v) ~= "number" or v < 0 or v ~= math.floor(v) then
+		if type(k) ~= "number" or k > 3 or k < 1 or k ~= math.floor(k) or type(v) ~= "number" or v < 0 or v ~= math.floor(v) then
 			return false, "The LIKO-12 version must be an array of 3 natural numbers!"
 		end
 	end
