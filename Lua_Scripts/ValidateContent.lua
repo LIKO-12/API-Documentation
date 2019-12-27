@@ -48,6 +48,11 @@ print("")
 ANSI.setGraphicsMode(0, 1, 36) --Cyan output
 print("Validating the engine documentation in \"Engine_Documentation\".")
 
+local function isDirectory(path)
+	local mode, err = lfs.attributes(path, "mode")
+	return mode and mode == "directory"
+end
+
 local simpleTypes = {"number", "string", "boolean", "nil", "table", "userdata", "function"}
 for k,v in ipairs(simpleTypes) do simpleTypes[v] = k end
 
@@ -225,7 +230,7 @@ local function validateMethodArguments(arguments)
 	--Every field that's been validated is set to nil => This function destroys the data it has been passed
 	--Why doing so? Inorder to find any unwanted extra values in the data
 
-	local count = #argumets
+	local count = #arguments
 	if count == 0 then return false, "It must not be empty when specified!" end
 	for k, argument in pairs(arguments) do
 		if type(k) ~= "number" or k < 1 or k > count or k ~= math.floor(k) or type(argument) ~= "table" then
@@ -665,6 +670,7 @@ local function readJSONFile(path)
 end
 
 local function validateFields(dir)
+	if not isDirectory(dir) then return end
 	print("Validating fields in \""..dir.."\"")
 
 	for item in lfs.dir(dir) do
@@ -679,6 +685,7 @@ local function validateFields(dir)
 end
 
 local function validateMethods(dir)
+	if not isDirectory(dir) then return end
 	print("Validating methods in \""..dir.."\"")
 
 	for item in lfs.dir(dir) do
@@ -693,6 +700,7 @@ local function validateMethods(dir)
 end
 
 local function validateEvents(dir)
+	if not isDirectory(dir) then return end
 	print("Validating events in \""..dir.."\"")
 
 	for item in lfs.dir(dir) do
@@ -707,6 +715,7 @@ local function validateEvents(dir)
 end
 
 local function validateObjects(dir)
+	if not isDirectory(dir) then return end
 	print("Validating objects in \""..dir.."\"")
 
 	for item in lfs.dir(dir) do
