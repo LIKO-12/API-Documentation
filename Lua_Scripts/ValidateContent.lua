@@ -217,6 +217,50 @@ local function validateField(field)
 	return true
 end
 
+--Returns true if the peripheral meta was valid, false otherwise, with reason followed
+local function validatePeripheralMeta(meta)
+	--Every field that's been validated is set to nil => This function destroys the data it has been passed
+	--Why doing so? Inorder to find any unwanted extra values in the data
+
+	if type(meta.version) ~= "table" then return false, "Failed to validate 'version': It must be a table!" end
+	local ok1, reason1 = validateVersion({meta.version, {0,0,0}})
+	if not ok1 then return false, "Failed to validate 'version': "..reason1 end
+	meta.version = nil
+
+	if type(meta.availableSince) ~= "table" then return false, "Failed to validate 'availableSince': It must be a table!" end
+	local ok2, reason2 = validateVersion({{0,0,0}, meta.availableSince})
+	if not ok2 then return false, "Failed to validate 'availableSince': "..reason2 end
+	meta.availableSince = nil
+
+	if type(meta.lastUpdatedIn) ~= "table" then return false, "Failed to validate 'lastUpdatedIn': It must be a table!" end
+	local ok3, reason3 = validateVersion({{0,0,0}, meta.lastUpdatedIn})
+	if not ok3 then return false, "Failed to validate 'lastUpdatedIn': "..reason3 end
+	meta.lastUpdatedIn = nil
+
+	local ok4, reason4 = validateSimpleText(meta.name)
+	if not ok4 then return false, "Failed to validate 'name': "..reason4 end
+	meta.name = nil
+
+	local ok5, reason5 = validateSimpleText(meta.shortDescription)
+	if not ok5 then return false, "Failed to validate 'shortDescription': "..reason5 end
+	meta.shortDescription = nil
+
+	if type(meta.fullDescription) ~= "nil" and type(meta.fullDescription) ~= "string" then
+		return false, "Failed to validate 'fullDescription': It must be a string!"
+	end
+	meta.fullDescription = nil
+
+	--Reject any extra data in the peripheral meta
+	for k,v in pairs(meta) do
+		if type(v) ~= "nil" then
+			return false, "Invalid data field with the key: "..k.."!"
+		end
+	end
+
+	--Validated successfully
+	return true
+end
+
 --Returns true if the object meta was valid, false otherwise, with reason followed
 local function validateObjectMeta(meta)
 	--Every field that's been validated is set to nil => This function destroys the data it has been passed
