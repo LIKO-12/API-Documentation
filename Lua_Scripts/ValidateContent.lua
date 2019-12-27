@@ -148,6 +148,75 @@ local function validateSimpleText(text)
 	return true
 end
 
+--Returns true if the notes was valid, false otherwise, with reason followed
+local function validateNotes(notes)
+	if type(notes) ~= "table" then return false, "It must be a table, not a "..type(notes).."!" end
+	
+	local length = #notes
+	for k,v in pairs(notes) do
+		if type(k) ~= "number" or k < 1 or k > length or or k ~= math.floor(k) or type(v) ~= "string" then
+			return false, "Notes must be an array of strings with continuous values!"
+		end
+	end
+
+	return true
+end
+
+--Returns true if the field was valid, false otherwise, with reason followed
+local function validateField(field)
+	--Every field that's been validated is set to nil => This function destroys the data it has been passed
+	--Why doing so? Inorder to find any unwanted extra values in the data
+
+	local ok1, reason1 = validateVersion(field.availableSince)
+	if not ok1 then return false, "Failed to validate 'availableSince': "..reason1 end
+	field.availableSince = nil
+
+	local ok2, reason2 = validateVersion(field.lastUpdatedIn)
+	if not ok2 then return false, "Failed to validate 'lastUpdatedIn': "..reason2 end
+	field.lastUpdatedIn = nil
+
+	if type(field.shortDescription) ~= "nil" then
+		local ok3, reason3 = validateSimpleText(field.shortDescription)
+		if not ok3 then return false, "Failed to validate 'shortDescription': "..reason3 end
+		field.shortDescription = nil
+	end
+
+	if type(field.longDescription) ~= "nil" and type(field.longDescription) ~= "string" then
+		return false, "Failed to validate 'longDescription': It must be a string!"
+	end
+	field.longDescription = nil
+
+	if type(field.notes) ~= "nil" then
+		local ok4, reason4 = validateNotes(field.notes)
+		if not ok4 then return false, "Failed to validate 'notes': "..reason4 end
+		field.notes = nil
+	end
+
+	if type(field.extra) ~= "nil" and type(field.extra) ~= "string" then
+		return false, "Failed to validate 'extra': It must be a string!"
+	end
+	field.extra = nil
+
+	local ok5, reason5 = validateType(field.type)
+	if not ok5 then return false, "Failed to validate 'type': "..reason5 end
+	field.type = nil
+
+	if type(field.protected) ~= "nil" and type(field.protected) ~= "boolean" then
+		return false, "Failed to validate 'protected': It must be a boolean!"
+	end
+	field.protected = nil
+
+	--Reject any extra data in the field
+	for k,v in pairs(field) do
+		if type(v) ~= "nil" then
+			return false, "Invalid data field with the key: "..k.."!"
+		end
+	end
+
+	--Validated successfully
+	return true
+end
+
 --== The end of the script ==--
 
 local endClock = os.clock()
