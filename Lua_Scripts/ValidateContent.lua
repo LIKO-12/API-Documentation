@@ -266,7 +266,33 @@ local function validateMethodArguments(arguments)
 	return true
 end
 
-		--Reject any extra data in the argument
+--Returns true if the returns were valid, false otherwise, with reason followed
+local function validateMethodReturns(returns)
+	--Every field that's been validated is set to nil => This function destroys the data it has been passed
+	--Why doing so? Inorder to find any unwanted extra values in the data
+
+	local count = #returns
+	if count == 0 then return false, "It must not be empty when specified!" end
+	for k, ret in pairs(returns) do
+		if type(k) ~= "number" or k < 1 or k > count or k ~= math.floor(k) or type(ret) ~= "table" then
+			return false, "Invalid returns entry with the index: "..k.."!"
+		end
+
+		local ok1, reason1 = validateSimpleText(ret.name)
+		if not ok1 then return false, "Failed to validate 'name': "..reason1 end
+		ret.name = nil
+
+		local ok2, reason2 = validateType(ret.type)
+		if not ok2 then return false, "Failed to validate 'type': "..reason2 end
+		ret.type = nil
+
+		if type(ret.description) ~= "nil" then
+			local ok3, reason3 = validateSimpleText(ret.description)
+			if not ok3 then return false, "Failed to validate 'description': "..reason3 end
+			ret.description = nil
+		end
+
+		--Reject any extra data in the return
 		for k,v in pairs(meta) do
 			if type(v) ~= "nil" then
 				return false, "Invalid data field with the key: "..k.."!"
