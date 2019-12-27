@@ -245,7 +245,7 @@ local function validateDocumentationMeta(meta)
 	meta.specificationLink = nil
 
 	--Reject any extra data in the documentation meta
-	for k,v in pairs(field) do
+	for k,v in pairs(meta) do
 		if type(v) ~= "nil" then
 			return false, "Invalid data field with the key: "..k.."!"
 		end
