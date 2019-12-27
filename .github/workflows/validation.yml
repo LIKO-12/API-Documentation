@@ -23,3 +23,6 @@ jobs:
       
       - name: Validate JSON files
         run: luajit ./Lua_Scripts/ValidateJSON.lua
+      
+      - name: Validate files content
+        run: luajit ./Lua_Scripts/ValidateContent.lua
