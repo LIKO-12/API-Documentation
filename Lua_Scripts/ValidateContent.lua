@@ -217,6 +217,44 @@ local function validateField(field)
 	return true
 end
 
+--Returns true if the documentation meta was valid, false otherwise, with reason followed
+local function validateDocumentationMeta(meta)
+	--Every field that's been validated is set to nil => This function destroys the data it has been passed
+	--Why doing so? Inorder to find any unwanted extra values in the data
+
+	if type(meta.engineVersion) ~= "table" then return false, "Failed to validate 'engineVersion': It must be a table!" end
+	local ok1, reason1 = validateVersion({{0,0,0}, meta.engineVersion})
+	if not ok1 then return false, "Failed to validate 'engineVersion': "..reason1 end
+	meta.engineVersion = nil
+
+	local ok2, reason2 = validateDate(meta.revisionDate)
+	if not ok2 then return false, "Failed to validate 'revisionDate': "..reason2 end
+	meta.revisionDate = nil
+
+	if type(meta.revisionNumber) ~= "number" or meta.revisionNumber < 0 or meta.revisionNumber ~= math.floor(meta.revisionNumber) then
+		return false, "Failed to validate 'revisionNumber': It must be a natural number!"
+	end
+	meta.revisionNumber = nil
+
+	local ok3, reason3 = validateDate(meta.specificationDate)
+	if not ok3 then return false, "Failed to validate 'specificationDate': "..reason3 end
+	meta.specificationDate = nil
+
+	local ok4, reason4 = validateSimpleText(meta.specificationLink)
+	if not ok4 then return false, "Failed to validate 'specificationLink': "..reason4 end
+	meta.specificationLink = nil
+
+	--Reject any extra data in the documentation meta
+	for k,v in pairs(field) do
+		if type(v) ~= "nil" then
+			return false, "Invalid data field with the key: "..k.."!"
+		end
+	end
+
+	--Validated successfully
+	return true
+end
+
 --== The end of the script ==--
 
 local endClock = os.clock()
