@@ -45,6 +45,9 @@ print("")
 
 --== Validate Engine_Documentation ==--
 
+ANSI.setGraphicsMode(0, 1, 36) --Cyan output
+print("Validating the engine documentation in \"Engine_Documentation\".")
+
 local simpleTypes = {"number", "string", "boolean", "nil", "table", "userdata", "function"}
 for k,v in ipairs(simpleTypes) do simpleTypes[v] = k end
 
@@ -652,6 +655,99 @@ local function validateDocumentationMeta(meta)
 	--Validated successfully
 	return true
 end
+
+local function readJSONFile(path)
+	local file = assert(io.open(path, "r"))
+	local jdata = file:read("*a")
+	file:close()
+
+	return JSON:decode(jdata)
+end
+
+local function validateFields(dir)
+	print("Validating fields in \""..dir.."\"")
+
+	for item in lfs.dir(dir) do
+		if item:sub(-5,-1) == ".json" then
+			local data = readJSONFile(dir.."/"..item)
+			local ok, failure = validateField(data)
+			if not ok then
+				fail("Failed to validate field \""..dir.."/"..item.."\":", failure)
+			end
+		end
+	end
+end
+
+local function validateMethods(dir)
+	print("Validating methods in \""..dir.."\"")
+
+	for item in lfs.dir(dir) do
+		if item:sub(-5,-1) == ".json" then
+			local data = readJSONFile(dir.."/"..item)
+			local ok, failure = validateMethod(data)
+			if not ok then
+				fail("Failed to validate method \""..dir.."/"..item.."\":", failure)
+			end
+		end
+	end
+end
+
+local function validateEvents(dir)
+	print("Validating events in \""..dir.."\"")
+
+	for item in lfs.dir(dir) do
+		if item:sub(-5,-1) == ".json" then
+			local data = readJSONFile(dir.."/"..item)
+			local ok, failure = validateEvent(data)
+			if not ok then
+				fail("Failed to validate event \""..dir.."/"..item.."\":", failure)
+			end
+		end
+	end
+end
+
+local function validateObjects(dir)
+	print("Validating objects in \""..dir.."\"")
+
+	for item in lfs.dir(dir) do
+		if item ~= "." and item ~= ".." then
+			local data = readJSONFile(dir.."/"..item.."/"..item..".json")
+			local ok, failure = validateObjectMeta(data)
+			if not ok then
+				fail("Failed to validate object meta \""..dir.."/"..item.."/"..item..".json\":", failure)
+			end
+
+			validateMethods(dir.."/"..item.."/methods")
+			validateFields(dir.."/"..item.."/fields")
+		end
+	end
+end
+
+local function validatePeripherals(dir)
+	print("Validating peripherals in \""..dir.."\"")
+
+	for item in lfs.dir(dir) do
+		if item ~= "." and item ~= ".." then
+			local data = readJSONFile(dir.."/"..item.."/"..item..".json")
+			local ok, failure = validatePeripheralMeta(data)
+			if not ok then
+				fail("Failed to validate peripheral meta \""..dir.."/"..item.."/"..item..".json\":", failure)
+			end
+
+			validateMethods(dir.."/"..item.."/methods")
+			validateObjects(dir.."/"..item.."/objects")
+			validateEvents(dir.."/"..item.."/events")
+		end
+	end
+end
+
+local docMeta = readJSONFile("Engine_Documentation/Engine_Documentation.json")
+local ok, failure = validateDocumentationMeta(docMeta)
+if not ok then
+	fail("Failed to validate documentation meta \"Engine_Documentation/Engine_Documentation.json\":", failure)
+end
+
+validatePeripherals("Engine_Documentation/Peripherals")
 
 --== The end of the script ==--
 
