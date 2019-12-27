@@ -217,6 +217,54 @@ local function validateField(field)
 	return true
 end
 
+--Returns true if the arguments were valid, false otherwise, with reason followed
+local function validateMethodArguments(arguments)
+	--Every field that's been validated is set to nil => This function destroys the data it has been passed
+	--Why doing so? Inorder to find any unwanted extra values in the data
+
+	local count = #argumets
+	for k, argument in pairs(arguments) do
+		if type(k) ~= "number" or k < 1 or k > count or k ~= math.floor(k) or type(argument) ~= "table" then
+			return false, "Invalid argument entry with the index: "..k.."!"
+		end
+
+		if type(argument.default) == "nil" and type(argument.name) == "nil" then
+			return false, "The 'name' field must be specified when the 'default' field is not set!"
+		end
+
+		if type(argument.name) ~= "nil" then
+			local ok1, reason1 = validateSimpleText(argument.name)
+			if not ok1 then return false, "Failed to validate 'name' field of the #"..k.." argument: "..reason1 end
+			argument.name = nil
+		end
+
+		local ok2, reason2 = validateType(argument.type)
+		if not ok2 then return false, "Failed to validate 'type' field of the #"..k.." argument: "..reason2 end
+		argument.type = nil
+
+		if type(argument.description) ~= "nil" then
+			local ok3, reason3 = validateSimpleText(argument.description)
+			if not ok3 then return false, "Failed to validate 'description' field of the #"..k.." argument: "..reason3 end
+			argument.description = nil
+		end
+
+		if type(argument.default) ~= "nil" and type(argument.default) ~= "string" then
+			return false, "Failed to validate 'default' field of the #"..k.." argument: It must be a string!"
+		end
+		argument.default = nil
+
+		--Reject any extra data in the argument
+		for k,v in pairs(meta) do
+			if type(v) ~= "nil" then
+				return false, "Invalid data field with the key: "..k.."!"
+			end
+		end
+	end
+
+	--Validated successfully
+	return true
+end
+
 --Returns true if the peripheral meta was valid, false otherwise, with reason followed
 local function validatePeripheralMeta(meta)
 	--Every field that's been validated is set to nil => This function destroys the data it has been passed
