@@ -223,9 +223,10 @@ local function validateMethodArguments(arguments)
 	--Why doing so? Inorder to find any unwanted extra values in the data
 
 	local count = #argumets
+	if count == 0 then return false, "It must not be empty when specified!" end
 	for k, argument in pairs(arguments) do
 		if type(k) ~= "number" or k < 1 or k > count or k ~= math.floor(k) or type(argument) ~= "table" then
-			return false, "Invalid argument entry with the index: "..k.."!"
+			return false, "Invalid arguments entry with the index: "..k.."!"
 		end
 
 		if type(argument.default) == "nil" and type(argument.name) == "nil" then
@@ -252,6 +253,18 @@ local function validateMethodArguments(arguments)
 			return false, "Failed to validate 'default' field of the #"..k.." argument: It must be a string!"
 		end
 		argument.default = nil
+
+		--Reject any extra data in the argument
+		for k,v in pairs(argument) do
+			if type(v) ~= "nil" then
+				return false, "Invalid data field with the key: "..k.."!"
+			end
+		end
+	end
+
+	--Validated successfully
+	return true
+end
 
 		--Reject any extra data in the argument
 		for k,v in pairs(meta) do
