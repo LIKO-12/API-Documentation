@@ -217,6 +217,52 @@ local function validateField(field)
 	return true
 end
 
+--Returns true if the object meta was valid, false otherwise, with reason followed
+local function validateObjectMeta(meta)
+	--Every field that's been validated is set to nil => This function destroys the data it has been passed
+	--Why doing so? Inorder to find any unwanted extra values in the data
+
+	local ok1, reason1 = validateVersion(meta.availableSince)
+	if not ok1 then return false, "Failed to validate 'availableSince': "..reason1 end
+	meta.availableSince = nil
+
+	local ok2, reason2 = validateVersion(meta.lastUpdatedIn)
+	if not ok2 then return false, "Failed to validate 'lastUpdatedIn': "..reason2 end
+	meta.lastUpdatedIn = nil
+
+	if type(meta.shortDescription) ~= "nil" then
+		local ok3, reason3 = validateSimpleText(meta.shortDescription)
+		if not ok3 then return false, "Failed to validate 'shortDescription': "..reason3 end
+		meta.shortDescription = nil
+	end
+
+	if type(meta.fullDescription) ~= "nil" and type(meta.fullDescription) ~= "string" then
+		return false, "Failed to validate 'fullDescription': It must be a string!"
+	end
+	meta.fullDescription = nil
+
+	if type(meta.notes) ~= "nil" then
+		local ok4, reason4 = validateNotes(meta.notes)
+		if not ok4 then return false, "Failed to validate 'notes': "..reason4 end
+		meta.notes = nil
+	end
+
+	if type(meta.extra) ~= "nil" and type(meta.extra) ~= "string" then
+		return false, "Failed to validate 'extra': It must be a string!"
+	end
+	meta.extra = nil
+
+	--Reject any extra data in the object meta
+	for k,v in pairs(meta) do
+		if type(v) ~= "nil" then
+			return false, "Invalid data field with the key: "..k.."!"
+		end
+	end
+
+	--Validated successfully
+	return true
+end
+
 --Returns true if the documentation meta was valid, false otherwise, with reason followed
 local function validateDocumentationMeta(meta)
 	--Every field that's been validated is set to nil => This function destroys the data it has been passed
