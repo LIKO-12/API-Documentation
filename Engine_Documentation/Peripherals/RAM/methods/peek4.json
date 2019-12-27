@@ -1,7 +1,7 @@
 {
   "shortDescription": "Peeks a half byte section in RAM.",
 	"longDescription": "Peeks (reads) a half byte section in video memory.",
-  "note": "The address is for the specific half byte.",
+  "notes": ["The address is for the specific half byte."],
 	"arguments": [ {
 		"description": "An address to the location to read.",
 		"name": "address",

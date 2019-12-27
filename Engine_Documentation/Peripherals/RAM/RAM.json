@@ -1,4 +1,5 @@
 {
+	"version": [1,0,0],
 	"availableSince": [ 0,6,0 ],
 	"lastUpdatedIn": [ 0,8,0 ],
 	"name": "Random Access Memory",
