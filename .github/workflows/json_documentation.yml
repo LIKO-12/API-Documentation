@@ -1,9 +1,9 @@
-name: Documentation Verification
+name: JSON Documentation
 on: [push]
 
 jobs:
   validate:
-    name: Validation scripts
+    name: Engine Documentation
     runs-on: ubuntu-18.04
     steps:
       - name: Update APT
@@ -26,3 +26,11 @@ jobs:
       
       - name: Validate files content
         run: luajit ./Lua_Scripts/ValidateContent.lua
+
+      - name: Reformat JSON files
+        run: |
+          luajit ./Lua_Scripts/RefromatJSON.lua
+          git add -A && git commit -m "Reformat JSON files in Engine_Documentation"
+      
+      - name: Push Git changes
+        run: git push
