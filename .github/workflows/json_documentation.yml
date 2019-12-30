@@ -27,10 +27,17 @@ jobs:
       - name: Validate files content
         run: luajit ./Lua_Scripts/ValidateContent.lua
 
+      - name: Configure Git
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
       - name: Reformat JSON files
         run: |
           luajit ./Lua_Scripts/ReformatJSON.lua
           git add -A && git commit -m "Reformat JSON files in Engine_Documentation"
       
-      - name: Push Git changes
-        run: git push
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
