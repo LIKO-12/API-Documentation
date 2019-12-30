@@ -79,8 +79,8 @@ local function indexDirectory(path)
                 jsonData = JSON:encode(data, _, newFormat)
 
                 jsonFile = assert(io.open(path..item, "w"))
-                jsonFile:write(jsonData)
-                jsonFile:close()
+                assert(jsonFile:write(jsonData))
+                assert(jsonFile:close())
             end
         end
     end
