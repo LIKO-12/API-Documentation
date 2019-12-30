@@ -29,7 +29,7 @@ jobs:
 
       - name: Reformat JSON files
         run: |
-          luajit ./Lua_Scripts/RefromatJSON.lua
+          luajit ./Lua_Scripts/ReformatJSON.lua
           git add -A && git commit -m "Reformat JSON files in Engine_Documentation"
       
       - name: Push Git changes
