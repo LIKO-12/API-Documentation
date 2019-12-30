@@ -1,18 +1,15 @@
 {
+	"arguments": [ {
+		"description": "The sound effect data.",
+		"name": "sfx",
+		"type": "table"
+	}, {
+		"default": "0",
+		"description": "A channel from 0 to 3.",
+		"name": "chn",
+		"type": "number"
+	} ],
 	"availableSince": [ [ 1, 0, 0 ], [ 0, 7, 0 ] ],
 	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 8, 0 ] ],
-	"shortDescription": "Plays a sound effect over a channel.",
-  "arguments": [
-    {
-			"description": "The sound effect data.",
-			"name": "sfx",
-			"type": "table"
-		},
-    {
-      "description": "A channel from 0 to 3.",
-			"name": "chn",
-			"type": "number",
-      "default": "0"
-    }
-  ]
+	"shortDescription": "Plays a sound effect over a channel."
 }

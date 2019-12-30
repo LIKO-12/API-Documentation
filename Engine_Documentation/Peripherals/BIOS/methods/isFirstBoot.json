@@ -1,12 +1,10 @@
 {
-  "availableSince": [[1,18,3], [1,0,0]],
-  "lastUpdatedIn": [[1,18,3], [1,0,0]],
-  "shortDescription": "Tells if this is the first boot of LIKO-12 ever.",
-  "returns":[
-    {
-      "name":"FirstBoot",
-      "type":"boolean",
-      "description":"True when this is the first boot of LIKO-12 ever."
-    }
-  ]
+	"availableSince": [ [ 1, 18, 3 ], [ 1, 0, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 18, 3 ], [ 1, 0, 0 ] ],
+	"returns": [ {
+		"description": "True when this is the first boot of LIKO-12 ever.",
+		"name": "FirstBoot",
+		"type": "boolean"
+	} ],
+	"shortDescription": "Tells if this is the first boot of LIKO-12 ever."
 }

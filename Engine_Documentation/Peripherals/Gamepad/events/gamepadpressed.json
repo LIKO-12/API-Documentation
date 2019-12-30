@@ -1,18 +1,14 @@
 {
-  "availableSince": [[1,0,0], [0,6,0]],
-  "lastUpdatedIn": [[1,0,0], [0,8,0]],
-
-  "shortDescription":"A button on the gamepad was pressed.",
-  "arguments":[
-    {
-      "name":"joystick",
-      "type":"table",
-      "description":"The joystick with the pressed button."
-    },
-    {
-      "name":"button",
-      "type":"string",
-      "description":"The name of the pressed button."
-    }
-  ]
+	"arguments": [ {
+		"description": "The joystick with the pressed button.",
+		"name": "joystick",
+		"type": "table"
+	}, {
+		"description": "The name of the pressed button.",
+		"name": "button",
+		"type": "string"
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 8, 0 ] ],
+	"shortDescription": "A button on the gamepad was pressed."
 }

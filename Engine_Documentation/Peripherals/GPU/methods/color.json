@@ -1,29 +1,21 @@
 {
-  "shortDescription": "Set's the current active color.",
-  "longDescription": "Set's the current active color.\n\n---\n\n![Palette](_media/Palette.png)",
 	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
 	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
-  
-	"usages": [
-    {
-      "name": "Set the current active color:",
-      "arguments": [
-        {
-          "description": "The new active color id (0-15).",
-          "name": "id",
-          "type": "number"
-        }
-      ]
-    },
-    {
-      "name": "Get the current active color:",
-      "returns": [
-        {
-          "description": "The current active color id (0-15).",
-          "name": "id",
-          "type": "number"
-        }
-      ]
-    }
-  ]
+	"longDescription": "Set's the current active color.\n\n---\n\n![Palette](_media/Palette.png)",
+	"shortDescription": "Set's the current active color.",
+	"usages": [ {
+		"arguments": [ {
+			"description": "The new active color id (0-15).",
+			"name": "id",
+			"type": "number"
+		} ],
+		"name": "Set the current active color:"
+	}, {
+		"name": "Get the current active color:",
+		"returns": [ {
+			"description": "The current active color id (0-15).",
+			"name": "id",
+			"type": "number"
+		} ]
+	} ]
 }

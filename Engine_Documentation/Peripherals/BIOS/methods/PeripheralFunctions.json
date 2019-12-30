@@ -1,21 +1,17 @@
 {
-  "availableSince": [[1,15,2], [0,7,0]],
-  "lastUpdatedIn": [[1,15,2], [0,7,0]],
-  "shortDescription": "Returns the list of available peripheral functions, and their type (Direct,Yield).",
-  "arguments":[
-    {
-      "name":"mountName",
-      "type":"string",
-      "description":"The peripheral mount name."
-    }
-  ],
-  "returns":[
-    {
-      "name":"functions",
-      "type":"table",
-      "description":"The peripheral functions list."
-    }
-  ],
-  "extra":"The peripheral functions list is a table where the keys and values are:\n- **Keys**: The function/method name.\n- **Values**: The function/method type (`\"Direct\"` or `\"Yield\"`).",
-  "notes":["It's good to know if a method/function is a yield or direct one:\n- **Direct Methods** are called directly, _fast_.\n- **Yielding Methods** requires a coroutine yield, _slow_."]
+	"arguments": [ {
+		"description": "The peripheral mount name.",
+		"name": "mountName",
+		"type": "string"
+	} ],
+	"availableSince": [ [ 1, 15, 2 ], [ 0, 7, 0 ] ],
+	"extra": "The peripheral functions list is a table where the keys and values are:\n- **Keys**: The function/method name.\n- **Values**: The function/method type (`\"Direct\"` or `\"Yield\"`).",
+	"lastUpdatedIn": [ [ 1, 15, 2 ], [ 0, 7, 0 ] ],
+	"notes": [ "It's good to know if a method/function is a yield or direct one:\n- **Direct Methods** are called directly, _fast_.\n- **Yielding Methods** requires a coroutine yield, _slow_." ],
+	"returns": [ {
+		"description": "The peripheral functions list.",
+		"name": "functions",
+		"type": "table"
+	} ],
+	"shortDescription": "Returns the list of available peripheral functions, and their type (Direct,Yield)."
 }

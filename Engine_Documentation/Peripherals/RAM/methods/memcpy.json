@@ -1,21 +1,19 @@
 {
-  "shortDescription": "Copies data in RAM.",
-	"longDescription": "Copies data from one location to another in video memory.",
 	"arguments": [ {
 		"description": "The address of the data to be copied.",
 		"name": "from_address",
 		"type": "number"
-	},
-  {
+	}, {
 		"description": "The address the data should be copied to.",
 		"name": "to_address",
 		"type": "number"
-	},
-  {
-    "description": "Length of the data to copy.",
+	}, {
+		"description": "Length of the data to copy.",
 		"name": "length",
 		"type": "number"
-  } ],
+	} ],
 	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
-	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ]
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"longDescription": "Copies data from one location to another in video memory.",
+	"shortDescription": "Copies data in RAM."
 }

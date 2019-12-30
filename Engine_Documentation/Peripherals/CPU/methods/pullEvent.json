@@ -1,44 +1,35 @@
 {
-  "shortDescription": "Pulls an event from the events stack.",
-  "longDescription": "Pulls an event from the events stack.\n\nThis function is used internally by DiskOS to run the default event loop, which calls the callback functions that start by `_` like `_update` and `_mousepressed`, etc..\n\nEvents in LIKO-12 may be pulled directly, or pulled from a stack if there are already, the stack may fill up when CPU `sleep()` or GPU `flip()` are called.",
 	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
 	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
-  
-	"returns": [
-    {
-      "description": "The event name, can be any of the callbacks names without the \"_\" at the start.",
-      "name": "event",
-      "type": "string"
-    },
-    {
-      "description": "First argument.",
-      "name": "a",
-      "type": "any"
-    },
-    {
-      "description": "Second argument.",
-      "name": "b",
-      "type": "any"
-    },
-    {
-      "description": "Third argument.",
-      "name": "c",
-      "type": "any"
-    },
-    {
-      "description": "Forth argument.",
-      "name": "d",
-      "type": "any"
-    },
-    {
-      "description": "Fifth argument.",
-      "name": "e",
-      "type": "any"
-    },
-    {
-      "description": "Sixth argument.",
-      "name": "f",
-      "type": "any"
-    }
-  ]
+	"longDescription": "Pulls an event from the events stack.\n\nThis function is used internally by DiskOS to run the default event loop, which calls the callback functions that start by `_` like `_update` and `_mousepressed`, etc..\n\nEvents in LIKO-12 may be pulled directly, or pulled from a stack if there are already, the stack may fill up when CPU `sleep()` or GPU `flip()` are called.",
+	"returns": [ {
+		"description": "The event name, can be any of the callbacks names without the \"_\" at the start.",
+		"name": "event",
+		"type": "string"
+	}, {
+		"description": "First argument.",
+		"name": "a",
+		"type": "any"
+	}, {
+		"description": "Second argument.",
+		"name": "b",
+		"type": "any"
+	}, {
+		"description": "Third argument.",
+		"name": "c",
+		"type": "any"
+	}, {
+		"description": "Forth argument.",
+		"name": "d",
+		"type": "any"
+	}, {
+		"description": "Fifth argument.",
+		"name": "e",
+		"type": "any"
+	}, {
+		"description": "Sixth argument.",
+		"name": "f",
+		"type": "any"
+	} ],
+	"shortDescription": "Pulls an event from the events stack."
 }

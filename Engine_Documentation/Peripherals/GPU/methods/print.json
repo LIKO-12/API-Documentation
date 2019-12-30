@@ -2,177 +2,136 @@
 	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
 	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
 	"shortDescription": "Prints text to the screen, uses the current active color.",
-	"usages": [
-    {
-      "name": "Print at a specific position on the screen with wrapping mode",
-      "arguments": [
-        {
-          "description": "The text to draw.",
-          "name": "text",
-          "type": "string"
-        },
-        {
-          "description": "The X coord to draw at.",
-          "name": "x",
-          "type": "number"
-        },
-        {
-          "description": "The y coord to draw at.",
-          "name": "y",
-          "type": "number"
-        },
-        {
-          "description": "Wrap the line after this many horizontal pixels.",
-          "name": "limit",
-          "type": "number"
-        },
-        {
-          "default": "left",
-          "description": "The alignment.",
-          "name": "align",
-          "type": "string"
-        },
-        {
-          "description": "Rotation (radians).",
-          "name": "r",
-          "type": "number"
-        },
-        {
-          "description": "Scale factor (x-axis).",
-          "name": "sx",
-          "type": "number"
-        },
-        {
-          "description": "Scale factor (y-axis).",
-          "name": "sy",
-          "type": "number"
-        },
-        {
-          "description": "Origin offset (x-axis).",
-          "name": "ox",
-          "type": "number"
-        },
-        {
-          "description": "Origin offset (y-axis).",
-          "name": "oy",
-          "type": "number"
-        },
-        {
-          "description": "Shear factor (x-axis).",
-          "name": "kx",
-          "type": "number"
-        },
-        {
-          "description": "Shear factor (y-axis).",
-          "name": "ky",
-          "type": "number"
-        }
-      ]
-    },
-    {
-      "name": "Print at a specific position on the screen without wrapping.",
-      "arguments": [
-        {
-          "description": "The text to draw.",
-          "name": "text",
-          "type": "string"
-        },
-        {
-          "description": "The X coord to draw at.",
-          "name": "x",
-          "type": "number"
-        },
-        {
-          "description": "The y coord to draw at.",
-          "name": "y",
-          "type": "number"
-        },
-        {
-          "default": "false",
-          "type": "boolean"
-        },
-        {
-          "default": "false",
-          "type": "boolean"
-        },
-        {
-          "description": "Rotation (radians).",
-          "name": "r",
-          "type": "number"
-        },
-        {
-          "description": "Scale factor (x-axis).",
-          "name": "sx",
-          "type": "number"
-        },
-        {
-          "description": "Scale factor (y-axis).",
-          "name": "sy",
-          "type": "number"
-        },
-        {
-          "description": "Origin offset (x-axis).",
-          "name": "ox",
-          "type": "number"
-        },
-        {
-          "description": "Origin offset (y-axis).",
-          "name": "oy",
-          "type": "number"
-        },
-        {
-          "description": "Shear factor (x-axis).",
-          "name": "kx",
-          "type": "number"
-        },
-        {
-          "description": "Shear factor (y-axis).",
-          "name": "ky",
-          "type": "number"
-        }
-      ]
-    },
-    {
-      "name": "Print in terminal grid way.",
-      "arguments": [
-        {
-          "description": "The text to draw.",
-          "name": "text",
-          "type": "string"
-        }
-      ]
-    },
-    {
-      "name": "Print in terminal grid without auto newline.",
-      "arguments": [
-        {
-          "description": "The text to draw.",
-          "name": "text",
-          "type": "string"
-        },
-        {
-          "default": "false",
-          "type": "boolean"
-        }
-      ]
-    },
-    {
-      "name": "Print in terminal grid directly without wrapping nor new line.",
-      "arguments": [
-        {
-          "description": "The text to draw.",
-          "name": "text",
-          "type": "string"
-        },
-        {
-          "default": "false",
-          "type": "boolean"
-        },
-        {
-          "default": "true",
-          "type": "boolean"
-        }
-      ]
-    }
-  ]
+	"usages": [ {
+		"arguments": [ {
+			"description": "The text to draw.",
+			"name": "text",
+			"type": "string"
+		}, {
+			"description": "The X coord to draw at.",
+			"name": "x",
+			"type": "number"
+		}, {
+			"description": "The y coord to draw at.",
+			"name": "y",
+			"type": "number"
+		}, {
+			"description": "Wrap the line after this many horizontal pixels.",
+			"name": "limit",
+			"type": "number"
+		}, {
+			"default": "left",
+			"description": "The alignment.",
+			"name": "align",
+			"type": "string"
+		}, {
+			"description": "Rotation (radians).",
+			"name": "r",
+			"type": "number"
+		}, {
+			"description": "Scale factor (x-axis).",
+			"name": "sx",
+			"type": "number"
+		}, {
+			"description": "Scale factor (y-axis).",
+			"name": "sy",
+			"type": "number"
+		}, {
+			"description": "Origin offset (x-axis).",
+			"name": "ox",
+			"type": "number"
+		}, {
+			"description": "Origin offset (y-axis).",
+			"name": "oy",
+			"type": "number"
+		}, {
+			"description": "Shear factor (x-axis).",
+			"name": "kx",
+			"type": "number"
+		}, {
+			"description": "Shear factor (y-axis).",
+			"name": "ky",
+			"type": "number"
+		} ],
+		"name": "Print at a specific position on the screen with wrapping mode"
+	}, {
+		"arguments": [ {
+			"description": "The text to draw.",
+			"name": "text",
+			"type": "string"
+		}, {
+			"description": "The X coord to draw at.",
+			"name": "x",
+			"type": "number"
+		}, {
+			"description": "The y coord to draw at.",
+			"name": "y",
+			"type": "number"
+		}, {
+			"default": "false",
+			"type": "boolean"
+		}, {
+			"default": "false",
+			"type": "boolean"
+		}, {
+			"description": "Rotation (radians).",
+			"name": "r",
+			"type": "number"
+		}, {
+			"description": "Scale factor (x-axis).",
+			"name": "sx",
+			"type": "number"
+		}, {
+			"description": "Scale factor (y-axis).",
+			"name": "sy",
+			"type": "number"
+		}, {
+			"description": "Origin offset (x-axis).",
+			"name": "ox",
+			"type": "number"
+		}, {
+			"description": "Origin offset (y-axis).",
+			"name": "oy",
+			"type": "number"
+		}, {
+			"description": "Shear factor (x-axis).",
+			"name": "kx",
+			"type": "number"
+		}, {
+			"description": "Shear factor (y-axis).",
+			"name": "ky",
+			"type": "number"
+		} ],
+		"name": "Print at a specific position on the screen without wrapping."
+	}, {
+		"arguments": [ {
+			"description": "The text to draw.",
+			"name": "text",
+			"type": "string"
+		} ],
+		"name": "Print in terminal grid way."
+	}, {
+		"arguments": [ {
+			"description": "The text to draw.",
+			"name": "text",
+			"type": "string"
+		}, {
+			"default": "false",
+			"type": "boolean"
+		} ],
+		"name": "Print in terminal grid without auto newline."
+	}, {
+		"arguments": [ {
+			"description": "The text to draw.",
+			"name": "text",
+			"type": "string"
+		}, {
+			"default": "false",
+			"type": "boolean"
+		}, {
+			"default": "true",
+			"type": "boolean"
+		} ],
+		"name": "Print in terminal grid directly without wrapping nor new line."
+	} ]
 }

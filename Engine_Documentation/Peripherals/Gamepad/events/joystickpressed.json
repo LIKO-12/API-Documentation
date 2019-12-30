@@ -1,18 +1,14 @@
 {
-  "availableSince": [[1,0,0], [0,6,0]],
-  "lastUpdatedIn": [[1,0,0], [0,8,0]],
-
-  "shortDescription":"Map a button on the joysitck.",
-  "arguments":[
-    {
-      "name":"joystick",
-      "type":"table",
-      "description":"The joystick with the button."
-    },
-    {
-      "name":"button",
-      "type":"string",
-      "description":"The button to map."
-    }
-  ]
+	"arguments": [ {
+		"description": "The joystick with the button.",
+		"name": "joystick",
+		"type": "table"
+	}, {
+		"description": "The button to map.",
+		"name": "button",
+		"type": "string"
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 8, 0 ] ],
+	"shortDescription": "Map a button on the joysitck."
 }

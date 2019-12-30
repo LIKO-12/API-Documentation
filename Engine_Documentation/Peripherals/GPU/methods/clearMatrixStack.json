@@ -1,5 +1,5 @@
 {
-  "shortDescription": "Clears the matrix stack (By calling `popMatrix()`).",
 	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
-	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ]
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"shortDescription": "Clears the matrix stack (By calling `popMatrix()`)."
 }

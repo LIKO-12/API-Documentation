@@ -26,6 +26,6 @@
 	} ],
 	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
 	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
-	"notes": ["The arguments can be passed in a table."],
+	"notes": [ "The arguments can be passed in a table." ],
 	"shortDescription": "Draws a circle on the screen."
 }

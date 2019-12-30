@@ -1,8 +1,8 @@
 {
-	"version": [ 1,18,3 ],
-	"availableSince": [ 0,6,0 ],
-	"lastUpdatedIn": [ 1,0,0 ],
+	"availableSince": [ 0, 6, 0 ],
+	"fullDescription": "Provides APIs to get information about the peripherals, and their methods, are the direct or indirect.\n\nAlso gives info about LIKO-12's version, and previous version when updated from an old one (only the first boot with the new version).\nStarting with LIKO-12 0.9.0, It also gives the .love of LIKO-12.",
+	"lastUpdatedIn": [ 1, 0, 0 ],
 	"name": "Basic Integrated Operating System",
 	"shortDescription": "Gives access to miscellaneous functions.",
-	"fullDescription": "Provides APIs to get information about the peripherals, and their methods, are the direct or indirect.\n\nAlso gives info about LIKO-12's version, and previous version when updated from an old one (only the first boot with the new version).\nStarting with LIKO-12 0.9.0, It also gives the .love of LIKO-12."
+	"version": [ 1, 18, 3 ]
 }

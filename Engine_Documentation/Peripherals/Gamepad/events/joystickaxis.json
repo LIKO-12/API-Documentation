@@ -1,23 +1,18 @@
 {
-  "availableSince": [[1,0,0], [0,6,0]],
-  "lastUpdatedIn": [[1,0,0], [0,8,0]],
-
-  "shortDescription":"Map the joystick movements.",
-  "arguments":[
-    {
-      "name":"joystick",
-      "type":"table",
-      "description":"The joystick to map."
-    },
-    {
-      "name":"axis",
-      "type":"number",
-      "description":"The index to map to."
-    },
-    {
-      "name":"value",
-      "type":"number",
-      "description":"Value of the axis."
-    }
-  ]
+	"arguments": [ {
+		"description": "The joystick to map.",
+		"name": "joystick",
+		"type": "table"
+	}, {
+		"description": "The index to map to.",
+		"name": "axis",
+		"type": "number"
+	}, {
+		"description": "Value of the axis.",
+		"name": "value",
+		"type": "number"
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 8, 0 ] ],
+	"shortDescription": "Map the joystick movements."
 }

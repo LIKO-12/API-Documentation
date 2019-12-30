@@ -1,13 +1,10 @@
 {
-  "availableSince": [[1,0,0], [0,6,0]],
-  "lastUpdatedIn": [[1,0,0], [0,8,0]],
-
-  "shortDescription":"Triggered when a joystick is connected.",
-  "arguments":[
-    {
-      "name":"joystick",
-      "type":"table",
-      "description":"The joystick that was added."
-    }
-  ]
+	"arguments": [ {
+		"description": "The joystick that was added.",
+		"name": "joystick",
+		"type": "table"
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 8, 0 ] ],
+	"shortDescription": "Triggered when a joystick is connected."
 }

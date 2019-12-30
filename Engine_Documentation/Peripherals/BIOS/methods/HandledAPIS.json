@@ -1,14 +1,12 @@
 {
-  "availableSince": [[1,15,2], [0,7,0]],
-  "lastUpdatedIn": [[1,15,2], [0,7,0]],
-  "shortDescription": "Returns the handled peripherals APIS, that can be used directly.",
-  "returns":[
-    {
-      "name":"HandledAPIS",
-      "type":"table",
-      "description":"The peripherals handled APIS."
-    }
-  ],
-  "extra":"The peripherals handled APIS is a table where the keys and values are:\n- **Keys**: The mount name.\n- **Values**: The peripheral methods (functions).",
-  "notes":["The HandledAPIS table is passed to the operating system's `boot.lua` as an argument:\n```lua\n--In C:/boot.lua\nlocal HandledAPIS = ...\n```"]
+	"availableSince": [ [ 1, 15, 2 ], [ 0, 7, 0 ] ],
+	"extra": "The peripherals handled APIS is a table where the keys and values are:\n- **Keys**: The mount name.\n- **Values**: The peripheral methods (functions).",
+	"lastUpdatedIn": [ [ 1, 15, 2 ], [ 0, 7, 0 ] ],
+	"notes": [ "The HandledAPIS table is passed to the operating system's `boot.lua` as an argument:\n```lua\n--In C:/boot.lua\nlocal HandledAPIS = ...\n```" ],
+	"returns": [ {
+		"description": "The peripherals handled APIS.",
+		"name": "HandledAPIS",
+		"type": "table"
+	} ],
+	"shortDescription": "Returns the handled peripherals APIS, that can be used directly."
 }

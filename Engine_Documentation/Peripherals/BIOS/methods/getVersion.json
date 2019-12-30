@@ -1,18 +1,15 @@
 {
-  "availableSince": [[1,15,2], [0,7,0]],
-  "lastUpdatedIn": [[1,15,2], [0,7,0]],
-  "shortDescription": "Returns LIKO-12's Version.",
-  "returns":[
-    {
-      "name":"LIKO_Version",
-      "type":"string",
-      "description":"Current LIKO-12's version string (ex: `1.0.0_DEV`)."
-    },
-    {
-      "name":"LIKO_Old",
-      "type":["string","nil"],
-      "description":"The previous installed LIKO-12's version string (ex: `0.8.0_PRE`)."
-    }
-  ],
-  "extra":"!> The `LIKO_Old` value is only provided when LIKO-12 boots for the __first time__ with the new version."
+	"availableSince": [ [ 1, 15, 2 ], [ 0, 7, 0 ] ],
+	"extra": "!> The `LIKO_Old` value is only provided when LIKO-12 boots for the __first time__ with the new version.",
+	"lastUpdatedIn": [ [ 1, 15, 2 ], [ 0, 7, 0 ] ],
+	"returns": [ {
+		"description": "Current LIKO-12's version string (ex: `1.0.0_DEV`).",
+		"name": "LIKO_Version",
+		"type": "string"
+	}, {
+		"description": "The previous installed LIKO-12's version string (ex: `0.8.0_PRE`).",
+		"name": "LIKO_Old",
+		"type": [ "string", "nil" ]
+	} ],
+	"shortDescription": "Returns LIKO-12's Version."
 }

@@ -1,32 +1,23 @@
 {
-  "shortDescription": "Deletes the last printed character via the 3rd and 4th variants of `print()`, and it updates the cursor position.",
 	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
 	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
-  
-	"usages": [
-    {
-      "name": "Delete the last character:",
-      "arguments": [
-        {
-          "description": "The background color to fill the character with (**-1**,**15**), **-1** means no background, defaults to the current print cursor background color.",
-          "name": "c",
-          "type": "number"
-        }
-      ]
-    },
-    {
-      "name": "Delete the last character without doing a carriage return if needed:",
-      "arguments": [
-        {
-          "description": "The background color to fill the character with (**-1**,**15**), **-1** means no background, defaults to the current print cursor background color.",
-          "name": "c",
-          "type": "number"
-        },
-        {
-          "default": "true",
-          "type": "boolean"
-        }
-      ]
-    }
-  ]
+	"shortDescription": "Deletes the last printed character via the 3rd and 4th variants of `print()`, and it updates the cursor position.",
+	"usages": [ {
+		"arguments": [ {
+			"description": "The background color to fill the character with (**-1**,**15**), **-1** means no background, defaults to the current print cursor background color.",
+			"name": "c",
+			"type": "number"
+		} ],
+		"name": "Delete the last character:"
+	}, {
+		"arguments": [ {
+			"description": "The background color to fill the character with (**-1**,**15**), **-1** means no background, defaults to the current print cursor background color.",
+			"name": "c",
+			"type": "number"
+		}, {
+			"default": "true",
+			"type": "boolean"
+		} ],
+		"name": "Delete the last character without doing a carriage return if needed:"
+	} ]
 }

@@ -1,8 +1,8 @@
 {
 	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
 	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
-  "shortDescription": "Enables or disables key repeat.",
 	"longDescription": "Enables or disables key repeat. It is disabled by default.\n\nThe interval between repeats depends on the user's system settings.\n\n**Note:** It's better to do `if isrepeat then return true end` than calling this function.",
+	"shortDescription": "Enables or disables key repeat.",
 	"usages": [ {
 		"arguments": [ {
 			"description": "Whether repeat keypress events should be enabled when a key is held down.",

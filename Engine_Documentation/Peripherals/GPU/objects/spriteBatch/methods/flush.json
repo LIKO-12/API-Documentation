@@ -1,7 +1,7 @@
 {
 	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
 	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
-	"notes": ["The function returns the spritebatch object itself, so it can be used for chain calls."],
+	"notes": [ "The function returns the spritebatch object itself, so it can be used for chain calls." ],
 	"returns": [ {
 		"description": "The spritebatch itself.",
 		"name": "sb",

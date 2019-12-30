@@ -1,47 +1,37 @@
 {
-  "shortDescription": "Changes the print cursor position used by `print()` in the grid variant.",
-  "notes": ["The positions are on a characters grid, the size of the grid can be requested from `termSize()`."],
 	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
 	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
-	
-	"usages": [ 
-    {
-      "name": "Set cursor position:",
-      "arguments": [
-        {
-          "description": "The X coord of the cursor in characters, defaults to the current X coord.",
-          "name": "x",
-          "type": "number"
-        }, {
-          "description": "The Y corrd of the cursor in characters, defaults to the current Y coord.",
-          "name": "y",
-          "type": "number"
-        }, {
-          "description": "The background color used when printing (**-1**,**15**), **-1** means no background, defaults to the current background color.",
-          "name": "bgcolor",
-          "type": "number"
-        }
-      ]
-    },
-    {
-      "name": "Get cursor position",
-      "returns": [
-        {
-          "description": "The current X coord of the cursor in characters.",
-          "name": "x",
-          "type": "number"
-        },
-        {
-          "description": "The current Y corrd of the cursor in characters.",
-          "name": "y",
-          "type": "number"
-        },
-        {
-          "description": "The current background color.",
-          "name": "bgcolor",
-          "type": "number"
-        }
-      ]
-    }
-  ]
+	"notes": [ "The positions are on a characters grid, the size of the grid can be requested from `termSize()`." ],
+	"shortDescription": "Changes the print cursor position used by `print()` in the grid variant.",
+	"usages": [ {
+		"arguments": [ {
+			"description": "The X coord of the cursor in characters, defaults to the current X coord.",
+			"name": "x",
+			"type": "number"
+		}, {
+			"description": "The Y corrd of the cursor in characters, defaults to the current Y coord.",
+			"name": "y",
+			"type": "number"
+		}, {
+			"description": "The background color used when printing (**-1**,**15**), **-1** means no background, defaults to the current background color.",
+			"name": "bgcolor",
+			"type": "number"
+		} ],
+		"name": "Set cursor position:"
+	}, {
+		"name": "Get cursor position",
+		"returns": [ {
+			"description": "The current X coord of the cursor in characters.",
+			"name": "x",
+			"type": "number"
+		}, {
+			"description": "The current Y corrd of the cursor in characters.",
+			"name": "y",
+			"type": "number"
+		}, {
+			"description": "The current background color.",
+			"name": "bgcolor",
+			"type": "number"
+		} ]
+	} ]
 }

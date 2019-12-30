@@ -1,18 +1,14 @@
 {
-  "availableSince": [[1,0,0], [0,6,0]],
-  "lastUpdatedIn": [[1,0,0], [0,8,0]],
-
-  "shortDescription":"Triggered when the joystick is moved.",
-  "arguments":[
-    {
-      "name":"joystick",
-      "type":"table",
-      "description":"The joystick that was moved."
-    },
-    {
-      "name":"axis",
-      "type":"string",
-      "description":"The axis is was pushed on (leftx or lefty)."
-    }
-  ]
+	"arguments": [ {
+		"description": "The joystick that was moved.",
+		"name": "joystick",
+		"type": "table"
+	}, {
+		"description": "The axis is was pushed on (leftx or lefty).",
+		"name": "axis",
+		"type": "string"
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 8, 0 ] ],
+	"shortDescription": "Triggered when the joystick is moved."
 }

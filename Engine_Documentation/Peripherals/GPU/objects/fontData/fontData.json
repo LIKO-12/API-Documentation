@@ -1,5 +1,5 @@
 {
-	"availableSince": [[1,0,0], [1,1,0]],
-	"lastUpdatedIn": [[1,0,0], [1,1,0]],
+	"availableSince": [ [ 1, 0, 0 ], [ 1, 1, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 1, 1, 0 ] ],
 	"shortDescription": "fontData, modifiable pixel data, not drawable, convert to an font to print with."
 }

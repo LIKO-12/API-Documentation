@@ -1,7 +1,7 @@
 {
 	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
 	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
-	"notes": ["This function is fast, unlike imagedata:image()"],
+	"notes": [ "This function is fast, unlike imagedata:image()" ],
 	"returns": [ {
 		"description": "The imagedata object of this image.",
 		"name": "imgdata",

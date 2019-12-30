@@ -1,7 +1,7 @@
 {
 	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
 	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
-	"notes": ["This function is slow if called repeatly, unlike image:data(). image:refresh() will reload it's content from it's source imagedata."],
+	"notes": [ "This function is slow if called repeatly, unlike image:data(). image:refresh() will reload it's content from it's source imagedata." ],
 	"returns": [ {
 		"description": "The created image object.",
 		"name": "img",

@@ -1,7 +1,7 @@
 {
 	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
 	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
-	"notes": ["There are 2 palettes in LIKO-12: The Images palette which affects images only. And the Drawing palette which affects all other GPU functions."],
+	"notes": [ "There are 2 palettes in LIKO-12: The Images palette which affects images only. And the Drawing palette which affects all other GPU functions." ],
 	"shortDescription": "Maps a color in the palette to another color.",
 	"usages": [ {
 		"arguments": [ {

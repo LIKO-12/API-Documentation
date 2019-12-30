@@ -1,32 +1,24 @@
 {
-  "shortDescription": "Gets formatting information for text, given a wrap limit.",
-  "longDescription": "Gets formatting information for text, given a wrap limit.\n\nThis function accounts for newlines correctly (i.e. '\\n').",
-  "availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"arguments": [ {
+		"description": "The text that will be wrapped.",
+		"name": "text",
+		"type": "string"
+	}, {
+		"description": "The maximum width in pixels of each line that text is allowed before wrapping.",
+		"name": "wraplimit",
+		"type": "number"
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
 	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
-  
-	"arguments": [
-    {
-      "description": "The text that will be wrapped.",
-      "name": "text",
-      "type": "string"
-    },
-    {
-      "description": "The maximum width in pixels of each line that text is allowed before wrapping.",
-      "name": "wraplimit",
-      "type": "number"
-    }
-  ],
-  
-	"returns": [
-    {
-      "description": "The maximum width of the wrapped text.",
-      "name": "width",
-      "type": "string"
-    },
-    {
-      "description": "A sequence containing each line of text that was wrapped.",
-      "name": "wrappedText",
-      "type": "table"
-    }
-  ]
+	"longDescription": "Gets formatting information for text, given a wrap limit.\n\nThis function accounts for newlines correctly (i.e. '\\n').",
+	"returns": [ {
+		"description": "The maximum width of the wrapped text.",
+		"name": "width",
+		"type": "string"
+	}, {
+		"description": "A sequence containing each line of text that was wrapped.",
+		"name": "wrappedText",
+		"type": "table"
+	} ],
+	"shortDescription": "Gets formatting information for text, given a wrap limit."
 }

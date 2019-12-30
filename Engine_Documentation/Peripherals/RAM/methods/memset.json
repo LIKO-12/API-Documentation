@@ -1,6 +1,4 @@
 {
-  "shortDescription": "Sets data to RAM.",
-	"longDescription": "Writes a string of data to video memory.",
 	"arguments": [ {
 		"description": "The address of the location to write to.",
 		"name": "address",
@@ -11,5 +9,7 @@
 		"type": "string"
 	} ],
 	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
-	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ]
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"longDescription": "Writes a string of data to video memory.",
+	"shortDescription": "Sets data to RAM."
 }

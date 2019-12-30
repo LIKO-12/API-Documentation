@@ -6,7 +6,7 @@
 	} ],
 	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
 	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
-	"notes": ["All transparent pixels and all colors that are not from the palette will be loaded as black!"],
+	"notes": [ "All transparent pixels and all colors that are not from the palette will be loaded as black!" ],
 	"returns": [ {
 		"description": "The created imagedata object.",
 		"name": "imgdata",

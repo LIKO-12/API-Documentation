@@ -1,13 +1,10 @@
 {
-  "shortDescription": "Returns the width of the screen.",
 	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
 	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
-  
-	"returns": [
-    {
-      "description": "The width of the screen (By default - 192)",
-      "name": "w",
-      "type": "number"
-    }
-  ]
+	"returns": [ {
+		"description": "The width of the screen (By default - 192)",
+		"name": "w",
+		"type": "number"
+	} ],
+	"shortDescription": "Returns the width of the screen."
 }
