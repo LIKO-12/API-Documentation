@@ -35,12 +35,12 @@ jobs:
       - name: Reformat JSON files
         run: |
           luajit ./Lua_Scripts/ReformatJSON.lua
-          git add -A && git commit -m "Reformat JSON files"
+          git add -A && git commit -m "Reformat JSON files" || true
       
       - name: Generate merged JSON files
         run: |
           luajit ./Lua_Scripts/GenerateMergedJSON.lua
-          git add -A && git commit -m "Update Engine_Merged.json and Engine_Merged_Pretty.json"
+          git add -A && git commit -m "Update Engine_Merged.json and Engine_Merged_Pretty.json" || true
       
       - name: Push changes
         uses: ad-m/github-push-action@master
