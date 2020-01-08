@@ -11,12 +11,12 @@
 	}, {
 		"default": "4",
 		"description": "The color of the text (0-15).",
-		"name": "",
+		"name": "tColor",
 		"type": "number"
 	}, {
 		"default": "9",
 		"description": "The color of the background (0-15).",
-		"name": "",
+		"name": "bgColor",
 		"type": "number"
 	} ],
 	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
