@@ -20,7 +20,7 @@
 			"name": "limit",
 			"type": "number"
 		}, {
-			"default": "left",
+			"default": "\"left\"",
 			"description": "The text alignment (can be \"left\", \"center\" and \"right\").",
 			"name": "align",
 			"type": "string"

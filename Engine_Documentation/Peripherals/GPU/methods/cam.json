@@ -5,7 +5,7 @@
 	"shortDescription": "Transforms the drawing operations.",
 	"usages": [ {
 		"arguments": [ {
-			"default": "translate",
+			"default": "\"translate\"",
 			"type": "string"
 		}, {
 			"description": "The translation relative to the x-axis.",
@@ -20,7 +20,7 @@
 		"shortDescription": "Shifts all drawing operations."
 	}, {
 		"arguments": [ {
-			"default": "scale",
+			"default": "\"scale\"",
 			"type": "string"
 		}, {
 			"description": "The scaling in the direction of the x-axis.",
@@ -35,7 +35,7 @@
 		"shortDescription": "Scales all the drawing operations."
 	}, {
 		"arguments": [ {
-			"default": "rotate",
+			"default": "\"rotate\"",
 			"type": "string"
 		}, {
 			"description": "The amount to rotate the coordinate system in radians.",
@@ -45,7 +45,7 @@
 		"name": "Rotate drawing operations:"
 	}, {
 		"arguments": [ {
-			"default": "shear",
+			"default": "\"shear\"",
 			"type": "string"
 		}, {
 			"description": "The shear factor on the x-axis.",

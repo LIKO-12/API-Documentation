@@ -1,6 +1,6 @@
 {
 	"arguments": [ {
-		"default": "Blue",
+		"default": "\"Blue\"",
 		"description": "Template name, without the .png extension.",
 		"name": "tname",
 		"type": "string"
