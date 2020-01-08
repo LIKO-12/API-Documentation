@@ -1056,7 +1056,7 @@
 							"type": "number"
 						}, {
 							"default": "left",
-							"description": "The alignment.",
+							"description": "The text alignment (can be \"left\", \"center\" and \"right\").",
 							"name": "align",
 							"type": "string"
 						}, {
