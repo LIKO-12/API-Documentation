@@ -1060,30 +1060,37 @@
 							"name": "align",
 							"type": "string"
 						}, {
+							"default": "0",
 							"description": "Rotation (radians).",
 							"name": "r",
 							"type": "number"
 						}, {
+							"default": "1",
 							"description": "Scale factor (x-axis).",
 							"name": "sx",
 							"type": "number"
 						}, {
+							"default": "sx",
 							"description": "Scale factor (y-axis).",
 							"name": "sy",
 							"type": "number"
 						}, {
+							"default": "0",
 							"description": "Origin offset (x-axis).",
 							"name": "ox",
 							"type": "number"
 						}, {
+							"default": "0",
 							"description": "Origin offset (y-axis).",
 							"name": "oy",
 							"type": "number"
 						}, {
+							"default": "0",
 							"description": "Shear factor (x-axis).",
 							"name": "kx",
 							"type": "number"
 						}, {
+							"default": "0",
 							"description": "Shear factor (y-axis).",
 							"name": "ky",
 							"type": "number"
@@ -1109,30 +1116,37 @@
 							"default": "false",
 							"type": "boolean"
 						}, {
+							"default": "0",
 							"description": "Rotation (radians).",
 							"name": "r",
 							"type": "number"
 						}, {
+							"default": "1",
 							"description": "Scale factor (x-axis).",
 							"name": "sx",
 							"type": "number"
 						}, {
+							"default": "sx",
 							"description": "Scale factor (y-axis).",
 							"name": "sy",
 							"type": "number"
 						}, {
+							"default": "0",
 							"description": "Origin offset (x-axis).",
 							"name": "ox",
 							"type": "number"
 						}, {
+							"default": "0",
 							"description": "Origin offset (y-axis).",
 							"name": "oy",
 							"type": "number"
 						}, {
+							"default": "0",
 							"description": "Shear factor (x-axis).",
 							"name": "kx",
 							"type": "number"
 						}, {
+							"default": "0",
 							"description": "Shear factor (y-axis).",
 							"name": "ky",
 							"type": "number"
