@@ -1,7 +1,7 @@
 {
 	"availableSince": [ [ 1, 15, 2 ], [ 0, 7, 0 ] ],
-	"notes": ["The `LIKO_Old` value is only provided when LIKO-12 boots for the __first time__ with the new version."],
 	"lastUpdatedIn": [ [ 1, 15, 2 ], [ 0, 7, 0 ] ],
+	"notes": [ "The `LIKO_Old` value is only provided when LIKO-12 boots for the __first time__ with the new version." ],
 	"returns": [ {
 		"description": "Current LIKO-12's version string (ex: `1.0.0_DEV`).",
 		"name": "LIKO_Version",
