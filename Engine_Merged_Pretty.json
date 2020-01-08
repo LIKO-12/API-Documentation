@@ -2224,7 +2224,7 @@
 					"shortDescription": "Spritebatch, draw multiple parts of an image at once instantly, useful for maps."
 				}
 			},
-			"shortDescription": "It's the strongest peripheral in LIKO-12, and the biggest file also, it's responsible for creating the window and doing all the drawing operations.",
+			"shortDescription": "It's the strongest peripheral in LIKO-12, it's responsible for creating the window and doing all the drawing operations.",
 			"version": [ 1, 0, 0 ]
 		},
 		"Gamepad": {
@@ -2794,7 +2794,7 @@
 					} ],
 					"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
 					"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 8, 0 ] ],
-					"self": true,
+					"self": false,
 					"shortDescription": "Turns on or off the touch controls."
 				}
 			},
