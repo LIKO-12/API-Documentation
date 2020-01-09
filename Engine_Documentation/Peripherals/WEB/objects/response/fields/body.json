@@ -1,0 +1,8 @@
+{
+    "availableSince": [[1,0,0], [1,0,0]],
+    "lastUpdatedIn": [[1,0,0], [1,0,0]],
+
+    "shortDescription": "The body of the response.",
+	
+    "type": "string"
+}

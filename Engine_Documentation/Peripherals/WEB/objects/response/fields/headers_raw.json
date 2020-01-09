@@ -1,0 +1,12 @@
+{
+    "availableSince": [[1,0,0], [1,0,0]],
+    "lastUpdatedIn": [[1,0,0], [1,0,0]],
+
+    "shortDescription": "A raw string containing the actual headers the server send back.",
+	
+    "type": "string",
+	
+	"notes": [
+		"This field is nil when the LuaJIT-Request backend is used for the HTTP request."
+	]
+}
