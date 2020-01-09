@@ -1,5 +1,5 @@
 {
 	"availableSince": [ [ 1, 0, 0 ], [ 1, 0, 0 ] ],
 	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 1, 0, 0 ] ],
-	"shortDescription": "The response table return when a HTTP response is received."
+	"shortDescription": "The response table returnd when a HTTP response is received."
 }
