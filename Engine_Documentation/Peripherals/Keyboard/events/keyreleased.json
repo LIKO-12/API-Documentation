@@ -1,0 +1,20 @@
+{
+    "availableSince": [[1,0,0], [0,6,0]],
+    "lastUpdatedIn": [[1,0,0], [0,6,0]],
+
+    "shortDescription": "Triggered when a keyboard button is released.",
+	
+	"arguments":[
+		{
+			"name": "key",
+			"type": "string",
+			"description": "The character/id of the released key."
+		},
+		
+		{
+			"name": "scancode",
+			"type": "string",
+			"description": "The scancode representing the key."
+		}
+	]
+}

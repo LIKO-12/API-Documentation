@@ -1,0 +1,26 @@
+{
+    "availableSince": [[1,0,0], [0,6,0]],
+    "lastUpdatedIn": [[1,0,0], [0,6,0]],
+
+    "shortDescription": "Triggered when a keyboard button is pressed.",
+	
+	"arguments":[
+		{
+			"name": "key",
+			"type": "string",
+			"description": "The character/id of the pressed key."
+		},
+		
+		{
+			"name": "scancode",
+			"type": "string",
+			"description": "The scancode representing the key."
+		},
+		
+		{
+			"name": "isrepeat",
+			"type": "boolean",
+			"description": "Whether this keypress event is a repeat. The delay between key repeats depends on the user's system settings."
+		}
+	]
+}
