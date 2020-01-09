@@ -1,0 +1,20 @@
+{
+    "availableSince": [[1,0,0], [0,6,0]],
+    "lastUpdatedIn": [[1,0,0], [0,6,0]],
+
+    "shortDescription": "Triggered when the mouse wheel is moved.",
+
+    "arguments":[
+        {
+            "name": "x",
+            "type": "number",
+            "description":"Amount of horizontal mouse wheel movement. Positive values indicate movement to the right."
+        },
+		
+		{
+			"name": "y",
+			"type": "number",
+			"description": "Amount of vertical mouse wheel movement. Positive values indicate upward movement."
+		}
+    ]
+}

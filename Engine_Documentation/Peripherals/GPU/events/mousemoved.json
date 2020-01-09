@@ -1,0 +1,38 @@
+{
+    "availableSince": [[1,0,0], [0,6,0]],
+    "lastUpdatedIn": [[1,0,0], [0,6,0]],
+
+    "shortDescription": "Triggered when the mouse is moved, or if a screen touch was moved.",
+
+    "arguments":[
+        {
+            "name": "x",
+            "type": "number",
+            "description":"Mouse x position, in pixels."
+        },
+		
+		{
+			"name": "y",
+			"type": "number",
+			"description": "Mouse y position, in pixels."
+		},
+		
+		{
+            "name": "dx",
+            "type": "number",
+            "description":"The amount moved along the x-axis since the last time mousemoved was triggered."
+        },
+		
+		{
+			"name": "dy",
+			"type": "number",
+			"description": "The amount moved along the y-axis since the last time mousemoved was triggered."
+		},
+		
+		{
+			"name": "istouch",
+			"type": "boolean",
+			"description": "True if the mouse move originated from a touchscreen touch-move."
+		}
+    ]
+}
