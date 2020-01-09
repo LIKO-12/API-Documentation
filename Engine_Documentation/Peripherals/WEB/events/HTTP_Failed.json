@@ -1,20 +1,14 @@
 {
-    "availableSince": [[1,0,0], [1,0,0]],
-    "lastUpdatedIn": [[1,0,0], [1,0,0]],
-
-    "shortDescription": "Triggered when a HTTP request fails.",
-	
-	"arguments":[
-		{
-			"name": "requestID",
-			"type": "number",
-			"description": "The requestID returned by WEB.send()."
-		},
-		
-		{
-			"name": "reason",
-			"type": "string",
-			"description": "The reason of the request failure."
-		}
-	]
+	"arguments": [ {
+		"description": "The requestID returned by WEB.send().",
+		"name": "requestID",
+		"type": "number"
+	}, {
+		"description": "The reason of the request failure.",
+		"name": "reason",
+		"type": "string"
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 1, 0, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 1, 0, 0 ] ],
+	"shortDescription": "Triggered when a HTTP request fails."
 }

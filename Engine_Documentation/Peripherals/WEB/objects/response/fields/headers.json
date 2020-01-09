@@ -1,8 +1,6 @@
 {
-    "availableSince": [[1,0,0], [1,0,0]],
-    "lastUpdatedIn": [[1,0,0], [1,0,0]],
-
-    "shortDescription": "A table of headers and their values.",
-	
-    "type": "table"
+	"availableSince": [ [ 1, 0, 0 ], [ 1, 0, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 1, 0, 0 ] ],
+	"shortDescription": "A table of headers and their values.",
+	"type": "table"
 }

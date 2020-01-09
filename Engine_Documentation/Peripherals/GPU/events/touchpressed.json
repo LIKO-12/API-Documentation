@@ -1,48 +1,31 @@
 {
-    "availableSince": [[1,0,0], [0,6,0]],
-    "lastUpdatedIn": [[1,0,0], [0,6,0]],
-
-    "shortDescription": "Triggered when the touchscreen is touched.",
-	
-	"notes":[
-		"The identifier is only guaranteed to be unique for the specific touch press until touchreleased is triggered with that identifier, at which point it may be reused for new touch presses."
-	],
-
-    "arguments":[
-		{
-			"name": "id",
-			"type": "userdata",
-			"description": "The identifier for the touch press."
-		},
-		
-        {
-            "name": "x",
-            "type": "number",
-            "description":"The x-axis position of the touch press inside the window, in pixels."
-        },
-		
-		{
-			"name": "y",
-			"type": "number",
-			"description": "The y-axis position of the touch press inside the window, in pixels."
-		},
-		
-		{
-			"name": "dx",
-			"type": "number",
-			"description": "The x-axis movement of the touch press inside the window, in pixels. This should always be zero."
-		},
-		
-		{
-			"name": "dy",
-			"type": "number",
-			"description": "The y-axis movement of the touch press inside the window, in pixels. This should always be zero."
-		},
-		
-		{
-			"name": "pressure",
-			"type": "number",
-			"description": "The amount of pressure being applied. Most touch screens aren't pressure sensitive, in which case the pressure will be 1."
-		}
-    ]
+	"arguments": [ {
+		"description": "The identifier for the touch press.",
+		"name": "id",
+		"type": "userdata"
+	}, {
+		"description": "The x-axis position of the touch press inside the window, in pixels.",
+		"name": "x",
+		"type": "number"
+	}, {
+		"description": "The y-axis position of the touch press inside the window, in pixels.",
+		"name": "y",
+		"type": "number"
+	}, {
+		"description": "The x-axis movement of the touch press inside the window, in pixels. This should always be zero.",
+		"name": "dx",
+		"type": "number"
+	}, {
+		"description": "The y-axis movement of the touch press inside the window, in pixels. This should always be zero.",
+		"name": "dy",
+		"type": "number"
+	}, {
+		"description": "The amount of pressure being applied. Most touch screens aren't pressure sensitive, in which case the pressure will be 1.",
+		"name": "pressure",
+		"type": "number"
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"notes": [ "The identifier is only guaranteed to be unique for the specific touch press until touchreleased is triggered with that identifier, at which point it may be reused for new touch presses." ],
+	"shortDescription": "Triggered when the touchscreen is touched."
 }

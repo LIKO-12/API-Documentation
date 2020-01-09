@@ -1,20 +1,14 @@
 {
-    "availableSince": [[1,0,0], [0,7,0]],
-    "lastUpdatedIn": [[1,0,0], [0,7,0]],
-
-    "shortDescription": "Triggered when the state of a virtual touch button has changed.",
-	
-	"arguments":[
-		{
-			"name": "state",
-			"type": "boolean",
-			"description": "The state of the button: True when pressed, False when released."
-		},
-		
-		{
-			"name": "button",
-			"type": "number",
-			"description": "The ID of the button: (1: Left, 2: Right, 3: Up, 4: Down, 5: A, 6: B, 6: Start)."
-		}
-	]
+	"arguments": [ {
+		"description": "The state of the button: True when pressed, False when released.",
+		"name": "state",
+		"type": "boolean"
+	}, {
+		"description": "The ID of the button: (1: Left, 2: Right, 3: Up, 4: Down, 5: A, 6: B, 6: Start).",
+		"name": "button",
+		"type": "number"
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 7, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 7, 0 ] ],
+	"shortDescription": "Triggered when the state of a virtual touch button has changed."
 }

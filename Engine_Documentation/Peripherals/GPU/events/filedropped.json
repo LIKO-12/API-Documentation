@@ -1,20 +1,14 @@
 {
-    "availableSince": [[1,0,0], [0,7,0]],
-    "lastUpdatedIn": [[1,0,0], [0,7,0]],
-
-    "shortDescription": "Triggered when a file is dropped into LIKO-12's window.",
-
-    "arguments":[
-        {
-            "name": "filename",
-            "type": "string",
-            "description":"The filename of the dropped file."
-        },
-		
-		{
-			"name": "data",
-			"type": "string",
-			"description": "The content of the dropped file."
-		}
-    ]
+	"arguments": [ {
+		"description": "The filename of the dropped file.",
+		"name": "filename",
+		"type": "string"
+	}, {
+		"description": "The content of the dropped file.",
+		"name": "data",
+		"type": "string"
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 7, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 7, 0 ] ],
+	"shortDescription": "Triggered when a file is dropped into LIKO-12's window."
 }
