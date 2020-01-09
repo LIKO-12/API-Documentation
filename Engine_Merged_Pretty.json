@@ -3237,7 +3237,7 @@
 							"lastUpdatedIn": [ [ 1, 0, 0 ], [ 1, 0, 0 ] ],
 							"notes": [ "This field is nil when the LuaJIT-Request backend is used for the HTTP request." ],
 							"shortDescription": "A raw string containing the actual headers the server send back.",
-							"type": "string"
+							"type": [ "string", "nil" ]
 						},
 						"set_cookies": {
 							"availableSince": [ [ 1, 0, 0 ], [ 1, 0, 0 ] ],
