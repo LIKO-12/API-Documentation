@@ -1,6 +1,6 @@
 {
-    "availableSince": [[1,0,0], [1,0,0]],
-    "lastUpdatedIn": [[1,0,0], [1,0,0]],
+    "availableSince": [[1,0,0], [0,7,0]],
+    "lastUpdatedIn": [[1,0,0], [0,7,0]],
 
     "shortDescription": "Triggered when the state of a virtual touch button has changed.",
 	
