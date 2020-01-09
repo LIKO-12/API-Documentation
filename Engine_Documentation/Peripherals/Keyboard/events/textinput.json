@@ -1,18 +1,11 @@
 {
-    "availableSince": [[1,0,0], [0,6,0]],
-    "lastUpdatedIn": [[1,0,0], [0,6,0]],
-
-    "shortDescription": "Called when text has been entered by the user. For example if shift-2 is pressed on an American keyboard layout, the text '@' will be generated.",
-	
-	"arguments":[
-		{
-			"name": "text",
-			"type": "string",
-			"description": "The ASCII encoded text."
-		}
-	],
-	
-	"notes":[
-		"All non ASCII characters are filtered out and replaced with nothing, so in case of non-English input, the event would be triggered with empty strings."
-	]
+	"arguments": [ {
+		"description": "The ASCII encoded text.",
+		"name": "text",
+		"type": "string"
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"notes": [ "All non ASCII characters are filtered out and replaced with nothing, so in case of non-English input, the event would be triggered with empty strings." ],
+	"shortDescription": "Called when text has been entered by the user. For example if shift-2 is pressed on an American keyboard layout, the text '@' will be generated."
 }

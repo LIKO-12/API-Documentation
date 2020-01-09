@@ -1,19 +1,11 @@
 {
-    "availableSince": [[1,0,0], [0,6,0]],
-    "lastUpdatedIn": [[1,0,0], [0,6,0]],
-
-    "shortDescription": "Triggered almost every frame, with the delta-time between each called passed in.",
-
-    "notes": [
-        "`update` is triggered 60 times a second for most of the devices, but that depends on the screen refresh rate, so it can be more or less!",
-		"`update` can be triggered for over than 2000 times a second if the vsync of the GPU was disabled due to user's configuration!"
-    ],
-
-    "arguments":[
-        {
-            "name": "dt",
-            "type": "number",
-            "description":"The time passed since the previous `update` triggered, measured in seconds."
-        }
-    ]
+	"arguments": [ {
+		"description": "The time passed since the previous `update` triggered, measured in seconds.",
+		"name": "dt",
+		"type": "number"
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"notes": [ "`update` is triggered 60 times a second for most of the devices, but that depends on the screen refresh rate, so it can be more or less!", "`update` can be triggered for over than 2000 times a second if the vsync of the GPU was disabled due to user's configuration!" ],
+	"shortDescription": "Triggered almost every frame, with the delta-time between each called passed in."
 }

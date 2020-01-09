@@ -1,20 +1,14 @@
 {
-    "availableSince": [[1,0,0], [1,0,0]],
-    "lastUpdatedIn": [[1,0,0], [1,0,0]],
-
-    "shortDescription": "Triggered when a HTTP response is received.",
-	
-	"arguments":[
-		{
-			"name": "requestID",
-			"type": "number",
-			"description": "The requestID returned by WEB.send()."
-		},
-		
-		{
-			"name": "response",
-			"type": [["Peripherals", "WEB", "objects", "response"]],
-			"description": "The content of the response."
-		}
-	]
+	"arguments": [ {
+		"description": "The requestID returned by WEB.send().",
+		"name": "requestID",
+		"type": "number"
+	}, {
+		"description": "The content of the response.",
+		"name": "response",
+		"type": [ [ "Peripherals", "WEB", "objects", "response" ] ]
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 1, 0, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 1, 0, 0 ] ],
+	"shortDescription": "Triggered when a HTTP response is received."
 }

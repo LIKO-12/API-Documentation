@@ -1,32 +1,22 @@
 {
-    "availableSince": [[1,0,0], [0,6,0]],
-    "lastUpdatedIn": [[1,0,0], [0,6,0]],
-
-    "shortDescription": "Triggered when a mouse button is pressed, or if the screen was touched.",
-
-    "arguments":[
-        {
-            "name": "x",
-            "type": "number",
-            "description":"Mouse x position, in pixels."
-        },
-		
-		{
-			"name": "y",
-			"type": "number",
-			"description": "Mouse y position, in pixels."
-		},
-		
-		{
-			"name": "button",
-			"type": "number",
-			"description": "The button index that was pressed. 1 is the primary mouse button, 2 is the secondary mouse button and 3 is the middle button. Further buttons are mouse dependent."
-		},
-		
-		{
-			"name": "istouch",
-			"type": "boolean",
-			"description": "True if the mouse button press originated from a touchscreen touch-press."
-		}
-    ]
+	"arguments": [ {
+		"description": "Mouse x position, in pixels.",
+		"name": "x",
+		"type": "number"
+	}, {
+		"description": "Mouse y position, in pixels.",
+		"name": "y",
+		"type": "number"
+	}, {
+		"description": "The button index that was pressed. 1 is the primary mouse button, 2 is the secondary mouse button and 3 is the middle button. Further buttons are mouse dependent.",
+		"name": "button",
+		"type": "number"
+	}, {
+		"description": "True if the mouse button press originated from a touchscreen touch-press.",
+		"name": "istouch",
+		"type": "boolean"
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"shortDescription": "Triggered when a mouse button is pressed, or if the screen was touched."
 }

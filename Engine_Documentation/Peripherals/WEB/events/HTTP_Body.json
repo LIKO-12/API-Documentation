@@ -1,20 +1,14 @@
 {
-    "availableSince": [[1,0,0], [1,0,0]],
-    "lastUpdatedIn": [[1,0,0], [1,0,0]],
-
-    "shortDescription": "Triggered when a chunk of the HTTP response body is recieved.",
-	
-	"arguments":[
-		{
-			"name": "requestID",
-			"type": "number",
-			"description": "The requestID returned by WEB.send()."
-		},
-		
-		{
-			"name": "chunk",
-			"type": "string",
-			"description": "A chunk (part) of the response body, they're recieved in the correct order."
-		}
-	]
+	"arguments": [ {
+		"description": "The requestID returned by WEB.send().",
+		"name": "requestID",
+		"type": "number"
+	}, {
+		"description": "A chunk (part) of the response body, they're recieved in the correct order.",
+		"name": "chunk",
+		"type": "string"
+	} ],
+	"availableSince": [ [ 1, 0, 0 ], [ 1, 0, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 1, 0, 0 ] ],
+	"shortDescription": "Triggered when a chunk of the HTTP response body is recieved."
 }
