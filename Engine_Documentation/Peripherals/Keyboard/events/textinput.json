@@ -10,7 +10,7 @@
 			"type": "string",
 			"description": "The ASCII encoded text."
 		}
-	]
+	],
 	
 	"notes":[
 		"All non ASCII characters are filtered out and replaced with nothing, so in case of non-English input, the event would be triggered with empty strings."

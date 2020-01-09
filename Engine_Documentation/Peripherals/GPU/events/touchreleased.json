@@ -6,7 +6,7 @@
 	
 	"notes":[
 		"The identifier is only guaranteed to be unique for the specific touch press until touchreleased is triggered with that identifier, at which point it may be reused for new touch presses."
-	]
+	],
 
     "arguments":[
 		{
@@ -25,7 +25,7 @@
 			"name": "y",
 			"type": "number",
 			"description": "The y-axis position of the touch press inside the window, in pixels."
-		}
+		},
 		
 		{
 			"name": "dx",
