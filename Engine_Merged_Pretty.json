@@ -139,6 +139,19 @@
 		},
 		"CPU": {
 			"availableSince": [ 0, 6, 0 ],
+			"events": {
+				"update": {
+					"arguments": [ {
+						"description": "The time passed since the previous `update` triggered, measured in seconds.",
+						"name": "dt",
+						"type": "number"
+					} ],
+					"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+					"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+					"notes": [ "`update` is triggered 60 times a second for most of the devices, but that depends on the screen refresh rate, so it can be more or less!", "`update` can be triggered for over than 2000 times a second if the vsync of the GPU was disabled due to user's configuration!" ],
+					"shortDescription": "Triggered almost every frame, with the delta-time between each called passed in."
+				}
+			},
 			"lastUpdatedIn": [ 0, 8, 0 ],
 			"methods": {
 				"clearClipboard": {
@@ -424,6 +437,199 @@
 		},
 		"GPU": {
 			"availableSince": [ 0, 6, 0 ],
+			"events": {
+				"filedropped": {
+					"arguments": [ {
+						"description": "The filename of the dropped file.",
+						"name": "filename",
+						"type": "string"
+					}, {
+						"description": "The content of the dropped file.",
+						"name": "data",
+						"type": "string"
+					} ],
+					"availableSince": [ [ 1, 0, 0 ], [ 0, 7, 0 ] ],
+					"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 7, 0 ] ],
+					"shortDescription": "Triggered when a file is dropped into LIKO-12's window."
+				},
+				"mousemoved": {
+					"arguments": [ {
+						"description": "Mouse x position, in pixels.",
+						"name": "x",
+						"type": "number"
+					}, {
+						"description": "Mouse y position, in pixels.",
+						"name": "y",
+						"type": "number"
+					}, {
+						"description": "The amount moved along the x-axis since the last time mousemoved was triggered.",
+						"name": "dx",
+						"type": "number"
+					}, {
+						"description": "The amount moved along the y-axis since the last time mousemoved was triggered.",
+						"name": "dy",
+						"type": "number"
+					}, {
+						"description": "True if the mouse move originated from a touchscreen touch-move.",
+						"name": "istouch",
+						"type": "boolean"
+					} ],
+					"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+					"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+					"shortDescription": "Triggered when the mouse is moved, or if a screen touch was moved."
+				},
+				"mousepressed": {
+					"arguments": [ {
+						"description": "Mouse x position, in pixels.",
+						"name": "x",
+						"type": "number"
+					}, {
+						"description": "Mouse y position, in pixels.",
+						"name": "y",
+						"type": "number"
+					}, {
+						"description": "The button index that was pressed. 1 is the primary mouse button, 2 is the secondary mouse button and 3 is the middle button. Further buttons are mouse dependent.",
+						"name": "button",
+						"type": "number"
+					}, {
+						"description": "True if the mouse button press originated from a touchscreen touch-press.",
+						"name": "istouch",
+						"type": "boolean"
+					} ],
+					"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+					"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+					"shortDescription": "Triggered when a mouse button is pressed, or if the screen was touched."
+				},
+				"mousereleased": {
+					"arguments": [ {
+						"description": "Mouse x position, in pixels.",
+						"name": "x",
+						"type": "number"
+					}, {
+						"description": "Mouse y position, in pixels.",
+						"name": "y",
+						"type": "number"
+					}, {
+						"description": "The button index that was released. 1 is the primary mouse button, 2 is the secondary mouse button and 3 is the middle button. Further buttons are mouse dependent.",
+						"name": "button",
+						"type": "number"
+					}, {
+						"description": "True if the mouse button release originated from a touchscreen touch-release.",
+						"name": "istouch",
+						"type": "boolean"
+					} ],
+					"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+					"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+					"shortDescription": "Triggered when a mouse button is released, or if the screen was no longer touched."
+				},
+				"touchmoved": {
+					"arguments": [ {
+						"description": "The identifier for the touch press.",
+						"name": "id",
+						"type": "userdata"
+					}, {
+						"description": "The x-axis position of the touch press inside the window, in pixels.",
+						"name": "x",
+						"type": "number"
+					}, {
+						"description": "The y-axis position of the touch press inside the window, in pixels.",
+						"name": "y",
+						"type": "number"
+					}, {
+						"description": "The x-axis movement of the touch press inside the window, in pixels.",
+						"name": "dx",
+						"type": "number"
+					}, {
+						"description": "The y-axis movement of the touch press inside the window, in pixels.",
+						"name": "dy",
+						"type": "number"
+					}, {
+						"description": "The amount of pressure being applied. Most touch screens aren't pressure sensitive, in which case the pressure will be 1.",
+						"name": "pressure",
+						"type": "number"
+					} ],
+					"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+					"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+					"notes": [ "The identifier is only guaranteed to be unique for the specific touch press until touchreleased is triggered with that identifier, at which point it may be reused for new touch presses." ],
+					"shortDescription": "Triggered when a touch press moves inside the touchscreen."
+				},
+				"touchpressed": {
+					"arguments": [ {
+						"description": "The identifier for the touch press.",
+						"name": "id",
+						"type": "userdata"
+					}, {
+						"description": "The x-axis position of the touch press inside the window, in pixels.",
+						"name": "x",
+						"type": "number"
+					}, {
+						"description": "The y-axis position of the touch press inside the window, in pixels.",
+						"name": "y",
+						"type": "number"
+					}, {
+						"description": "The x-axis movement of the touch press inside the window, in pixels. This should always be zero.",
+						"name": "dx",
+						"type": "number"
+					}, {
+						"description": "The y-axis movement of the touch press inside the window, in pixels. This should always be zero.",
+						"name": "dy",
+						"type": "number"
+					}, {
+						"description": "The amount of pressure being applied. Most touch screens aren't pressure sensitive, in which case the pressure will be 1.",
+						"name": "pressure",
+						"type": "number"
+					} ],
+					"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+					"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+					"notes": [ "The identifier is only guaranteed to be unique for the specific touch press until touchreleased is triggered with that identifier, at which point it may be reused for new touch presses." ],
+					"shortDescription": "Triggered when the touchscreen is touched."
+				},
+				"touchreleased": {
+					"arguments": [ {
+						"description": "The identifier for the touch press.",
+						"name": "id",
+						"type": "userdata"
+					}, {
+						"description": "The x-axis position of the touch press inside the window, in pixels.",
+						"name": "x",
+						"type": "number"
+					}, {
+						"description": "The y-axis position of the touch press inside the window, in pixels.",
+						"name": "y",
+						"type": "number"
+					}, {
+						"description": "The x-axis movement of the touch press inside the window, in pixels.",
+						"name": "dx",
+						"type": "number"
+					}, {
+						"description": "The y-axis movement of the touch press inside the window, in pixels.",
+						"name": "dy",
+						"type": "number"
+					}, {
+						"description": "The amount of pressure being applied. Most touch screens aren't pressure sensitive, in which case the pressure will be 1.",
+						"name": "pressure",
+						"type": "number"
+					} ],
+					"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+					"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+					"notes": [ "The identifier is only guaranteed to be unique for the specific touch press until touchreleased is triggered with that identifier, at which point it may be reused for new touch presses." ],
+					"shortDescription": "Triggered when the touchscreen stops being touched."
+				},
+				"wheelmoved": {
+					"arguments": [ {
+						"description": "Amount of horizontal mouse wheel movement. Positive values indicate movement to the right.",
+						"name": "x",
+						"type": "number"
+					}, {
+						"description": "Amount of vertical mouse wheel movement. Positive values indicate upward movement.",
+						"name": "y",
+						"type": "number"
+					} ],
+					"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+					"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+					"shortDescription": "Triggered when the mouse wheel is moved."
+				}
+			},
 			"lastUpdatedIn": [ 0, 8, 0 ],
 			"methods": {
 				"_systemMessage": {
@@ -1502,6 +1708,7 @@
 				"fontData": {
 					"availableSince": [ [ 1, 0, 0 ], [ 1, 1, 0 ] ],
 					"lastUpdatedIn": [ [ 1, 0, 0 ], [ 1, 1, 0 ] ],
+					"methods": [],
 					"shortDescription": "fontData, modifiable pixel data, not drawable, convert to an font to print with."
 				},
 				"image": {
@@ -2569,6 +2776,51 @@
 		},
 		"Keyboard": {
 			"availableSince": [ 0, 6, 0 ],
+			"events": {
+				"keypressed": {
+					"arguments": [ {
+						"description": "The character/id of the pressed key.",
+						"name": "key",
+						"type": "string"
+					}, {
+						"description": "The scancode representing the key.",
+						"name": "scancode",
+						"type": "string"
+					}, {
+						"description": "Whether this keypress event is a repeat. The delay between key repeats depends on the user's system settings.",
+						"name": "isrepeat",
+						"type": "boolean"
+					} ],
+					"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+					"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+					"shortDescription": "Triggered when a keyboard button is pressed."
+				},
+				"keyreleased": {
+					"arguments": [ {
+						"description": "The character/id of the released key.",
+						"name": "key",
+						"type": "string"
+					}, {
+						"description": "The scancode representing the key.",
+						"name": "scancode",
+						"type": "string"
+					} ],
+					"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+					"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+					"shortDescription": "Triggered when a keyboard button is released."
+				},
+				"textinput": {
+					"arguments": [ {
+						"description": "The ASCII encoded text.",
+						"name": "text",
+						"type": "string"
+					} ],
+					"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+					"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+					"notes": [ "All non ASCII characters are filtered out and replaced with nothing, so in case of non-English input, the event would be triggered with empty strings." ],
+					"shortDescription": "Called when text has been entered by the user. For example if shift-2 is pressed on an American keyboard layout, the text '@' will be generated."
+				}
+			},
 			"lastUpdatedIn": [ 0, 8, 0 ],
 			"methods": {
 				"isKDown": {
@@ -2799,6 +3051,22 @@
 		},
 		"TouchControls": {
 			"availableSince": [ 0, 6, 0 ],
+			"events": {
+				"touchcontrol": {
+					"arguments": [ {
+						"description": "The state of the button: True when pressed, False when released.",
+						"name": "state",
+						"type": "boolean"
+					}, {
+						"description": "The ID of the button: (1: Left, 2: Right, 3: Up, 4: Down, 5: A, 6: B, 6: Start).",
+						"name": "button",
+						"type": "number"
+					} ],
+					"availableSince": [ [ 1, 0, 0 ], [ 0, 7, 0 ] ],
+					"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 7, 0 ] ],
+					"shortDescription": "Triggered when the state of a virtual touch button has changed."
+				}
+			},
 			"lastUpdatedIn": [ 0, 8, 0 ],
 			"methods": {
 				"setInput": {
@@ -2819,6 +3087,50 @@
 		},
 		"WEB": {
 			"availableSince": [ 0, 6, 0 ],
+			"events": {
+				"HTTP_Body": {
+					"arguments": [ {
+						"description": "The requestID returned by WEB.send().",
+						"name": "requestID",
+						"type": "number"
+					}, {
+						"description": "A chunk (part) of the response body, they're recieved in the correct order.",
+						"name": "chunk",
+						"type": "string"
+					} ],
+					"availableSince": [ [ 1, 0, 0 ], [ 1, 0, 0 ] ],
+					"lastUpdatedIn": [ [ 1, 0, 0 ], [ 1, 0, 0 ] ],
+					"shortDescription": "Triggered when a chunk of the HTTP response body is recieved."
+				},
+				"HTTP_Failed": {
+					"arguments": [ {
+						"description": "The requestID returned by WEB.send().",
+						"name": "requestID",
+						"type": "number"
+					}, {
+						"description": "The reason of the request failure.",
+						"name": "reason",
+						"type": "string"
+					} ],
+					"availableSince": [ [ 1, 0, 0 ], [ 1, 0, 0 ] ],
+					"lastUpdatedIn": [ [ 1, 0, 0 ], [ 1, 0, 0 ] ],
+					"shortDescription": "Triggered when a HTTP request fails."
+				},
+				"HTTP_Respond": {
+					"arguments": [ {
+						"description": "The requestID returned by WEB.send().",
+						"name": "requestID",
+						"type": "number"
+					}, {
+						"description": "The content of the response.",
+						"name": "response",
+						"type": [ [ "Peripherals", "WEB", "objects", "response" ] ]
+					} ],
+					"availableSince": [ [ 1, 0, 0 ], [ 1, 0, 0 ] ],
+					"lastUpdatedIn": [ [ 1, 0, 0 ], [ 1, 0, 0 ] ],
+					"shortDescription": "Triggered when a HTTP response is received."
+				}
+			},
 			"lastUpdatedIn": [ 0, 8, 0 ],
 			"methods": {
 				"hasLuaSec": {
@@ -2898,6 +3210,46 @@
 				}
 			},
 			"name": "WEB",
+			"objects": {
+				"response": {
+					"availableSince": [ [ 1, 0, 0 ], [ 1, 0, 0 ] ],
+					"fields": {
+						"body": {
+							"availableSince": [ [ 1, 0, 0 ], [ 1, 0, 0 ] ],
+							"lastUpdatedIn": [ [ 1, 0, 0 ], [ 1, 0, 0 ] ],
+							"shortDescription": "The body of the response.",
+							"type": "string"
+						},
+						"code": {
+							"availableSince": [ [ 1, 0, 0 ], [ 1, 0, 0 ] ],
+							"lastUpdatedIn": [ [ 1, 0, 0 ], [ 1, 0, 0 ] ],
+							"shortDescription": "The HTTP status code the response gave.",
+							"type": "string"
+						},
+						"headers": {
+							"availableSince": [ [ 1, 0, 0 ], [ 1, 0, 0 ] ],
+							"lastUpdatedIn": [ [ 1, 0, 0 ], [ 1, 0, 0 ] ],
+							"shortDescription": "A table of headers and their values.",
+							"type": "table"
+						},
+						"headers_raw": {
+							"availableSince": [ [ 1, 0, 0 ], [ 1, 0, 0 ] ],
+							"lastUpdatedIn": [ [ 1, 0, 0 ], [ 1, 0, 0 ] ],
+							"notes": [ "This field is nil when the LuaJIT-Request backend is used for the HTTP request." ],
+							"shortDescription": "A raw string containing the actual headers the server send back.",
+							"type": "string"
+						},
+						"set_cookies": {
+							"availableSince": [ [ 1, 0, 0 ], [ 1, 0, 0 ] ],
+							"lastUpdatedIn": [ [ 1, 0, 0 ], [ 1, 0, 0 ] ],
+							"shortDescription": "A table of cookies given by the \"Set-Cookie\" header from the server.",
+							"type": "table"
+						}
+					},
+					"lastUpdatedIn": [ [ 1, 0, 0 ], [ 1, 0, 0 ] ],
+					"shortDescription": "The response table return when a HTTP response is received."
+				}
+			},
 			"shortDescription": "This peripheral gives access into the Internet.",
 			"version": [ 1, 0, 0 ]
 		}
