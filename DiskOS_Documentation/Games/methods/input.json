@@ -1,0 +1,31 @@
+{
+    "availableSince": [0,6,0],
+    "lastModifiedIn": [1,0,0],
+
+    "shortDescription": "Get text input from the user in a terminal fashion.",
+    "longDescription": "This method supports cursor operations (left,right,backspace,etc..) and also supports input history (up,down)!",
+
+    "arguments":[
+        {
+            "name": "history",
+            "type": "table",
+            "description": "A table for storing the user input history in, `nil` to disable this feature.",
+            "default": "{}"
+        },
+
+        {
+            "name": "preInput",
+            "type": "string",
+            "description": "Text to have already inputted for that user.",
+            "default": "\"\""
+        }
+    ],
+
+    "returns": [
+        {
+            "name": "userInput",
+            "type": ["string", "boolean"],
+            "description": "The text which the user has inputted, or false if the user pressed `escape` (cancelled the input)."
+        }
+    ]
+}

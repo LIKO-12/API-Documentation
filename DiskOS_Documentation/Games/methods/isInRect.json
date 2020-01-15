@@ -1,0 +1,32 @@
+{
+    "availableSince": [0,6,0],
+    "shortDescription": "Checks if a point is in the rectangle or not.",
+
+    "arguments":[
+        {
+            "name": "x",
+            "type": "number",
+            "description": "The point X coords."
+        },
+
+        {
+            "name": "y",
+            "type": "number",
+            "description": "The point Y coords."
+        },
+
+        {
+            "name": "rect",
+            "type": "table",
+            "description": "The rectangle definition table, in this format: `{x,y,w,h}`."
+        }
+    ],
+
+    "returns":[
+        {
+            "name": "isIt",
+            "type": "boolean",
+            "description": "Wether the point is in the rectangle or not."
+        }
+    ]
+}

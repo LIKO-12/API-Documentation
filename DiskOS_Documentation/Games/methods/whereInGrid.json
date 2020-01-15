@@ -1,0 +1,38 @@
+{
+    "availableSince": [0,6,0],
+    "shortDescription": "Check in what cell X and Y lands on for a rectangular grid.",
+
+    "arguments":[
+        {
+            "name": "x",
+            "type": "number",
+            "description": "The X coords to check."
+        },
+
+        {
+            "name": "y",
+            "type": "number",
+            "description": "They Y coords to check."
+        },
+
+        {
+            "name": "rectGrid",
+            "type": "table",
+            "description": "Contains in order: Grid X, GridY (top-left corner of the grid), Grid width, Grid height, Number of cells in width, Number of cells in height."
+        }
+    ],
+
+    "returns":[
+        {
+            "name": "cellX",
+            "type": ["number", "boolean"],
+            "description": "The cell X, or false if the coordinations don't land in the grid."
+        },
+
+        {
+            "name": "cellY",
+            "type": ["number", "boolean"],
+            "description": "The cell Y, or false if the coordinations don't land in the grid."
+        }
+    ]
+}
