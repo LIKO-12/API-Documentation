@@ -1,0 +1,15 @@
+{
+    "blacklisted": [
+        "HDD",
+        "WEB",
+        "FDD",
+        "BIOS"
+    ],
+
+    "globalized": [
+        "GPU",
+        "CPU",
+        "Keyboard",
+        "RAM"
+    ]
+}
