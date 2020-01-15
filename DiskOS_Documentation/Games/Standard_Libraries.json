@@ -1,0 +1,123 @@
+{
+    "globals": [
+        "assert",
+        "error",
+        "ipairs",
+        "pairs",
+        "next",
+        "pcall",
+        "select",
+        "tonumber",
+        "tostring",
+        "type",
+        "unpack",
+        "_VERSION",
+        "xpcall",
+        "setmetatable",
+        "getmetatable",
+        "rawget",
+        "rawset",
+        "rawequal",
+        "getfenv",
+        "setfenv",
+        "loadstring",
+        "load",
+        "_G"
+    ],
+
+    "string": [
+        "byte",
+        "char",
+        "find",
+        "format",
+        "gmatch",
+        "gsub",
+        "len",
+        "lower",
+        "match",
+        "rep",
+        "reverse",
+        "sub",
+        "upper"
+    ],
+
+    "table": [
+        "insert",
+        "maxn",
+        "remove",
+        "sort",
+        "concat"
+    ],
+
+    "math": [
+        "abs",
+        "acos",
+        "asin",
+        "atan",
+        "atan2",
+        "ceil",
+        "cos",
+        "deg",
+        "exp",
+        "floor",
+        "fmod",
+        "frexp",
+        "huge",
+        "ldexp",
+        "log",
+        "log10",
+        "max",
+        "min",
+        "modf",
+        "pi",
+        "pow",
+        "rad",
+        "random",
+        "randomseed",
+        "sin",
+        "sinh",
+        "sqrt",
+        "tan",
+        "tanh"
+    ],
+
+    "coroutine": [
+        "create",
+        "resume",
+        "yield",
+        "status",
+        "running"
+    ],
+
+    "os": [
+        "time",
+        "difftime",
+        "clock",
+        "date"
+    ],
+
+    "bit": [
+        "cast",
+        "bnot",
+        "band",
+        "bor",
+        "bxor",
+        "lshift",
+        "rshift",
+        "arshift",
+        "tobit",
+        "tohex",
+        "rol",
+        "ror",
+        "bswap"
+    ],
+
+    "utf8": [
+        "char",
+        "charpattern",
+        "codes",
+        "codepoint",
+        "len",
+        "offset"
+    ]
+}
