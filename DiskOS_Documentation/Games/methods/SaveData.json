@@ -1,0 +1,19 @@
+{
+    "availableSince": [0,6,0],
+
+    "shortDescription": "Set and save the savedata of the game.",
+    "longDescription": "The data can be 2KB large maximum!!",
+
+    "notes":[
+        "The save ID using the `SaveID` method has to be set first!",
+        "**IMPORTANT:** due to a nasty bug in V1.1.0 and before, the savedata is **not saved**. Thanks to me, the ~~stupid~~ smart LIKO-12 developer."
+    ],
+
+    "arguments":[
+        {
+            "name": "data",
+            "type": "string",
+            "description": "The new savedata of the game."
+        }
+    ]
+}

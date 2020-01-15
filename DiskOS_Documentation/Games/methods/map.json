@@ -1,0 +1,168 @@
+{
+    "availableSince": [0,6,0],
+
+    "shortDescription": "Draw the tile map (or a section of it) on the screen.",
+    "notes":[
+
+    ],
+
+    "usages":[
+        {
+            "name": "Draw the whole map",
+
+            "arguments":[
+                {
+                    "name": "dx",
+                    "type": "number",
+                    "description": "The destination X coords to draw the map at on the screen.",
+                    "default": "0"
+                },
+
+                {
+                    "name": "dy",
+                    "type": "number",
+                    "description": "The destination Y coords to draw the map at on the screen.",
+                    "default": "0"
+                }
+            ]
+        },
+
+        {
+            "name": "Draw the whole map with scaling and/or different spritesheet",
+
+            "notes":[
+                "This usage is completely ignored when the map object is set on the spritebatch mode, instead the whole map is drawn with no scaling and/or different sheet!"
+            ],
+
+            "arguments":[
+                {
+                    "name": "dx",
+                    "type": "number",
+                    "description": "The destination X coords to draw the map at on the screen.",
+                    "default": "0"
+                },
+
+                {
+                    "name": "dy",
+                    "type": "number",
+                    "description": "The destination Y coords to draw the map at on the screen.",
+                    "default": "0"
+                },
+
+                {
+                    "type": "boolean",
+                    "default": "false"
+                },
+
+                {
+                    "type": "boolean",
+                    "default": "false"
+                },
+
+                {
+                    "type": "boolean",
+                    "default": "false"
+                },
+
+                {
+                    "type": "boolean",
+                    "default": "false"
+                },
+
+                {
+                    "name": "sx",
+                    "type": "number",
+                    "description": "The scale factor of the map's width.",
+                    "default": "1"
+                },
+
+                {
+                    "name": "sy",
+                    "type": "number",
+                    "description": "The scale factor of the map's height.",
+                    "default": "1"
+                },
+
+                {
+                    "name": "sheet",
+                    "type": [["TODO", "SpriteSheet"]],
+                    "description": "The sprite sheet to pick the tiles from.",
+                    "default": "SpriteMap"
+                }
+            ]
+        },
+
+        {
+            "name": "Draw a section of the map",
+
+            "notes":[
+                "This usage is completely ignored when the map object is set on the spritebatch mode, instead the whole map is drawn with no scaling and/or different sheet!"
+            ],
+
+            "arguments":[
+                {
+                    "name": "dx",
+                    "type": "number",
+                    "description": "The destination X coords to draw the map at on the screen.",
+                    "default": "0"
+                },
+
+                {
+                    "name": "dy",
+                    "type": "number",
+                    "description": "The destination Y coords to draw the map at on the screen.",
+                    "default": "0"
+                },
+
+                {
+                    "name": "x",
+                    "type": "number",
+                    "description": "The X coords (in tiles) of the top-left corner of the map section.",
+                    "default": "0"
+                },
+
+                {
+                    "name": "y",
+                    "type": "number",
+                    "description": "The Y coords (in tiles) of the top-left corner of the map section.",
+                    "default": "0"
+                },
+
+                {
+                    "name": "w",
+                    "type": "number",
+                    "description": "The width (in tiles) of the map section to draw.",
+                    "default": "map width"
+                },
+
+                {
+                    "name": "h",
+                    "type": "number",
+                    "description": "The height (in tiles) of the map section to draw.",
+                    "default": "map height"
+                },
+
+                {
+                    "name": "sx",
+                    "type": "number",
+                    "description": "The scale factor of the map's width.",
+                    "default": "1"
+                },
+
+                {
+                    "name": "sy",
+                    "type": "number",
+                    "description": "The scale factor of the map's height.",
+                    "default": "1"
+                },
+
+                {
+                    "name": "sheet",
+                    "type": [["TODO", "SpriteSheet"]],
+                    "description": "The sprite sheet to pick the tiles from.",
+                    "default": "SpriteMap"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "availableSince": [0,6,0],
+    "lastModifiedIn": [1,1,0],
+
+    "shortDescription": "Execute a .lua file from LIKO-12's filesystem.",
+
+    "notes":[
+        "This function is intended to aid while developing a game, but must not be used with the finaly copy of a game, because the game's .lk12 file won't contain any external file executed with this function!"
+    ],
+
+    "arguments":[
+        {
+            "name": "path",
+            "type": "string",
+            "description": "The path to the .lua file."
+        },
+
+        {
+            "name": "...",
+            "type": "any",
+            "description": "Arguments to pass into the .lua file while executing."
+        }
+    ],
+
+    "returns":[
+        {
+            "name": "...",
+            "type": "any",
+            "description": "Values returned by the executed .lua file."
+        }
+    ]
+}

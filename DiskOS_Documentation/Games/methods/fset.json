@@ -1,0 +1,57 @@
+{
+    "availableSince": [0,6,0],
+
+    "shortDescription": "Set the flags byte or a bit of it, for a sprite in the spritesheet.",
+    "notes":[
+        "This method uses the SpriteMap global as the default SpriteSheet, and would fail if it's invalid!",
+        "The sprite ID 0 is accepted (for easier use with the map), and defaults to all flags off for it."
+    ],
+
+    "usages":[
+        {
+            "name": "Set the flags byte as a decimal number",
+
+            "notes":[
+                "**IMPORTANT:** Due to a nasty bug in 1.1.0 and previous versions, this usage does nothing at all (but only verify the arguments)!"
+            ],
+
+            "arguments":[
+                {
+                    "name": "id",
+                    "type": "number",
+                    "description": "The ID of the sprite, as displayed in the Sprites Editor."
+                },
+
+                {
+                    "name": "flags",
+                    "type": "number",
+                    "description": "The flags unsigned byte as a decimal number."
+                }
+            ]
+        },
+
+        {
+            "name": "Set the state of a single flag",
+
+            "arguments":[
+                {
+                    "name": "id",
+                    "type": "number",
+                    "description": "The ID of the sprite, as displayed in the Sprites Editor."
+                },
+
+                {
+                    "name": "bitNumber",
+                    "type": "number",
+                    "description": "Which bit to set the state of. [1-8], numbered from right to left."
+                },
+
+                {
+                    "name": "state",
+                    "type": "boolean",
+                    "description": "The new state of the flag, true for on, false for off."
+                }
+            ]
+        }
+    ]
+}

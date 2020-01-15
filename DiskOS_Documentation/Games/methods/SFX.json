@@ -1,0 +1,24 @@
+{
+    "availableSince": [0,7,0],
+
+    "shortDescription": "Play a sound effect.",
+    "notes":[
+        "Only one SFX on a channel can be played at once!",
+        "This method looks up the SFX from the SFXS table, and if the table or the SFX was invalid it would fail!"
+    ],
+
+    "arguments":[
+        {
+            "name":"id",
+            "type":"number",
+            "description": "The ID of the SFX as displayed in the SFX Editor."
+        },
+
+        {
+            "name":"channel",
+            "type":"number",
+            "description":"The ID of the channel to play the SFX on [0-4].",
+            "default":"0"
+        }
+    ]
+}

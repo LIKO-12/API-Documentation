@@ -1,0 +1,16 @@
+{
+    "availableSince": [0,6,0],
+
+    "shortDescription": "Set the save ID of the running game.",
+    "notes":[
+        "**The save ID can be only set ONCE**"
+    ],
+
+    "arguments":[
+        {
+            "name": "saveID",
+            "type": "string",
+            "description": "The save ID of the running game, should be an unique ID, by convention its `AuthorName_GameName`."
+        }
+    ]
+}

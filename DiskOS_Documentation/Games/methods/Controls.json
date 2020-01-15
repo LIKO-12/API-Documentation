@@ -1,0 +1,19 @@
+{
+    "availableSince": [0,6,0],
+
+    "shortDescription": "Set the controls type of the game, important for proper mobile devices support!",
+    "longDescription": "This method has **important effects** on the mobile devices, as it would disable or enable the keyboard input or the on-screen gamepad!\n**Supported Controls:**\n- `gamepad` (default): When accepting input using the `btn` and `btnp` functions.\n- `keyboard`: When accepting mainly keyboard input, using the `isDown` function or the keys events.\n- `mouse` and `touch`: When accepting mainly mouse/touch input, disables the text input for mobile devices.\n- `none`: When not accepting any input, like in an animation or graphical demo.",
+
+    "notes":[
+        "This method doesn't error when an invalid controls type is provided!\ninstead it would do nothing."
+    ],
+
+    "arguments":[
+        {
+            "name":"ctype",
+            "type":"string",
+            "description": "The controls type, `gamepad`, `keyboard`, `mouse`, `touch` or `none`.",
+            "default":"gamepad"
+        }
+    ]
+}

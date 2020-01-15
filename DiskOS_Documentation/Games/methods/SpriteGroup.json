@@ -1,0 +1,76 @@
+{
+    "availableSince": [0,6,0],
+
+    "shortDescription": "Draw a group of adjacent Sprites.",
+    "longDescription": "Draw a group of adjacent Sprites from the sprites sheet.\nLike a 16x16 group, which is made of 4 sprites.",
+
+    "notes":[
+        "This method draws the sprites group from it's top-left corner.",
+        "This method uses the SpriteMap global as the default SpriteSheet, and would fail if it's invalid!",
+        "The sprites of the sprite group are drawn individually, and so that might cause performance issues for large groups."
+    ],
+
+    "arguments":[
+        {
+            "name": "id",
+            "type": "number",
+            "description": "The ID of the top-left sprite, as displayed in the Sprites Editor"
+        },
+
+        {
+            "name": "x",
+            "type": "number",
+            "description": "The X coord to draw the sprites group at.",
+            "default": "0"
+        },
+
+        {
+            "name": "y",
+            "type": "number",
+            "description": "The Y coord to draw the sprites group at.",
+            "default": "0"
+        },
+
+        {
+            "name": "w",
+            "type": "number",
+            "description": "The width of the sprites group in sprites. (ex: 2 for a 16x16 sprites group).",
+            "default": "1"
+        },
+
+        {
+            "name": "h",
+            "type": "number",
+            "description": "The height of the sprites group in sprites. (ex: 2 for a 16x16 sprites group).",
+            "default": "1"
+        },
+
+        {
+            "name": "sx",
+            "type": "number",
+            "description": "The scale factor of the sprite's width.",
+            "default": "1"
+        },
+
+        {
+            "name": "sy",
+            "type": "number",
+            "description": "The scale factor of the sprite's height.",
+            "default": "1"
+        },
+
+        {
+            "name": "r",
+            "type": "number",
+            "description": "The rotation of the sprites group in radian, costs little bit more performance.",
+            "default": "0"
+        },
+
+        {
+            "name": "sheet",
+            "type": [["TODO","SpriteSheet"]],
+            "description": "The spritesheet to pick the sprites from.",
+            "default": "SpriteMap"
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "availableSince": [0,8,0],
+    
+    "shortDescription": "Get the name of a gamepad button for displaying to the user.",
+    "longDescription": "Which is actually the user mapped key name with the first letter capitalized, or a representiative name for player 1 in mobile devices.",
+
+    "arguments":[
+        {
+            "name": "buttonID",
+            "type": "number",
+            "description": "The ID of the button [1-7]: 1: left, 2: right, 3: up, 4: down, 5: A, 6: B and 7: Start."
+        },
+
+        {
+            "name": "playerID",
+            "type": "number",
+            "description": "The ID of the player (1-based).",
+            "default": "1"
+        }
+    ],
+
+    "returns":[
+        {
+            "name": "name",
+            "type": "string",
+            "description": "The name of the gamepad button."
+        }
+    ]
+}

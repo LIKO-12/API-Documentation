@@ -1,0 +1,58 @@
+{
+    "availableSince": [0,6,0],
+
+    "shortDescription": "Get the flags byte or a bit of it, for a sprite in the spritesheet.",
+    "notes":[
+        "This method uses the SpriteMap global as the default SpriteSheet, and would fail if it's invalid!",
+        "The sprite ID 0 is accepted (for easier use with the map), and defaults to all flags off for it."
+    ],
+
+    "usages": [
+        {
+            "name": "Get the flags byte as a decimal number",
+
+            "arguments":[
+                {
+                    "name": "id",
+                    "type": "number",
+                    "description": "The ID of the sprite, as displayed in the Sprites Editor"
+                }
+            ],
+
+            "returns":[
+                {
+                    "name": "flags",
+                    "type": "number",
+                    "description": "The flags unsigned byte as a decimal number."
+                }
+            ]
+        },
+
+        {
+            "name": "Get the state of a single flag",
+
+            "arguments":[
+                {
+                    "name": "id",
+                    "type": "number",
+                    "description": "The ID of the sprite, as displayed in the Sprites Editor."
+                },
+
+                {
+                    "name": "bitNumber",
+                    "type": "number",
+                    "description": "Which bit to get the state of. [1-8], numbered from right to left."
+                }
+            ],
+
+            "returns":[
+                {
+                    "name": "state",
+                    "type": "boolean",
+                    "description": "The state of the flag, true for on, and false for off."
+                }
+            ]
+        }
+    ]
+    
+}

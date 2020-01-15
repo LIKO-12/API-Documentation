@@ -1,0 +1,10 @@
+{
+    "availableSince": [0,6,0],
+
+    "shortDescription": "Pause the game instantly.",
+    "longDescription": "And displays the pause screen just as if the enter key was pressed",
+
+    "notes":[
+        "This method does nothing when a global variable named `_DISABLE_PAUSE` is set to true!"
+    ]
+}

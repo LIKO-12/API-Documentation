@@ -1,0 +1,154 @@
+{
+    "availableSince":[1,0,0],
+    
+    "shortDescription": "Get a new instance of a third-party library.",
+
+    "usages":[
+        {
+            "name": "lume",
+            "shortDescription": "Lua functions geared towards gamedev.",
+            "longDescription": "**GitHub:** [https://github.com/rxi/lume](https://github.com/rxi/lume)",
+
+            "arguments":[
+                {
+                    "type":"string",
+                    "default":"\"lume\""
+                }
+            ],
+
+            "returns":[
+                {
+                    "name":"lume",
+                    "type":"table",
+                    "description":"A new instance of the lume library."
+                }
+            ]
+        },
+
+        {
+            "name": "middleclass",
+            "shortDescription": "A simple OOP library for Lua. It has inheritance, metamethods (operators), class variables and weak mixin support.",
+            "longDescription": "**GitHub:** [https://github.com/kikito/middleclass](https://github.com/kikito/middleclass)\n**Wiki:** [https://github.com/kikito/middleclass/wiki](https://github.com/kikito/middleclass/wiki)",
+
+            "arguments":[
+                {
+                    "type":"string",
+                    "default":"\"class\""
+                }
+            ],
+
+            "returns":[
+                {
+                    "name":"class",
+                    "type":"table",
+                    "description":"A new instance of the middleclass library."
+                }
+            ]
+        },
+
+        {
+            "name": "bump",
+            "shortDescription": "A simple collision-detection library for axis-aligned rectangles.",
+            "longDescription": "**GitHub:** [https://github.com/kikito/bump.lua](https://github.com/kikito/bump.lua)",
+
+            "arguments":[
+                {
+                    "type":"string",
+                    "default":"\"bump\""
+                }
+            ],
+
+            "returns":[
+                {
+                    "name":"bump",
+                    "type":"table",
+                    "description":"A new instance of the bump library."
+                }
+            ]
+        },
+
+        {
+            "name": "likocam",
+            "shortDescription": "An undocumented 3D camera projection library.",
+            "longDescription": "**DEPRICATED**, Will be removed in future releases, the source-code can be viewed in `C:/Libraries/likocam.lua`.\nFor example code look for the `cube` demo.",
+
+            "arguments":[
+                {
+                    "type":"string",
+                    "default":"\"likocam\""
+                }
+            ],
+
+            "returns":[
+                {
+                    "name":"bump",
+                    "type":"likocam",
+                    "description":"A new instance of the likocam library."
+                }
+            ]
+        },
+
+        {
+            "name": "JSON",
+            "shortDescription": "A simple JSON library purly written in Lua.",
+            "longDescription": "**Website:** [http://regex.info/blog/lua/json](http://regex.info/blog/lua/json)",
+
+            "arguments":[
+                {
+                    "type":"string",
+                    "default":"\"JSON\""
+                }
+            ],
+
+            "returns":[
+                {
+                    "name":"JSON",
+                    "type":"table",
+                    "description":"A new instance of the JSON library."
+                }
+            ]
+        },
+
+        {
+            "name": "vector",
+            "shortDescription": "2D vector math.",
+            "longDescription": "**GitHub:** [https://github.com/vrld/hump/blob/master/vector.lua](https://github.com/vrld/hump/blob/master/vector.lua)\n**Documentation:** [https://hump.readthedocs.io/en/latest/vector.html](https://hump.readthedocs.io/en/latest/vector.html)",
+
+            "arguments":[
+                {
+                    "type":"string",
+                    "default":"\"vector\""
+                }
+            ],
+
+            "returns":[
+                {
+                    "name":"vector",
+                    "type":"table",
+                    "description":"A new instance of the vector library."
+                }
+            ]
+        },
+
+        {
+            "name": "spritesheet",
+            "shortDescription": "The SpriteSheet of DiskOS, as documented in the objects section.",
+            "longDescription": "But this is the spritesheet creation function, which takes in a GPU image, and the width & height of the sprites in the spritesheet.\n```lua\nlocal SpriteSheet = Library(\"spritesheet\")\nlocal mySpriteSheet = SpriteSheet(myImage, 8,8)\n```",
+
+            "arguments":[
+                {
+                    "type":"string",
+                    "default":"\"spritesheet\""
+                }
+            ],
+
+            "returns":[
+                {
+                    "name":"SpriteSheet",
+                    "type":"function",
+                    "description":"A new copy of the SpriteSheet creation function."
+                }
+            ]
+        }
+    ]
+}

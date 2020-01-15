@@ -1,0 +1,59 @@
+{
+    "availableSince": [0,6,0],
+
+    "shortDescription": "Draw a sprite on the screen.",
+    "notes": [
+        "This method draws the sprite from it's top-left corner.",
+        "This method uses the SpriteMap global as the default SpriteSheet, and would fail if it's invalid!"
+    ],
+
+    "arguments":[
+        {
+            "name": "id",
+            "type": "number",
+            "description": "The ID of the sprite, as displayed in the Sprites Editor"
+        },
+
+        {
+            "name": "x",
+            "type": "number",
+            "description": "The X coord to draw the sprite at.",
+            "default": "0"
+        },
+
+        {
+            "name": "y",
+            "type": "number",
+            "description": "The Y coord to draw the sprite at.",
+            "default": "0"
+        },
+
+        {
+            "name": "r",
+            "type": "number",
+            "description": "The rotation of the sprite in radian.",
+            "default": "0"
+        },
+
+        {
+            "name": "sx",
+            "type": "number",
+            "description": "The scale factor of the sprite's width.",
+            "default": "1"
+        },
+
+        {
+            "name": "sy",
+            "type": "number",
+            "description": "The scale factor of the sprite's height.",
+            "default": "1"
+        },
+
+        {
+            "name": "sheet",
+            "type": [["TODO","SpriteSheet"]],
+            "description": "The spritesheet to pick the sprite from.",
+            "default": "SpriteMap"
+        }
+    ]
+}

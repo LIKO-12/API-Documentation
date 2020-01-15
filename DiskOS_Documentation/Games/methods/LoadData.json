@@ -1,0 +1,18 @@
+{
+    "availableSince": [0,6,0],
+
+    "shortDescription": "Load and get the savedata of the game.",
+    "longDescription": "The data is an empty string by default.",
+
+    "notes":[
+        "The save ID using the `SaveID` method has to be set first!"
+    ],
+
+    "returns":[
+        {
+            "name": "data",
+            "type": "string",
+            "description": "The saved data for the game."
+        }
+    ]
+}
