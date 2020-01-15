@@ -1,0 +1,6 @@
+{
+    "availableSince": [0,6,0],
+    "shortDescription": "The SpriteSheet object of the game's sprites sheet.",
+
+    "type": [["TODO","SpriteSheet"]]
+}

@@ -1,0 +1,7 @@
+{
+    "availableSince": [0,6,0],
+    "shortDescription": "Disable/Enable the pause screen for the game.",
+    "longDescription": "- `true`: The pause screen (which is showed when the user presses the enter key), and the `pause()` function are disabled.\n- `false` or `nil`: The pause screen and the `pause()` function are activated.",
+
+    "type": ["boolean","nil"]
+}

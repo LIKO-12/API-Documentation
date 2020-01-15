@@ -1,0 +1,13 @@
+{
+    "availableSince": [0,6,0],
+    "shortDescription": "An internal function used for handling the gamepad input.",
+    "longDescription": "It's called automatically with the internet events loop, but if you're using your own custom loop, and want the gamepad input through `btn` and `btnp` to work, then call this method in the `update` event.",
+
+    "arguments":[
+        {
+            "name":"...",
+            "type":"any",
+            "description":"The arguments passed to the original event"
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+{
+    "availableSince": [0,6,0],
+    "shortDescription": "The Lua code of the currently running game, as a string.",
+
+    "type": "string"
+}

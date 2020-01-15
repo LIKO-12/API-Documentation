@@ -1,0 +1,6 @@
+{
+    "availableSince": [0,6,0],
+    "shortDescription": "The Map object of the game's tile map.",
+
+    "type": [["TODO","Map"]]
+}

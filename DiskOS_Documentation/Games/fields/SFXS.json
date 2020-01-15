@@ -1,0 +1,7 @@
+{
+    "availableSince": [0,7,0],
+    "shortDescription": "Contains the loaded SFX objects of the SFXes defined in the SFX editor.",
+    "longDescription": "The indexes are the SFX ID, but 0 based. The values are the SFX objects.",
+
+    "type": "table"
+}

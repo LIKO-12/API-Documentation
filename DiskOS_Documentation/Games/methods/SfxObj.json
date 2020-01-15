@@ -1,0 +1,28 @@
+{
+    "availableSince": [0,7,0],
+    "shortDescription": "The constructor of SFX objects.",
+
+    "arguments":[
+        {
+            "name":"notes",
+            "type":"number",
+            "description": "The number of notes the SFX has.",
+            "default":"32"
+        },
+
+        {
+            "name":"speed",
+            "type":"number",
+            "description":"The speed of the SFX.",
+            "default":"1"
+        }
+    ],
+
+    "returns":[
+        {
+            "name": "newSfx",
+            "type":[["TODO","SFX"]],
+            "description": "The created SFX object."
+        }
+    ]
+}

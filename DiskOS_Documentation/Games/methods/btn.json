@@ -1,0 +1,28 @@
+{
+    "availableSince": [0,6,0],
+    "shortDescription": "Check if a gamepad button is down or not.",
+    "longDescription": "Default Controllers Keysmap:\n- **Player 1:** Left,Right,Up,Down, Z,X, C.\n- **Player 2:** S,F,E,D, Tab,Q, W.",
+
+    "arguments":[
+        {
+            "name": "buttonID",
+            "type": "number",
+            "description": "The ID of the button [1-7]: 1: left, 2: right, 3: up, 4: down, 5: A, 6: B and 7: Start."
+        },
+
+        {
+            "name": "playerID",
+            "type": "number",
+            "description": "The ID of the player (1-based).",
+            "default": "1"
+        }
+    ],
+    
+    "returns":[
+        {
+            "name": "state",
+            "type": "boolean",
+            "description": "The state of the button."
+        }
+    ]
+}

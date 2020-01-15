@@ -1,0 +1,34 @@
+{
+    "availableSince": [0,6,0],
+    "shortDescription": "The constructor of Map objects.",
+
+    "arguments":[
+        {
+            "name":"w",
+            "type":"number",
+            "description": "The width of the map in tiles.",
+            "default":"24"
+        },
+
+        {
+            "name":"h",
+            "type":"number",
+            "description":"The height of the map in tiles."
+        },
+
+        {
+            "name":"sheet",
+            "type":[["TODO","SpriteSheet"], "nil"],
+            "description": "The SpriteSheet to pick the sprites from while drawing the map.",
+            "default": "nil"
+        }
+    ],
+
+    "returns":[
+        {
+            "name": "newMap",
+            "type":[["TODO","Map"]],
+            "description": "The created Map object."
+        }
+    ]
+}

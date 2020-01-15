@@ -1,0 +1,7 @@
+{
+    "availableSince": [0,6,0],
+    "shortDescription": "A global boolean for indicating whether to run the internet event loop or not.",
+    "longDescription": "- `true`: Run the internal event loop.\n- `false`: Disable the internal event loop.\n- `nil` (default): Automatically decide wether to run it or not (It would do if any `_update` or `_draw` global functions are defined).",
+
+    "type": ["boolean", "nil"]
+}
