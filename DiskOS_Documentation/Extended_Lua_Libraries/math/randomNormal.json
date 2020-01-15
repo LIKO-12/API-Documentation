@@ -1,0 +1,28 @@
+{
+    "availableSince": [0,6,0],
+    "shortDescription": "Get a normally distributed pseudo random number.",
+
+    "arguments":[
+        {
+            "name": "stddev",
+            "type": "number",
+            "description": "Standard deviation of the distribution.",
+            "default": "1"
+        },
+
+        {
+            "name": "mean",
+            "type": "number",
+            "description": "The mean of the distribution.",
+            "default": "0"
+        }
+    ],
+
+    "returns":[
+        {
+            "name": "number",
+            "type": "number",
+            "description": "Normally distributed random number with variance `stddev^2` and the specified mean."
+        }
+    ]
+}

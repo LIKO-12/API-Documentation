@@ -1,0 +1,20 @@
+{
+    "availableSince": [0,6,0],
+    "shortDescription": "Encode a Hex string.",
+
+    "arguments":[
+        {
+            "name": "raw",
+            "type": "string",
+            "description": "The raw data string to Hex encode."
+        }
+    ],
+
+    "returns":[
+        {
+            "name": "hex",
+            "type": "string",
+            "description": "The result Hex encoded data string."
+        }
+    ]
+}

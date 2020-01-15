@@ -1,0 +1,38 @@
+{
+    "availableSince": [0,6,0],
+    "shortDescription": "Compress a data string using lz4, zlib or gzip.",
+
+    "notes":[
+        "This function, depending on the compression format and level, can be slow if called repeatedly, such as from _update or _draw."
+    ],
+
+    "arguments":[
+        {
+            "name": "data",
+            "type": "string",
+            "description": "The data as a string to compress."
+        },
+
+        {
+            "name": "format",
+            "type": "string",
+            "description": "The compression format to use (`lz4`, `zlib` or `gzip`).",
+            "default": "\"lz4\""
+        },
+
+        {
+            "name": "level",
+            "type": "string",
+            "description": "The level of compression to use, between 0 and 9. -1 indicates the default level. The meaning of this argument depends on the compression format being used.",
+            "default": "-1"
+        }
+    ],
+
+    "returns": [
+        {
+            "name": "compressedData",
+            "type": "string",
+            "description": "The result compressed binary data as a string"
+        }
+    ]
+}

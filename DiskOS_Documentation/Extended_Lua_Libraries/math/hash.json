@@ -1,0 +1,26 @@
+{
+    "availableSince": [0,8,0],
+    "shortDescription": "Compute the message digest of a string using a specified hash algorithm.",
+
+    "arguments":[
+        {
+            "name": "hashFunction",
+            "type": "string",
+            "description": "Hash algorithm to use (`md5` (16 bytes), `sha1` (20 bytes), `sha224` (28 bytes), `sha256` (32 bytes), `sha384` (48 bytes) and `sha512` (64 bytes))."
+        },
+
+        {
+            "name": "data",
+            "type": "string",
+            "description": "String to hash."
+        }
+    ],
+
+    "return":[
+        {
+            "name": "rawDigest",
+            "type": "string",
+            "description": "Raw message digest string."
+        }
+    ]
+}

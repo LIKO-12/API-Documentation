@@ -1,0 +1,127 @@
+{
+    "availableSince": [0,6,0],
+    "shortDescription": "Generates a Simplex or Perlin noise value in 1-4 dimensions. The return value will always be the same, given the same arguments.",
+    "longDescription": "[Simplex noise](http://en.wikipedia.org/wiki/Simplex_noise) is closely related to [Perlin noise](http://en.wikipedia.org/wiki/Perlin_noise). It is widely used for procedural content generation.\nThere are many [webpages](http://libnoise.sourceforge.net/noisegen/) which discuss Perlin and Simplex noise in detail.",
+
+    "notes":[
+        "The return value might be constant if only integer arguments are used. Avoid solely passing in integers, to get varying return values."
+    ],
+
+    "usages":[
+        {
+            "name": "Generate Simplex noise from 1 dimension",
+
+            "arguments":[
+                {
+                    "name": "x",
+                    "type": "number",
+                    "description": "The number used to generate the noise value."
+                }
+            ],
+
+            "returns":[
+                {
+                    "name": "value",
+                    "type": "number",
+                    "description": "The noise value in the range of [0, 1]."
+                }
+            ]
+        },
+
+        {
+            "name": "Generate Simplex noise from 2 dimensions",
+
+            "arguments":[
+                {
+                    "name": "x",
+                    "type": "number",
+                    "description": "The first value of the 2-dimensional vector used to generate the noise value."
+                },
+
+                {
+                    "name": "y",
+                    "type": "number",
+                    "description": "The second value of the 2-dimensional vector used to generate the noise value."
+                }
+            ],
+
+            "returns":[
+                {
+                    "name": "value",
+                    "type": "number",
+                    "description": "The noise value in the range of [0, 1]."
+                }
+            ]
+        },
+
+        {
+            "name": "Generate Perlin noise from 3 dimensions",
+
+            "arguments":[
+                {
+                    "name": "x",
+                    "type": "number",
+                    "description": "The first value of the 3-dimensional vector used to generate the noise value."
+                },
+                
+                {
+                    "name": "y",
+                    "type": "number",
+                    "description": "The second value of the 3-dimensional vector used to generate the noise value."
+                },
+
+                {
+                    "name": "z",
+                    "type": "number",
+                    "description": "The third value of the 3-dimensional vector used to generate the noise value."
+                }
+            ],
+
+            "returns":[
+                {
+                    "name": "value",
+                    "type": "number",
+                    "description": "The noise value in the range of [0, 1]."
+                }
+            ]
+        },
+
+        {
+            "name": "Generate Perlin noise from 4 dimensions",
+
+            "arguments":[
+                {
+                    "name": "x",
+                    "type": "number",
+                    "description": "The first value of the 4-dimensional vector used to generate the noise value."
+                },
+                
+                {
+                    "name": "y",
+                    "type": "number",
+                    "description": "The second value of the 4-dimensional vector used to generate the noise value."
+                },
+
+                {
+                    "name": "z",
+                    "type": "number",
+                    "description": "The third value of the 4-dimensional vector used to generate the noise value."
+                },
+
+                {
+                    "name": "w",
+                    "type": "number",
+                    "description": "The fourth value of the 4-dimensional vector used to generate the noise value."
+                }
+            ],
+
+            "returns":[
+                {
+                    "name": "value",
+                    "type": "number",
+                    "description": "The noise value in the range of [0, 1]."
+                }
+            ]
+        }
+    ]
+}

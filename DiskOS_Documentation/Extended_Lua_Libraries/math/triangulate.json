@@ -1,0 +1,82 @@
+{
+    "availableSince": [0,6,0],
+    "shortDescription": "Decomposes a simple polygon into triangles.",
+
+    "usages":[
+        {
+            "name": "Vertices as individual arguments",
+
+            "arguments":[
+                {
+                    "name": "x1",
+                    "type": "number",
+                    "description": "The position of the first vertex of the polygon on the x-axis."
+                },
+
+                {
+                    "name": "y1",
+                    "type": "number",
+                    "description": "The position of the first vertex of the polygon on the y-axis."
+                },
+
+                {
+                    "name": "x2",
+                    "type": "number",
+                    "description": "The position of the second vertex of the polygon on the x-axis."
+                },
+
+                {
+                    "name": "y2",
+                    "type": "number",
+                    "description": "The position of the second vertex of the polygon on the y-axis."
+                },
+
+                {
+                    "name": "x3",
+                    "type": "number",
+                    "description": "The position of the third vertex of the polygon on the x-axis."
+                },
+
+                {
+                    "name": "y3",
+                    "type": "number",
+                    "description": "The position of the third vertex of the polygon on the y-axis."
+                },
+
+                {
+                    "name": "...",
+                    "type": "number",
+                    "description": "The rest of the vertices."
+                }
+            ],
+
+            "returns":[
+                {
+                    "name": "triangles",
+                    "type": "table",
+                    "description": "List of triangles the polygon is composed of, in the form of `{{x1, y1, x2, y2, x3, y3}, {x1, y1, x2, y2, x3, y3}, ...}`."
+                }
+            ]
+        },
+
+        {
+            "name": "Vertices in a table",
+
+            "arguments":[
+                {
+                    "name": "vertices",
+                    "type": "number",
+                    "description": "The vertices of the polygon as a table in the form of `{x1, y1, x2, y2, x3, y3, ...}`."
+                }
+            ],
+
+            "returns":[
+                {
+                    "name": "triangles",
+                    "type": "table",
+                    "description": "List of triangles the polygon is composed of, in the form of `{{x1, y1, x2, y2, x3, y3}, {x1, y1, x2, y2, x3, y3}, ...}`."
+                }
+            ]
+        }
+    ]
+}

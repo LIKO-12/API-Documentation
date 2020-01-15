@@ -1,0 +1,27 @@
+{
+    "availableSince": [0,6,0],
+    "shortDescription": "Decompress a previously compressed string using lz4, zlib or gzip.",
+
+    "arguments":[
+        {
+            "name": "compressedData",
+            "type": "string",
+            "description": "The previously compressed data string."
+        },
+
+        {
+            "name": "format",
+            "type": "string",
+            "description": "The format that was used to compress the given string (`lz4`, `zlib` or `gzip`).",
+            "default": "\"lz4\""
+        }
+    ],
+
+    "returns": [
+        {
+            "name": "data",
+            "type": "string",
+            "description": "The draw decompressed data."
+        }
+    ]
+}

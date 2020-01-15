@@ -1,0 +1,20 @@
+{
+    "availableSince": [0,6,0],
+    "shortDescription": "Decode a Hex string",
+
+    "arguments":[
+        {
+            "name": "hex",
+            "type": "string",
+            "description": "The Hex encoded data string."
+        }
+    ],
+
+    "returns":[
+        {
+            "name": "raw",
+            "type": "string",
+            "description": "The result raw data string."
+        }
+    ]
+}

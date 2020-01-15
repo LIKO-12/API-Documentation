@@ -1,0 +1,20 @@
+{
+    "availableSince": [0,6,0],
+    "shortDescription": "Decode a Base-64 string",
+
+    "arguments":[
+        {
+            "name": "b64",
+            "type": "string",
+            "description": "The Base-64 encoded data string."
+        }
+    ],
+
+    "returns":[
+        {
+            "name": "raw",
+            "type": "string",
+            "description": "The result raw data string."
+        }
+    ]
+}
