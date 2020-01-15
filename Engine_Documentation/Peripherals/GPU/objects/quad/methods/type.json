@@ -1,0 +1,11 @@
+{
+	"availableSince": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"lastUpdatedIn": [ [ 1, 0, 0 ], [ 0, 6, 0 ] ],
+	"returns": [ {
+		"description": "The object type, (Quad).",
+		"name": "type",
+		"type": "string"
+	} ],
+	"self": true,
+	"shortDescription": "Gets the type of the object as a string."
+}
