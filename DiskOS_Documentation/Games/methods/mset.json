@@ -1,0 +1,24 @@
+{
+    "availableSince": [0,6,0],
+    "shortDescription": "Set the ID of a single tile in the map.",
+
+    "arguments":[
+        {
+            "name": "x",
+            "type": "number",
+            "description": "The X coords (in tiles) of the tile in the map."
+        },
+
+        {
+            "name": "y",
+            "type": "number",
+            "description": "The Y coords (in tiles) of the tile in the map."
+        },
+
+        {
+            "name": "id",
+            "type": "number",
+            "description": "The new id of the tile [0-255]"
+        }
+    ]
+}

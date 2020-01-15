@@ -1,0 +1,24 @@
+{
+    "availableSince": [0,6,0],
+    "shortDescription": "Set the color of a single pixel on the screen.",
+
+    "arguments":[
+        {
+            "name": "x",
+            "type": "number",
+            "description": "The X coords of the pixel on the screen."
+        },
+
+        {
+            "name": "y",
+            "type": "number",
+            "description": "The Y coords of the pixel on the screen."
+        },
+
+        {
+            "name": "c",
+            "type": "number",
+            "description": "The new color of the pixel [0-15]."
+        }
+    ]
+}

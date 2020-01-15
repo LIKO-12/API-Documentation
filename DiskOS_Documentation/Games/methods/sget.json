@@ -1,0 +1,26 @@
+{
+    "availableSince": [0,6,0],
+    "shortDescription": "Get the color of a single pixel in the spritesheet.",
+
+    "arguments":[
+        {
+            "name": "x",
+            "type": "number",
+            "description": "The X coords of the pixel in the spritesheet."
+        },
+
+        {
+            "name": "y",
+            "type": "number",
+            "description": "The Y coords of the pixel in the spritesheet."
+        }
+    ],
+
+    "returns":[
+        {
+            "name": "c",
+            "type": "number",
+            "description": "The color of the pixel [0-15]."
+        }
+    ]
+}
